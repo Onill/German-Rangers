@@ -1,0 +1,11 @@
+
+$[
+	1.063,
+	["Main",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
+	[1000,"Background",[2,"",["0 * GUI_GRID_W + GUI_GRID_X","4 * GUI_GRID_H + GUI_GRID_Y","40 * GUI_GRID_W","21 * GUI_GRID_H"],[-1,-1,-1,-1],[1,1,1,0.8],[-1,-1,-1,-1],"","-1"],[]],
+	[1001,"Bachground_Header",[2,"",["0 * GUI_GRID_W + GUI_GRID_X","0 * GUI_GRID_H + GUI_GRID_Y","40 * GUI_GRID_W","4 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1600,"Menue",[2,"",["0.56 * GUI_GRID_W + GUI_GRID_X","0.47 * GUI_GRID_H + GUI_GRID_Y","5 * GUI_GRID_W","3 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1601,"Cancel",[2,"",["35 * GUI_GRID_W + GUI_GRID_X","0.5 * GUI_GRID_H + GUI_GRID_Y","4.5 * GUI_GRID_W","3 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1602,"Teleport",[2,"",["1 * GUI_GRID_W + GUI_GRID_X","5 * GUI_GRID_H + GUI_GRID_Y","5 * GUI_GRID_W","3 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
+]
+
