@@ -20,18 +20,18 @@ _position = getPos player;
 
 switch (_TeleportTo) do
 	{
-		 case "Alpha": {_position = getPos s7;};
-		 case "Bravo": { _position = getPos s19; };
-		 case "Charlie": { _position = getPos s31; };
-		 case "Delta": { _position = getPos s43; };
-		 case "Sierra": { _position = getPos s63; };
-		 case "Echo_1": { _position = getPos s55; };
-		 case "Echo_2": { _position = getPos s59; };
+		 case "Alpha": {_position = getPos (units grpalpha select 0); };
+		 case "Bravo": { _position = getPos (units grpbravo select 0); };
+		 case "Charlie": { _position = getPos (units grpcharlie select 0); };
+		 case "Delta": { _position = getPos (units grpdelta select 0); };
+		 case "Sierra": { _position = getPos (units grpsierra select 0); };
+		 case "Echo_1": { _position = getPos (units grpecho1 select 0); };
+		 case "Echo_2": { _position = getPos (units grpecho2 select 0); };
 		 case "Fox_1": { _position = getPos s3; };
 		 case "Fox_2": { _position = getPos s4; };
 		 case "Kilo_1": { _position = getPos s1; };
 		 case "Kilo_2": { _position = getPos s2; };
-		 case "Lima": { hint"Die Einheit exestiert noch nur im Konzept"; };
+		 case "Lima": { hint"Erst demnächst verfügbar"; };
 		default { hint "Fehler" };
 	};
 
