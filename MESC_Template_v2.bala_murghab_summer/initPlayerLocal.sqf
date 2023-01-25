@@ -313,6 +313,20 @@ if (isClass(configFile >> "cfgPatches" >> "task_force_radio")) then {
 
 sleep 3;
 
+//ACE Self Interactions for Players in Base
+_condition = {player distance base < 300};
+_empty_statement = {"Nothing"};
+
+// Creating a Sub Menu Category GR Base with Logo
+_base_menu = ["GR Base","GR Base","images\GermanRangersLogo.paa",_empty_statement,_condition] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions"], _base_menu] call ace_interact_menu_fnc_addActionToClass;
+
+//OPen Teleport GUI via Self Interaction Menu in Subcategory GR Base
+_teleport_action = ["Teleporter","Teleporter","",{ _ok = createDialog "Teleport_Dialog";},_condition] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions","GR Base"], _teleport_action] call ace_interact_menu_fnc_addActionToClass;
+
+
+
 //AddActions für Mission Control
 
 laptop_start addAction ["<t color='#00ff00'>Missionsstart</t>", 
