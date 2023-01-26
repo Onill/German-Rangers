@@ -5,6 +5,14 @@
             <English>Confirm</English>
             <German>Bestätigen</German>
         </Key>
+		<Key ID="STR_Error">
+            <English>Error</English>
+            <German>Fehler</German>
+        </Key>
+		<Key ID="STR_Dialog_T_Vehicle">
+            <English>No room in squad's vehicle.</English>
+            <German>Kein Platz im Fahrzeug der Gruppe.</German>
+        </Key>	
     </Package>
 </Project>
 

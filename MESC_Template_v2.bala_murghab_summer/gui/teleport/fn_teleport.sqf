@@ -6,7 +6,6 @@ private ["_TeleportTo","_position","_target"];
 _TeleportTo = param[0];
 _position = getPos player;
 _target = player;
-//hint format ["player controlled is called: %1",_TeleportTo]; // Debugging 
 
 	switch (_TeleportTo) do
 		{
@@ -22,7 +21,7 @@ _target = player;
 			 case "Kilo_1": {_target = s1; };
 			 case "Kilo_2": {_target = s2; };
 			 case "Lima": { _target = (units grplima select 0); hint"Erst demnÃ¤chst verfÃ¼gbar"; };
-			 default { hint"Fehler"; };
+			 default { hint"$STR_Error"; };
 		};
 		
 	if (player == _target) then {
@@ -36,7 +35,7 @@ _target = player;
 			 case "Echo_1": {_target = (units grpecho1 select 1); };
 			 case "Echo_2": {_target = (units grpecho2 select 1); };
 			 case "Lima": { _target = (units grplima select 1); hint"Erst demnÃƒÂ¤chst verfÃƒÂ¼gbar"; };
-			 default { hint"Fehler";};
+			 default { hint"$STR_Error";};
 		};
 	};
 
