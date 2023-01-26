@@ -321,10 +321,12 @@ _empty_statement = {"Nothing"};
 _base_menu = ["GR Base","GR Base","images\GermanRangersLogo.paa",_empty_statement,_condition] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions"], _base_menu] call ace_interact_menu_fnc_addActionToClass;
 
-//OPen Teleport GUI via Self Interaction Menu in Subcategory GR Base
+//Open Teleport GUI via Self Interaction Menu in Subcategory GR Base
 _teleport_action = ["Teleporter","Teleporter","",{ _ok = createDialog "Teleport_Dialog";},_condition] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","GR Base"], _teleport_action] call ace_interact_menu_fnc_addActionToClass;
 
+_personal_arsenal = ["Personal Arsenal","Personal Arsenal","",{ execVM "loadouts\personalArsenal.sqf"; },_condition] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions","GR Base"], _personal_arsenal] call ace_interact_menu_fnc_addActionToClass;
 
 //		New Mission Control
 
