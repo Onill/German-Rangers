@@ -48,7 +48,7 @@ _loadedMods = configSourceModList (configFile >> "CfgPatches");
 		case "@CBA_A3": {true};
 		case "@ace": {true};
 		case "@ACE 3 Extension (Placeables)": {true};
-		case "@KAT - Advanced Medical REWRITE": {true};
+		case "@KAT - Advanced Medical": {true};
 
 		// CUP
 		case "@CUP Terrains - Core": {true};
@@ -63,10 +63,7 @@ _loadedMods = configSourceModList (configFile >> "CfgPatches");
 		case "@CUP ACE3 Compatibility Addon - Terrains": {true};
 		
 		//RHS
-		case "@RHSAFRF": {true};
-		case "@RHSGREF": {true};
 		case "@RHSUSAF": {true};
-		case "@RHSSAF": {true};
 		case "@3CB Factions": {true};
 		case "@ACE Compat - RHS AFRF": {true};
 		case "@ACE Compat - RHS- SAF": {true};
@@ -120,25 +117,41 @@ _loadedMods = configSourceModList (configFile >> "CfgPatches");
 		case "@CH View Distance": {true};
 		case "@Better Inventory": {true};
 		case "@DUI - Squad Radar": {true};
+		case "@Window Breaker": {true};
+		case "@Brush Clearing": {true};
+		case "@Arsenal Search": {true};
+		case "@ACE 3 Extension (Animations and Actions)": {true};
+		case "@Dismount Where You Look": {true};
+		case "@Ride Where You Look": {true};
+		case "@Project Infinite - Inspect weapons": {true};
+		case "@CQB Weapon Stance": {true};
+		case "@9Liners & Notepad": {true};
+		
 		
 		//Visual
 		case "@Blastcore Edited (standalone version)": {true};
+		case "@Vanilla smoke (for Blastcore Edited)": {true};		
 		case "@Blastcore Murr Edition Smoke Alternative": {true};
+		case "@Blastcore Murr Edition": {true};		
 		case "@Dynamic Lights Extended": {true};
 		case "@Real Lighting and Weather": {true};
 		case "@Cinematic Lens Flare": {true};
 		case "@Splendid Lighting Modification": {true};
 		case "@Reduced Haze Mod v3.1": {true};
+		case "@Bullets_Hit": {true};
+		case "@ArmaFXP - Smoke Edit": {true};
+		
 		
 		//Sound
 		case "@DynaSound 2": {true};
 		case "@Enhanced Soundscape": {true};
 		case "@LAxemann's Environment Ducking": {true};
 		case "@JSRS SOUNDMOD": {true};
-		case "@JSRS SOUNDMOD - RHS  AFRF Mod Pack Sound Support": {true};
 		case "@JSRS SOUNDMOD - RHS USAF Mod Pack Sound Support": {true};
 		case "@JSRS SOUNDMOD - CUP WEAPONS MOD SOUND SUPPORT": {true};
 		case "@JSRS SOUNDMOD - CUP VEHICLES MOD SOUND SUPPORT": {true};
+		case "@JSRS SOUNDMOD - Reloading Sounds": {true};
+		
 		
 		//Arma 3 Expansions
 		case "expansion": {true};
