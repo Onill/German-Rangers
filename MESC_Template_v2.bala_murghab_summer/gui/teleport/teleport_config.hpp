@@ -1,3 +1,5 @@
+#include "XEH_PREP.sqf"
+
 class ONI
 {
 	tag="ONI";
