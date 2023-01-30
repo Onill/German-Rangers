@@ -85,6 +85,7 @@ class Menue: RscButton
 	//colorBackground[] = {0,0,0,0};
 	colorFocused[] = {1,1,1,0.5};
 	text = "";
+	action = _menueDialog = createDialog "Main_Dialog";
 };
 
 
