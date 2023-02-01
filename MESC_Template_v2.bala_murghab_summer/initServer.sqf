@@ -19,7 +19,7 @@
 //------------------------------------------------------------------
 
 // Muss vom Missionmaker UNBEDIGT gesetzt werden! Aktiviert das Speichern und Laden von Markern / Kisten aus der Datenbank.
-saveDatabase = true;
+saveDatabase = false;
 publicVariable "saveDatabase";
 
 //------------------------------------------------------------------

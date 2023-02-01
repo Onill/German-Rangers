@@ -20,7 +20,7 @@ titleText ["Missionsvorbereitung", "BLACK FADED" ];
 //------------------------------------------------------------------
 
 // Muss vom Missionmaker UNBEDIGT gesetzt werden! Aktiviert nutzung der Datenbank (für Kampagnen benötigt)
-useDatabase = true;
+useDatabase = false;
 publicVariable "useDatabase";
 
 // Muss vom Missionmaker UNBEDIGT gesetzt werden! Entscheidet ob Fleck oder Tropentarn getragen wird "fleck" / "tropen".
