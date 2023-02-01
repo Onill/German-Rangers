@@ -353,7 +353,7 @@ _personal_arsenal = ["Personal Arsenal","Personal Arsenal","",{ execVM "loadouts
 	},{true}] call ace_interact_menu_fnc_createAction;
 	[["ACE_ZeusActions","Mission Control"], _start_mission] call ace_interact_menu_fnc_addActionToZeus;
 
-	_mission_succesful = ["Ende: Mission Erfüllt","Mission Erfüllt","",{ 
+	_mission_succesful = ["Ende: Mission Erfüllt","Ende: Mission Erfüllt","",{ 
 	["scripts\outro_success.sqf"]  remoteExec ["execVM"];
 	},{true}] call ace_interact_menu_fnc_createAction;
 	[["ACE_ZeusActions","Mission Control"], _mission_succesful] call ace_interact_menu_fnc_addActionToZeus;
