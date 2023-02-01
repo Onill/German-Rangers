@@ -1,13 +1,13 @@
 if (isServer) exitWith {};
 
 _result = false;
-private _result = ["Are you sure?", "Confirm", true, true] call BIS_fnc_guiMessage;
+private _result = ["Soll die Mission mit CONTINUE beendet werden?", "Confirm", true, true] call BIS_fnc_guiMessage;
 
 if (!_result) exitWith {};
 
 playMusic "MyOutro";
 
-titleText ["<img image='images\Logo512pxtransparent.paa' shadow='0' size='10'/> <br/>
+titleText ["<img image='images\GermanRangersLogo.paa' shadow='0' size='10'/> <br/>
 			<t color='#ffffff' size='5' font='RobotoCondensed' shadow = '2' >T O   B E   C O N T I N U E D</t>
 			<br/>
 			<br/>
@@ -23,7 +23,7 @@ cutText ["", "BLACK IN", 3, true, true];
 
 ["end2", true, 42, false, false] call BIS_fnc_endMission;
 
-titleText ["<br/><br/><br/><br/><img image='images\Logo512pxtransparent.paa' shadow='0' size='10'/><br/><br/>
+titleText ["<br/><br/><br/><br/><img image='images\GermanRangersLogo.paa' shadow='0' size='10'/><br/><br/>
 			<t color='#ffffff' size='3' font='RobotoCondensed' shadow = '2' >G U T E   A R B E I T ,   R A N G E R S</t>
 			<br/>
 			<br/>
