@@ -2,7 +2,8 @@
 
 if (isServer) exitWith {};
 
-titleText ["<img image='images\Logo512pxtransparent.paa' shadow='0' size='10'/><br/><br/>Mission startet...", "BLACK", 2, true, true];
+
+titleText ["<img image='images\GermanRangersLogo.paa' shadow='0' size='10'/><br/><br/>Mission startet...", "BLACK", 2, true, true];
 
 //Mute Sounds
 ace_hearing_disableVolumeUpdate = true;
@@ -20,6 +21,20 @@ sleep 2;
 //Start Music
 playMusic "MyIntro";
 
+
+// Teleport Player
+_vehicle = objectParent player;
+
+switch (_vehicle) do {
+		case transport_1: 	{ player moveInAny start_1; };
+		case transport_2: 	{ player moveInAny start_2; };
+		case transport_3: 	{ player moveInAny start_3; };
+		case transport_4: 	{ player moveInAny start_4; };
+		case transport_5: 	{ player moveInAny start_5; };
+		case transport_6: 	{ player moveInAny start_6; };
+};
+
+
 cutText ["", "BLACK FADED", 2];
 sleep 1;
 //Title Text Spawns
@@ -31,6 +46,7 @@ titleText ["<t color='#ffffff' size='1'>In der Nacht sind südlich und östlich 
 sleep 9;
 titleText ["<t color='#ffffff' size='1'>Auftrag: Auf beiden Seiten des Flusses auf die Ziele Vorrücken und bei Abbas Koshteh und CP Pacifico Stellung beziehen</t>", "BLACK FADED", 1, true, true];
 sleep 8;
+
 titleText ["<t color='#ffffff' size='1'>B A L A   M U R G H A B - 26.06.2022 - German Rangers<br/>____________________</t><br/><t color='#ffffff' size='5'>Operation Slum Fighter</t>", "BLACK FADED", 2, true, true];
 
 sleep 5;
