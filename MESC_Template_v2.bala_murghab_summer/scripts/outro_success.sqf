@@ -1,5 +1,10 @@
 if (isServer) exitWith {};
 
+_result = false;
+private _result = ["Are you sure?", "Confirm", true, true] call BIS_fnc_guiMessage;
+
+if (!_result) exitWith {};
+
 playMusic "MyOutro";
 
 titleText ["<img image='images\Logo512pxtransparent.paa' shadow='0' size='10'/> <br/>

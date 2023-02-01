@@ -343,30 +343,27 @@ _personal_arsenal = ["Personal Arsenal","Personal Arsenal","",{ execVM "loadouts
 
 //		New Mission Control
 
-if ( player == s1 || player == s2 ) then 
-	{ 
-		// Creating a Sub Menu Category GR Base with Logo
-		_mission_control = ["Mission Control","Mission Control","images\GermanRangersLogo.paa",{}, {true}] call ace_interact_menu_fnc_createAction;
-		[(typeOf player), 1, ["ACE_SelfActions"], _mission_control] call ace_interact_menu_fnc_addActionToClass;
+
+	// Creating a Sub Menu Category GR Base with Logo
+	_mission_control = ["Mission Control","Mission Control","images\GermanRangersLogo.paa",{}, {true}] call ace_interact_menu_fnc_createAction;
+	[(typeOf player), 1, ["ACE_SelfActions"], _mission_control] call ace_interact_menu_fnc_addActionToZeus;
 	
-		_start_mission = ["Missionsstart","Missionsstart","",{ 
-			"scripts\start_mission.sqf" remoteExec ["execVM", [0, -2] select isDedicated];
-			"scripts\teleport_players_start.sqf" remoteExec ["execVM", 2];
-		},{true}] call ace_interact_menu_fnc_createAction;
-		[(typeOf player), 1, ["ACE_SelfActions","Mission Control"], _start_mission] call ace_interact_menu_fnc_addActionToClass;
+	_start_mission = ["Missionsstart","Missionsstart","",{ 
+	"scripts\start_mission.sqf" remoteExec ["execVM", [0, -2] select isDedicated];
+	"scripts\teleport_players_start.sqf" remoteExec ["execVM", 2];
+	},{true}] call ace_interact_menu_fnc_createAction;
+	[(typeOf player), 1, ["ACE_SelfActions","Mission Control"], _start_mission] call ace_interact_menu_fnc_addActionToZeus;
 
-		_mission_succesful = ["Ende: Mission Erfüllt","Mission Erfüllt","",{ 
-			["scripts\outro_success.sqf"]  remoteExec ["execVM"];
-		},{true}] call ace_interact_menu_fnc_createAction;
-		[(typeOf player), 1, ["ACE_SelfActions","Mission Control"], _mission_succesful] call ace_interact_menu_fnc_addActionToClass;
+	_mission_succesful = ["Ende: Mission Erfüllt","Mission Erfüllt","",{ 
+	["scripts\outro_success.sqf"]  remoteExec ["execVM"];
+	},{true}] call ace_interact_menu_fnc_createAction;
+	[(typeOf player), 1, ["ACE_SelfActions","Mission Control"], _mission_succesful] call ace_interact_menu_fnc_addActionToZeus;
 
-		_to_be_continued = ["Ende: TO BE CONTINUED","Ende: TO BE CONTINUED","",{ 
-		["scripts\outro_continued.sqf"]  remoteExec ["execVM"];
-		},{true}] call ace_interact_menu_fnc_createAction;
-		[(typeOf player), 1, ["ACE_SelfActions","Mission Control"], _to_be_continued] call ace_interact_menu_fnc_addActionToClass;
+	_to_be_continued = ["Ende: TO BE CONTINUED","Ende: TO BE CONTINUED","",{ 
+	["scripts\outro_continued.sqf"]  remoteExec ["execVM"];
+	},{true}] call ace_interact_menu_fnc_createAction;
+	[(typeOf player), 1, ["ACE_SelfActions","Mission Control"], _to_be_continued] call ace_interact_menu_fnc_addActionToZeus;
 
-	} else	 {
-	};
 
 
 //AddActions für Mission Control
