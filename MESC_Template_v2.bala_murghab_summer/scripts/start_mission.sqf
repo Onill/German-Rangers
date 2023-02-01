@@ -21,6 +21,7 @@ sleep 2;
 //Start Music
 playMusic "MyIntro";
 
+0 call TFAR_fnc_setVoiceVolume;
 
 // Teleport Player
 _vehicle = objectParent player;
@@ -58,6 +59,8 @@ titleText ["<t color='#ffffff' size='1'>B A L A   M U R G H A B - 26.06.2022 - G
 5 fadeSound 1;
 5 fadeSpeech 1;
 5 fadeRadio 1;	
+
+30 call TFAR_fnc_setVoiceVolume;
 
 sleep 5;
 
