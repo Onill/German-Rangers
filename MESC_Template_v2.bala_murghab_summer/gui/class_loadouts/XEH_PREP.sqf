@@ -1,2 +1,2 @@
-
-PREP=(teleport);
+PREP=(getLoadouts);
+PREP=(takeLoadout);

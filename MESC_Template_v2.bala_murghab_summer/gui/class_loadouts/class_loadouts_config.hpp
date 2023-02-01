@@ -1,12 +1,12 @@
-#include "XEH_PREP.sqf"
+#include "classLoadouts.hpp" 
 
-class ONI
+class CLF
 {
-	tag="ONI";
+	tag="CLF";
 	class functions
 	{
-		file = "gui\teleport";
-		class teleport {};
-	};
- 
+		file = "gui\class_loadouts";
+		class getLoadouts {};
+		class takeLoadout {};
+	}; 
 };

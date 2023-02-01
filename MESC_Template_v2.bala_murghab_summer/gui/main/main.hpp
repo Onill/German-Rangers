@@ -16,9 +16,9 @@ class Main_Dialog
 	controls[] = {
 		Teleport,
 		ZUG,
-		Sierra,
-		Echo,
-		Lima,
+		//Sierra,
+		//Echo,
+		//Lima,
 		Text2
 	};
 	
@@ -46,21 +46,22 @@ class Main_Dialog
 		y = 0.374 * safezoneH + safezoneY;
 		w = 0.065625 * safezoneW;
 		h = 0.084 * safezoneH;
-		action = _menueDialog = createDialog "Teleport_Dialog"
+		action = _menueDialog = createDialog "Teleport_Dialog";
 	};
 	class ZUG: RscButton
 	{
 		idc = 1601;
-		text = "Zug"; //--- ToDo: Localize;
+		text = "Zug"; 
 		x = 0.395 * safezoneW + safezoneX;
 		y = 0.374 * safezoneH + safezoneY;
 		w = 0.065625 * safezoneW;
 		h = 0.084 * safezoneH;
+		action = _menueDialog = createDialog "Teleport_Dialog";
 	};
 	class Sierra: RscButton
 	{
 		idc = 1602;
-		text = "Sierra"; //--- ToDo: Localize;
+		text = "Sierra"; 
 		x = 0.395 * safezoneW + safezoneX;
 		y = 0.486 * safezoneH + safezoneY;
 		w = 0.065625 * safezoneW;
@@ -69,7 +70,7 @@ class Main_Dialog
 	class Echo: RscButton
 	{
 		idc = 1603;
-		text = "Echo"; //--- ToDo: Localize;
+		text = "Echo";
 		x = 0.395 * safezoneW + safezoneX;
 		y = 0.598 * safezoneH + safezoneY;
 		w = 0.065625 * safezoneW;
@@ -78,7 +79,7 @@ class Main_Dialog
 	class Lima: RscButton
 	{
 		idc = 1604;
-		text = "Lima"; //--- ToDo: Localize;
+		text = "Lima"; 
 		x = 0.395 * safezoneW + safezoneX;
 		y = 0.71 * safezoneH + safezoneY;
 		w = 0.065625 * safezoneW;
