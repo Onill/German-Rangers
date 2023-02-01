@@ -350,7 +350,6 @@ _personal_arsenal = ["Personal Arsenal","Personal Arsenal","",{ execVM "loadouts
 	
 	_start_mission = ["Missionsstart","Missionsstart","",{ 
 	"scripts\start_mission.sqf" remoteExec ["execVM", [0, -2] select isDedicated];
-	"scripts\teleport_players_start.sqf" remoteExec ["execVM", 2];
 	},{true}] call ace_interact_menu_fnc_createAction;
 	[(typeOf player), 1, ["ACE_SelfActions","Mission Control"], _start_mission] call ace_interact_menu_fnc_addActionToZeus;
 
@@ -372,7 +371,6 @@ _personal_arsenal = ["Personal Arsenal","Personal Arsenal","",{ execVM "loadouts
 laptop_start addAction ["<t color='#00ff00'>Missionsstart</t>", 
 	{
 		"scripts\start_mission.sqf" remoteExec ["execVM", [0, -2] select isDedicated];
-		"scripts\teleport_players_start.sqf" remoteExec ["execVM", 2];
 	}, 
 	nil, 100, false, true, "", ""
 ];
