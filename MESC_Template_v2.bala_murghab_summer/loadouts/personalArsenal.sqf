@@ -10,9 +10,7 @@ _playerGrp = group player;
 //------------------------------------------------------------------
 //------------------------------------------------------------------	
 
-if (_playerGrp == grpecho1 || _playerGrp == grpecho2 ) then {
-
-	_arsenalWhitelist = [
+	_echoArsenal = [
 							"CUP_arifle_HK416_Black",
 							"CUP_arifle_HK416_Desert",
 							"CUP_arifle_HK416_Wood",
@@ -229,7 +227,7 @@ if (_playerGrp == grpecho1 || _playerGrp == grpecho2 ) then {
 							"G_Bandanna_shades",
 							"G_Bandanna_tan"
 						];
-};
+
 
 
 //Switch to fill Arsenal according to group
@@ -249,7 +247,7 @@ switch _playerGrp do
 	{
 
 				// Fill ACE Arsenal
-				[player, _arsenalWhitelist, false] call ace_arsenal_fnc_addVirtualItems;
+				[player, _echoArsenal, false] call ace_arsenal_fnc_addVirtualItems;
 				
 				// Open ACE Arsenal
 				_personalArsenal = [player, player, false] call ace_arsenal_fnc_openBox;
@@ -268,7 +266,7 @@ switch _playerGrp do
 	{
 
 				// Fill ACE Arsenal
-				[player, _arsenalWhitelist, false] call ace_arsenal_fnc_addVirtualItems;
+				[player, _echoArsenal, false] call ace_arsenal_fnc_addVirtualItems;
 				
 				// Open ACE Arsenal
 				_personalArsenal = [player, player, false] call ace_arsenal_fnc_openBox;
