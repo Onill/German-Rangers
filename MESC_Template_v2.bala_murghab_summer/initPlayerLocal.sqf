@@ -7,9 +7,9 @@
 //------------------------------------------------------------------
 
 waitUntil{!isNull(player)};
+titleText ["Missionsvorbereitung", "BLACK FADED" ];
 setTerrainGrid 25;
 enableEnvironment [false, true];
-titleText ["Missionsvorbereitung", "BLACK FADED" ];
 
 //------------------------------------------------------------------
 //------------------------------------------------------------------
