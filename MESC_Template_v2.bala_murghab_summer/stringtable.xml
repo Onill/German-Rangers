@@ -12,7 +12,11 @@
 		<Key ID="STR_Dialog_T_Vehicle">
             <English>No room in squad's vehicle.</English>
             <German>Kein Platz im Fahrzeug der Gruppe.</German>
-        </Key>	
+        </Key>
+		<Key ID="STR_Confirm_Loadout">
+            <English>Take Loadout</English>
+            <German>Loadout ausrüsten</German>
+        </Key>		
     </Package>
 </Project>
 

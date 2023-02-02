@@ -112,7 +112,7 @@ class Cancel: RscButton
 	h = 0.084 * safezoneH;
 	action = "closeDialog 0;";
 	style = ST_CENTER;
-	text = "X"; //--- ToDo: Localize;
+	text = "X";
 	sizeEx = "0.09/ (getResolution select 5)";
 };
 class Alpha: RscButton
@@ -245,7 +245,7 @@ class Confirm_Teleport: RscButton
 	w = 0.07875 * safezoneW;
 	h = 0.084 * safezoneH;
 	colorBackground[] = {0,0.8,0,0.8};
-	action = "[TeleportTo] call ONI_fnc_teleport; closeDialog 0;";
+	action = "[TeleportTo] call TPF_fnc_teleport; closeDialog 0;";
 };
 class Lima: RscButton
 {

@@ -26,7 +26,9 @@ publicVariable "useDatabase";
 // Muss vom Missionmaker UNBEDIGT gesetzt werden! Entscheidet ob Fleck oder Tropentarn getragen wird "fleck" / "tropen".
 tarnfarbe = "tropen";
 publicVariable "tarnfarbe";
-
+// Für die GUI:
+// 0 = Flecktarn, 1 = Tropentarn
+tarnMuster = 1;
 
 //------------------------------------------------------------------
 //------------------------------------------------------------------
@@ -324,7 +326,7 @@ if (isClass(configFile >> "cfgPatches" >> "task_force_radio")) then {
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 
-sleep 3;
+sleep 2;
 
 //ACE Self Interactions for Players in Base
 _condition = {player distance base < 300};
@@ -337,6 +339,11 @@ _base_menu = ["GR Base","GR Base","images\GermanRangersLogo.paa",_empty_statemen
 //Open Teleport GUI via Self Interaction Menu in Subcategory GR Base
 _teleport_action = ["Teleporter","Teleporter","",{ _ok = createDialog "Teleport_Dialog";},_condition] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","GR Base"], _teleport_action] call ace_interact_menu_fnc_addActionToClass;
+
+//Loadout GUI
+_teleport_action = ["Loadouts","Loadouts","",{ _okLoudout = createDialog "ClassLoadout_Dialog";},_condition] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions","GR Base"], _teleport_action] call ace_interact_menu_fnc_addActionToClass;
+
 
 _personal_arsenal = ["Personal Arsenal","Personal Arsenal","",{ execVM "loadouts\personalArsenal.sqf"; },_condition] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","GR Base"], _personal_arsenal] call ace_interact_menu_fnc_addActionToClass;
