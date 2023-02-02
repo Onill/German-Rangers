@@ -24,6 +24,9 @@ _playerGrp = group player;
 							"CUP_lmg_Mk48_od",
 							
 							"launch_O_Titan_short_F",
+							"launch_I_Titan_short_F",
+							"launch_B_Titan_short_F",
+							
 							"launch_MRAWS_sand_F",
 							"launch_MRAWS_green_F",
 							"launch_MRAWS_olive_F",
@@ -47,15 +50,15 @@ _playerGrp = group player;
 							"cup_acc_anpeq_15_top_flashlight_od_l",
 
 							//Scopes
-							"CUP_optic_Elcan_SpecterDR_KF_RMR_black",
-							"cup_optic_elcan_specterdr_kf_rmr_coyote",
-							"CUP_optic_Elcan_SpecterDR_KF_RMR_od",
-							"CUP_optic_HensoldtZO_low_RDS",
-							"CUP_optic_HensoldtZO_low_RDS_desert",
-							"cup_optic_hensoldtzo_low_rds_od",
+							"CUP_optic_Elcan_SpecterDR_KF_RMR_black_pip",
+							"cup_optic_elcan_specterdr_kf_rmr_coyote_pip",
+							"CUP_optic_Elcan_SpecterDR_KF_RMR_od_pip",
+							"CUP_optic_HensoldtZO_low_RDS_pip",
+							"CUP_optic_HensoldtZO_low_RDS_desert_pip",
+							"cup_optic_hensoldtzo_low_rds_od_pip",
 							"CUP_optic_Elcan_reflex_pip",
 							"cup_optic_elcan_reflex_coyote_pip",
-							"cup_optic_elcan_reflex_od",
+							"cup_optic_elcan_reflex_od_pip",
 							"cup_optic_compm4",
 							"cup_optic_eotech553_black",
 							"cup_optic_eotech553_coyote",
@@ -333,15 +336,18 @@ switch _playerGrp do
 								"rhsusf_acc_premier",
 
 								//Scopes
-								"CUP_optic_Elcan_SpecterDR_KF_RMR_black",
-								"cup_optic_elcan_specterdr_kf_rmr_coyote",
-								"CUP_optic_Elcan_SpecterDR_KF_RMR_od",
-								"CUP_optic_HensoldtZO_low_RDS",
-								"CUP_optic_HensoldtZO_low_RDS_desert",
-								"cup_optic_hensoldtzo_low_rds_od",
+								"CUP_optic_Elcan_SpecterDR_KF_RMR_black_pip",
+								"cup_optic_elcan_specterdr_kf_rmr_coyote_pip",
+								"CUP_optic_Elcan_SpecterDR_KF_RMR_od_pip",
+								"CUP_optic_HensoldtZO_low_RDS_pip",
+								"CUP_optic_HensoldtZO_low_RDS_desert_pip",
+								"cup_optic_hensoldtzo_low_rds_od_pip",
 								"CUP_optic_Elcan_reflex_pip",
 								"cup_optic_elcan_reflex_coyote_pip",
-								"cup_optic_elcan_reflex_od",
+								"cup_optic_elcan_reflex_od_pip",
+								"cup_optic_ac11704_black",
+								"cup_optic_ac11704_coyote",
+								"cup_optic_ac11704_od",
 								"optic_AMS",
 								"optic_AMS_snd",
 								
@@ -576,9 +582,12 @@ switch _playerGrp do
 				// Standard Optics
 								
 				_optics =	[
-								"CUP_optic_G36DualOptics",
-								"CUP_optic_HensoldtZO_low_RDS",
-								"CUP_optic_Elcan_reflex_pip"
+								"cup_optic_g36dualoptics_pip"
+								"CUP_optic_HensoldtZO_low_RDS_pip",
+								"CUP_optic_Elcan_reflex_pip",
+								"cup_optic_compm4",
+								"cup_optic_eotech553_black",
+								"cup_optic_ac11704_black"
 							];
 
 
@@ -667,9 +676,11 @@ switch _playerGrp do
 							];
 
 					_optics =	_optics + [
-									"CUP_optic_G36DualOptics_desert",
-									"CUP_optic_HensoldtZO_low_RDS_desert",
-									"cup_optic_elcan_reflex_coyote_pip"
+									"cup_optic_g36dualoptics_desert_pip",
+									"CUP_optic_HensoldtZO_low_RDS_desert_pip",
+									"cup_optic_elcan_reflex_coyote_pip",
+									"cup_optic_eotech553_coyote",
+									"cup_optic_ac11704_coyote"
 								];
 
 					_attachments = _attachments + [
@@ -748,7 +759,7 @@ switch _playerGrp do
 							
 					_optics = [
 								"optic_AMS",
-								"CUP_optic_Elcan_reflex"
+								"CUP_optic_Elcan_reflex_pip"
 							];
 
 					if (tarnfarbe == "tropen") then {
@@ -758,7 +769,7 @@ switch _playerGrp do
 										];
 						_optics = _optics + [
 									"optic_AMS_snd",
-									"CUP_optic_Elcan_reflex_Desert"
+									"CUP_optic_Elcan_reflex_Desert_pip"
 								];
 
 					};
@@ -809,7 +820,19 @@ switch _playerGrp do
 					
 				if (_loadout == "Zug_Sanitater") then {
 
+					_rifle = _rifle + 	[
+											"CUP_arifle_HK416_CQB_Black",
+											"CUP_arifle_G36K",
+											"CUP_arifle_G36KA3"
+										];
+										
 					if (tarnfarbe == "tropen") then {
+
+						_rifle = _rifle + 	[
+												"CUP_arifle_HK416_CQB_Desert",
+												"CUP_arifle_G36K_camo",
+												"CUP_arifle_G36KA3_camo"						
+											];
 
 						_vests = [
 									"CUP_V_B_GER_PVest_Trop_Med",
@@ -837,9 +860,54 @@ switch _playerGrp do
 
 				if (_loadout == "Zug_AT") then {
 
+					_rifle = _rifle + 	[
+											"CUP_arifle_HK416_CQB_Black",
+											"CUP_arifle_G36K",
+											"CUP_arifle_G36KA3"
+										];
+
 					_launcher = ["CUP_launch_Mk153Mod0"];
 					
 					_optics = _optics + ["cup_optic_smaw_scope"];
+
+					if (tarnfarbe == "tropen") then {
+
+						_rifle = _rifle + 	[
+												"CUP_arifle_HK416_CQB_Desert",
+												"CUP_arifle_G36K_camo",
+												"CUP_arifle_G36KA3_camo"						
+											];
+
+
+					};
+				};
+
+				//------------------------------------------------------------------
+				//------------------------------------------------------------------
+				//
+				//						ATA
+				//
+				//------------------------------------------------------------------
+				//------------------------------------------------------------------	
+
+				if (_loadout == "Zug_ATA") then {
+
+					_rifle = _rifle + 	[
+											"CUP_arifle_HK416_CQB_Black",
+											"CUP_arifle_G36K",
+											"CUP_arifle_G36KA3"
+										];
+
+					if (tarnfarbe == "tropen") then {
+
+						_rifle = _rifle + 	[
+												"CUP_arifle_HK416_CQB_Desert",
+												"CUP_arifle_G36K_camo",
+												"CUP_arifle_G36KA3_camo"						
+											];
+
+
+					};
 				};
 
 
@@ -915,6 +983,18 @@ switch _playerGrp do
 				//------------------------------------------------------------------	
 					
 				if (_loadout == "Zug_Truppfuhre") then {
+
+					_rifle = _rifle + 	[
+											"CUP_arifle_HK416_CQB_Black",
+											"CUP_arifle_G36K",
+											"CUP_arifle_G36KA3"
+										];
+
+						_rifle = _rifle + 	[
+												"CUP_arifle_HK416_CQB_Desert",
+												"CUP_arifle_G36K_camo",
+												"CUP_arifle_G36KA3_camo"						
+											];
 
 					_misc = [
 								"ItemMap",
