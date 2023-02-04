@@ -5,7 +5,6 @@
 //
 //------------------------------------------------------------------
 //------------------------------------------------------------------
-
 waitUntil{!isNull(player)};
 titleText ["Missionsvorbereitung", "BLACK FADED" ];
 setTerrainGrid 25;
@@ -174,11 +173,9 @@ _loadedMods = configSourceModList (configFile >> "CfgPatches");
 	
 } forEach _loadedMods;
 
-//Muss noch getestet werden ob der Eintrag wirklich im Serverlog landet
 if(count _playermods > 0) then {
     (format ["%1 is using non Whitelisted Mods: %2",profileName, _playermods]) remoteExec ["diag_log", 2];
 };
-
 
 //------------------------------------------------------------------
 //------------------------------------------------------------------
@@ -190,7 +187,6 @@ if(count _playermods > 0) then {
 
 //DynamicGroups_Function Function needs to be initialized on server and client. Clients can then use action TeamSwitch ("U" by default) to access the Dynamic Groups interface.
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;			//Exec on client
-
 
 //------------------------------------------------------------------
 //------------------------------------------------------------------
@@ -225,7 +221,6 @@ if(count _playermods > 0) then {
 	else {
 		call compile preprocessFileLineNumbers "loadouts\loadoutInit.sqf";
 	};
-
 
 //------------------------------------------------------------------
 //------------------------------------------------------------------
@@ -337,7 +332,7 @@ _base_menu = ["GR Base","GR Base","images\GermanRangersLogo.paa",_empty_statemen
 [(typeOf player), 1, ["ACE_SelfActions"], _base_menu] call ace_interact_menu_fnc_addActionToClass;
 
 //Open Teleport GUI via Self Interaction Menu in Subcategory GR Base
-_teleport_action = ["Teleporter","Teleporter","",{ _ok = createDialog "Teleport_Dialog";},_condition] call ace_interact_menu_fnc_createAction;
+_teleport_action = ["Teleporter","Teleporter","gui\teleport\icon_teleport.paa",{ _ok = createDialog "Teleport_Dialog";},_condition] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","GR Base"], _teleport_action] call ace_interact_menu_fnc_addActionToClass;
 
 //Loadout GUI
