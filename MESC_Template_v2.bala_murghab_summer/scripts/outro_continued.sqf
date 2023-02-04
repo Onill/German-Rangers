@@ -1,10 +1,5 @@
 if (isServer) exitWith {};
 
-_result = false;
-private _result = ["Soll die Mission mit CONTINUE beendet werden?", "Confirm", true, true] call BIS_fnc_guiMessage;
-
-if (!_result) exitWith {};
-
 playMusic "MyOutro";
 
 titleText ["<img image='images\GermanRangersLogo.paa' shadow='0' size='10'/> <br/>
