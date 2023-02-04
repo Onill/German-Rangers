@@ -355,20 +355,15 @@ _personal_arsenal = ["Personal Arsenal","Personal Arsenal","",{ execVM "loadouts
 	_mission_control = ["Mission Control","Mission Control","images\GermanRangersLogo.paa",{}, {true}] call ace_interact_menu_fnc_createAction;
 	[["ACE_ZeusActions"], _mission_control] call ace_interact_menu_fnc_addActionToZeus;
 	
-	_start_mission = ["Missionsstart","Missionsstart","",{ 
-	"scripts\start_mission.sqf" remoteExec ["execVM", [0, -2] select isDedicated];
-	},{true}] call ace_interact_menu_fnc_createAction;
+	_start_mission = ["Missionsstart","Missionsstart","",{ execVM "scripts\missionsstart.sqf"; },{true}] call ace_interact_menu_fnc_createAction;
 	[["ACE_ZeusActions","Mission Control"], _start_mission] call ace_interact_menu_fnc_addActionToZeus;
 
-	_mission_succesful = ["Ende: Mission Erfüllt","Ende: Mission Erfüllt","",{ 
-	["scripts\outro_success.sqf"]  remoteExec ["execVM"];
-	},{true}] call ace_interact_menu_fnc_createAction;
+	_mission_succesful = ["Ende: Mission Erfüllt","Ende: Mission Erfüllt","",{ execVM "scripts\missionsende.sqf"; },{true}] call ace_interact_menu_fnc_createAction;
 	[["ACE_ZeusActions","Mission Control"], _mission_succesful] call ace_interact_menu_fnc_addActionToZeus;
 
-	_to_be_continued = ["Ende: TO BE CONTINUED","Ende: TO BE CONTINUED","",{ 
-	["scripts\outro_continued.sqf"]  remoteExec ["execVM"];
-	},{true}] call ace_interact_menu_fnc_createAction;
+	_to_be_continued = ["Ende: TO BE CONTINUED","Ende: TO BE CONTINUED","",{ execVM "scripts\missionscontinue.sqf"; },{true}] call ace_interact_menu_fnc_createAction;
 	[["ACE_ZeusActions","Mission Control"], _to_be_continued] call ace_interact_menu_fnc_addActionToZeus;
+
 
 
 
@@ -377,7 +372,7 @@ _personal_arsenal = ["Personal Arsenal","Personal Arsenal","",{ execVM "loadouts
 // To be removed
 laptop_start addAction ["<t color='#00ff00'>Missionsstart</t>", 
 	{
-		"scripts\start_mission.sqf" remoteExec ["execVM", [0, -2] select isDedicated];
+		execVM "scripts\missionsstart.sqf";
 	}, 
 	nil, 100, false, true, "", ""
 ];
@@ -385,7 +380,7 @@ laptop_start addAction ["<t color='#00ff00'>Missionsstart</t>",
 laptop_end addAction [
 	"<t color='#ff0000'>Ende: Mission Erfüllt</t>", 
 	{
-		["scripts\outro_success.sqf"]  remoteExec ["execVM"];
+		execVM "scripts\missionsende.sqf";
 	}, 
 	nil, 
 	100, 
@@ -398,7 +393,7 @@ laptop_end addAction [
 laptop_end addAction [
 	"<t color='#ff0000'>Ende: TO BE CONTINUED</t>", 
 	{
-		["scripts\outro_continued.sqf"]  remoteExec ["execVM"];
+		execVM "scripts\missionscontinue.sqf";
 	}, 
 	nil, 
 	100, 

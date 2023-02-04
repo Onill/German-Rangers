@@ -1,6 +1,6 @@
 if (isServer) exitWith {};
 
-_sleepRandom = randeom [10, 20, 40];
+_sleepRandom = random [10, 25, 40];
 
 sleep _sleepRandom;
 

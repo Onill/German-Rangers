@@ -1,6 +1,6 @@
 if (isServer) exitWith {};
 
-playMusic "MyOutro";
+playMusic "Outro_Success";
 
 titleText ["<img image='images\GermanRangersLogo.paa' shadow='0' size='10'/> <br/>
 			<t color='#ffffff' size='5' font='RobotoCondensed' shadow = '2' >M I S S I O N   E R F Ü L L T</t>
@@ -10,13 +10,12 @@ titleText ["<img image='images\GermanRangersLogo.paa' shadow='0' size='10'/> <br
 			"PLAIN", 2, true, true
 		];
 
-sleep 18;
+sleep 21;
 
 titleText ["", "BLACK OUT", 1, true, true];
 sleep 2.5;
 cutText ["", "BLACK IN", 3, true, true];
 
-["end1", true, 42, false, false] call BIS_fnc_endMission;
 
 titleText ["<br/><br/><br/><br/><img image='images\GermanRangersLogo.paa' shadow='0' size='10'/><br/><br/>
 			<t color='#ffffff' size='3' font='RobotoCondensed' shadow = '2' >G U T E   A R B E I T ,   R A N G E R S</t>
@@ -29,6 +28,8 @@ titleText ["<br/><br/><br/><br/><img image='images\GermanRangersLogo.paa' shadow
 //Camera creating - always add to the script to make the camera work
 _camera = "camera" camCreate [0,0,0];
 _camera cameraEffect ["internal","back"];
+
+showCinemaBorder true;
 
 //Camera moves in a circle around the player - advanced implementation example. Parameters, customization.
 //launch = [target unit, distance, height, max angle, speed];
@@ -46,6 +47,7 @@ _height = 1;
 _angle = 0;
 _maxAngle = 360;
 _speed = 0.061;
+_fade = false;
 
 _camera camSetpos position _target;
 _camera camSettarget _target;
@@ -54,14 +56,24 @@ _camera camSetPos _center;
 _camera camSetTarget _target;
 _camera camCommit 0;
 
-while {_height < 35} do {
+while {_height < 50} do {
 	_height = _height + 1;
 
 	_camera camSetRelPos [0,0,_height];
-	_camera camCommit 0.5;
-	sleep 0.5;
-
+	_camera camCommit 0.4;
+	sleep 0.4;
+	
+	if (_height > 40 && _fade == false) then {
+		cutText ["", "BLACK OUT", 1, true, true];
+		_fade = true;
 	};
+
+};
+
+sleep 1;
+
+cutText ["", "BLACK IN", 3, true, true];
+_fade = false;
 
 _height = 4;
 		
@@ -69,10 +81,40 @@ while {_angle < _maxAngle} do {
 	_angle = _angle + 1;
 
 	_camera camSetRelPos [_distance*cos(_angle),_distance*sin(_angle),_height];
-	_camera camCommit _speed;
-	sleep _speed;
+	_camera camCommit 0.04;
+	sleep 0.04;
 
+	if (_angle > 337 && _fade == false) then {
+		cutText ["", "BLACK OUT", 1, true, true];
+		_fade = true;
 	};
+	
+};
+
+_camera camSetRelPos [0,60,4];
+
+sleep 1;
+
+cutText ["", "BLACK IN", 3, true, true];
+_fade = false;
+
+_range = 60;
+
+while {_range > -60} do {
+	_range = _range - 0.7;
+
+	_camera camSetRelPos [0,_range,4];
+	_camera camCommit 0.07;
+	sleep 0.07;
+	
+	if (_range < -50  && _fade == false) then {
+		cutText ["", "BLACK OUT", 1, true, true];
+		_fade = true;
+	};
+
+};
+
+["End1", true, 0, false, false] call BIS_fnc_endMission;
 
 //Camera destroying - terminates the 'camera view'
 _camera CameraEffect ["Terminate","back"];
