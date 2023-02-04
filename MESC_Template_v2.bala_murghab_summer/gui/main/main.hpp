@@ -10,15 +10,20 @@ class Main_Dialog
 	//enableSimulation = false;
 	
 	controlsBackground[] = {
-		Background		
+		Background,
+		Background_Header,
+		Picture2		
 	};
 	
 	controls[] = {
+		Cancel,
 		Teleport,
+		Personal_Arsenal_12,
 		ZUG,
 		//Sierra,
 		//Echo,
 		//Lima,
+		Text1,
 		Text2
 	};
 	
@@ -28,7 +33,18 @@ class Main_Dialog
 ////////////////////////////////////////////////////////
 // GUI EDITOR OUTPUT START (by Onill, v1.063, #Ziqota)
 ////////////////////////////////////////////////////////
-
+	class Background_Header: RscText
+	{
+		idc = 1009;
+		x = 0.257187 * safezoneW + safezoneX;
+		y = 0.192 * safezoneH + safezoneY;
+		w = 0.4725 * safezoneW;
+		h = 0.098 * safezoneH;
+		colorBackground[] = {COLOR_MENUE_BACKGROUND};
+		style = ST_CENTER;
+		text = "Menue"; //--- ToDo: Localize;
+		sizeEx = "0.09/ (getResolution select 5)";
+	};
 	class Background: RscText
 	{
 		idc = 1000;
@@ -38,6 +54,27 @@ class Main_Dialog
 		h = 0.56 * safezoneH;
 		colorBackground[] = {1,1,1,0.8};
 	};
+	class Menue: RscButton
+	{
+		idc = 1699;
+		x = 0.270313 * safezoneW + safezoneX;
+		y = 0.206 * safezoneH + safezoneY;
+		w = 0.065625 * safezoneW;
+		h = 0.084 * safezoneH;
+	};
+	class Cancel: RscButton
+	{
+		idc = 1698;
+		x = 0.650937 * safezoneW + safezoneX;
+		y = 0.206 * safezoneH + safezoneY;
+		w = 0.0590625 * safezoneW;
+		h = 0.084 * safezoneH;
+		action = "closeDialog 0;";
+		style = ST_CENTER;
+		text = "X";
+		sizeEx = "0.09/ (getResolution select 5)";
+		
+	};
 	class Teleport: RscButton
 	{
 		idc = 1600;
@@ -46,7 +83,19 @@ class Main_Dialog
 		y = 0.374 * safezoneH + safezoneY;
 		w = 0.065625 * safezoneW;
 		h = 0.084 * safezoneH;
-		action = _menueDialog = createDialog "Teleport_Dialog";
+		action = "closeDialog 0; _menueDialog = createDialog 'Teleport_Dialog';"
+		colorFocused[] = {1,1,1,0.5};
+		colorText[] = {1,1,1,0.5};
+	};
+	
+	class Picture2: RscPicture
+	{
+		idc = 1050;
+		x = 0.29 * safezoneW + safezoneX;
+		y = 0.374 * safezoneH + safezoneY;
+		w = 0.065625 * safezoneW;
+		h = 0.084 * safezoneH;
+		text = "gui\teleport\icon_teleport.paa";
 	};
 	class ZUG: RscButton
 	{
@@ -56,7 +105,7 @@ class Main_Dialog
 		y = 0.374 * safezoneH + safezoneY;
 		w = 0.065625 * safezoneW;
 		h = 0.084 * safezoneH;
-		action = _menueDialog = createDialog "Teleport_Dialog";
+		action = "closeDialog 0; _menueDialog = createDialog 'Teleport_Dialog';"
 	};
 	class Sierra: RscButton
 	{
@@ -101,13 +150,15 @@ class Main_Dialog
 		w = 0.065625 * safezoneW;
 		h = 0.084 * safezoneH;
 	};
-	class Leer12: RscButton
+	class Personal_Arsenal_12: RscButton
 	{
 		idc = 1607;
 		x = 0.29 * safezoneW + safezoneX;
 		y = 0.486 * safezoneH + safezoneY;
 		w = 0.065625 * safezoneW;
 		h = 0.084 * safezoneH;
+		text = "$STR_Personal_Arsenal";
+		action = "execVM 'loadouts\personalArsenal.sqf';"
 	};
 	class Leer34: RscButton
 	{
@@ -206,7 +257,7 @@ class Main_Dialog
 	class Text1: RscText
 	{
 		idc = 1004;
-		text = "Loadouts"; //--- ToDo: Localize;
+		text = "Teleport"; //--- ToDo: Localize;
 		x = 0.296562 * safezoneW + safezoneX;
 		y = 0.29 * safezoneH + safezoneY;
 		w = 0.0525 * safezoneW;

@@ -582,7 +582,7 @@ switch _playerGrp do
 				// Standard Optics
 								
 				_optics =	[
-								"cup_optic_g36dualoptics_pip"
+								"cup_optic_g36dualoptics_pip",
 								"CUP_optic_HensoldtZO_low_RDS_pip",
 								"CUP_optic_Elcan_reflex_pip",
 								"cup_optic_compm4",

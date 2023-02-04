@@ -330,7 +330,7 @@ sleep 2;
 
 //ACE Self Interactions for Players in Base
 _condition = {player distance base < 300};
-_empty_statement = {"Nothing"};
+_empty_statement = {createDialog "Main_Dialog";}; //  {"Nothing"};
 
 // Creating a Sub Menu Category GR Base with Logo
 _base_menu = ["GR Base","GR Base","images\GermanRangersLogo.paa",_empty_statement,_condition] call ace_interact_menu_fnc_createAction;

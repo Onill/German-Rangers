@@ -63,8 +63,6 @@ class Background_Header: RscText
 	colorBackground[] = {COLOR_MENUE_BACKGROUND};
 	sizeEx = "0.09/ (getResolution select 5)";
 };
-
-
 class Menue: RscButton
 {
 	idc = 1600;
@@ -75,7 +73,7 @@ class Menue: RscButton
 	//colorBackground[] = {0,0,0,0};
 	colorFocused[] = {1,1,1,0.5};
 	text = "";
-	action = _menueDialog = createDialog "Main_Dialog";
+	action = "closeDialog 0; _menueDialog = createDialog 'Main_Dialog';"
 };
 
 class Picture: RscPicture

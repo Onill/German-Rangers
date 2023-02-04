@@ -16,7 +16,11 @@
 		<Key ID="STR_Confirm_Loadout">
             <English>Take Loadout</English>
             <German>Loadout ausrüsten</German>
-        </Key>		
+        </Key>	
+		<Key ID="STR_Personal_Arsenal">
+            <English>Personal <br> Arsenal</English>
+            <German>Persönliches <br> Arsenal</German>
+        </Key>	
     </Package>
 </Project>
 

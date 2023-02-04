@@ -6,8 +6,6 @@ class Teleport_Dialog
 	//access = 0;
 	movingEnable = false;
 	onLoad = TeleportTo = "";
-	//onUnload  = "hint str _this";
-	enableSimulation = false;
 	
 	controlsBackground[] = {
 		Background,
@@ -85,11 +83,8 @@ class Menue: RscButton
 	//colorBackground[] = {0,0,0,0};
 	colorFocused[] = {1,1,1,0.5};
 	text = "";
-	action = _menueDialog = createDialog "Main_Dialog";
+	action = "closeDialog 0; _menueDialog = createDialog 'Main_Dialog';"
 };
-
-
-//Test
 class Picture: RscPicture
 {
 	idc = 1599;
@@ -99,7 +94,6 @@ class Picture: RscPicture
 	h = 0.084 * safezoneH;
 	colorText[] = {1,1,1,1};
 	text = "gui\main\Logo.paa";
-	
 	// \A3\ui_f\data\GUI\rsc\rscdisplaymain\hover_ca.paa";
 };
 
