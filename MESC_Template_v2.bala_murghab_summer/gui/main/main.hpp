@@ -105,7 +105,7 @@ class Main_Dialog
 		y = 0.374 * safezoneH + safezoneY;
 		w = 0.065625 * safezoneW;
 		h = 0.084 * safezoneH;
-		action = "closeDialog 0; _menueDialog = createDialog 'Teleport_Dialog';"
+		action = "closeDialog 0; _menueDialog = createDialog 'ClassLoadout_Dialog';"
 	};
 	class Sierra: RscButton
 	{
@@ -158,7 +158,7 @@ class Main_Dialog
 		w = 0.065625 * safezoneW;
 		h = 0.084 * safezoneH;
 		text = "Arsenal";
-		action = "execVM 'loadouts\personalArsenal.sqf';"
+		action = "closeDialog 0; execVM 'loadouts\personalArsenal.sqf';"
 		tooltip = "$STR_P_Asenal";
 	};
 	class Leer34: RscButton
@@ -228,7 +228,7 @@ class Main_Dialog
 	class Text2: RscText
 	{
 		idc = 1001;
-		text = "Loadouts"; //--- ToDo: Localize;
+		text = "Loadouts";
 		x = 0.401563 * safezoneW + safezoneX;
 		y = 0.29 * safezoneH + safezoneY;
 		w = 0.0525 * safezoneW;
@@ -238,7 +238,7 @@ class Main_Dialog
 	class Text3: RscText
 	{
 		idc = 1002;
-		text = "Loadouts"; //--- ToDo: Localize;
+		text = "Loadouts";
 		x = 0.519688 * safezoneW + safezoneX;
 		y = 0.29 * safezoneH + safezoneY;
 		w = 0.0525 * safezoneW;
@@ -248,7 +248,7 @@ class Main_Dialog
 	class Text4: RscText
 	{
 		idc = 1003;
-		text = "Loadouts"; //--- ToDo: Localize;
+		text = "Loadouts";
 		x = 0.624687 * safezoneW + safezoneX;
 		y = 0.29 * safezoneH + safezoneY;
 		w = 0.0525 * safezoneW;
@@ -258,14 +258,11 @@ class Main_Dialog
 	class Text1: RscText
 	{
 		idc = 1004;
-		text = "Teleport"; //--- ToDo: Localize;
+		text = "Utilities";
 		x = 0.296562 * safezoneW + safezoneX;
 		y = 0.29 * safezoneH + safezoneY;
 		w = 0.0525 * safezoneW;
 		h = 0.07 * safezoneH;
 		colorText[] = {-1,-1,-1,0.8};
 	};
-////////////////////////////////////////////////////////
-// GUI EDITOR OUTPUT END
-////////////////////////////////////////////////////////
 };

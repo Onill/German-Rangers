@@ -18,3 +18,9 @@ private ["_loudout","_loudoutIndex","_index"];
 	lbSetData [2100, _forEachIndex, _tarnData select _forEachIndex];	 
 	} forEach _Tarn;
 	lbSetCurSel [2100, tarnMuster];
+	
+	/** 
+	Loudouts für Ausbildungen
+	
+	_loudout =["Ausbilder","Trainings-Abend","Training Schutze"]
+	_loudoutIndex =["ausbildung","trainingsabend","training_schutze"]
