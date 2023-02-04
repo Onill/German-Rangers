@@ -92,10 +92,16 @@ class CfgMusic
 		sound[]	= {"sounds\intro.ogg", db + 0, 1.0 };
 	};
 	
-	class MyOutro
+	class Outro_Success
 	{
-		name	= "MyOutro";
-		sound[]	= {"sounds\Outro.ogg", db - 1, 1.0 };
+		name	= "Outro_Success";
+		sound[]	= {"sounds\outro_success.ogg", db - 1, 1.0 };
+	};
+	
+	class Outro_Continue
+	{
+		name	= "Outro_Continue";
+		sound[]	= {"sounds\outro_continue.ogg", db - 1, 1.0 };
 	};
 };
 
