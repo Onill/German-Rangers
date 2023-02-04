@@ -17,10 +17,14 @@
             <English>Take Loadout</English>
             <German>Loadout ausrüsten</German>
         </Key>	
-		<Key ID="STR_Personal_Arsenal">
-            <English>Personal <br> Arsenal</English>
-            <German>Persönliches <br> Arsenal</German>
-        </Key>	
+		<Key ID="STR_P_Asenal">
+            <English>Personal Arsenal, to change equipment</English>
+            <German>Persönliches Arsenal, zum Wechseln von Ausrüstung</German>
+        </Key>
+		<Key ID="STR_Arsenal">
+            <English>Arsenal</English>
+            <German>Arsenal</German>
+        </Key>
     </Package>
 </Project>
 

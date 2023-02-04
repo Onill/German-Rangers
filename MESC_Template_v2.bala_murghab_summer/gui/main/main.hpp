@@ -5,7 +5,7 @@ class Main_Dialog
 	
 	//access = 0;
 	movingEnable = false;
-	//onLoad = TeleportTo = "";
+	//onLoad = "";
 	//onUnload  = "hint str _this";
 	//enableSimulation = false;
 	
@@ -157,8 +157,9 @@ class Main_Dialog
 		y = 0.486 * safezoneH + safezoneY;
 		w = 0.065625 * safezoneW;
 		h = 0.084 * safezoneH;
-		text = "$STR_Personal_Arsenal";
+		text = "Arsenal";
 		action = "execVM 'loadouts\personalArsenal.sqf';"
+		tooltip = "$STR_P_Asenal";
 	};
 	class Leer34: RscButton
 	{
