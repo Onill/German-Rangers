@@ -63,7 +63,24 @@ if (playerSide == west) then {
 
 	switch ((player getVariable "loadout")) do {
 
+		/*-----------------------------------------------------------------------------
+		-------------------------------------------------------------------------------
+		---																			---
+		---									Ausbildung									---
+		---																			---
+		-------------------------------------------------------------------------------
+		-----------------------------------------------------------------------------*/
 
+
+		case("Ausbilder"):{
+			_loadouts = format ["loadouts\bw%1\ausbilder.sqf", tarnfarbe];
+			call compile preprocessFileLineNumbers _loadouts;
+		};
+
+		case("Rekrut"):{
+			_loadouts = format ["loadouts\bw%1\rekrut.sqf", tarnfarbe];
+			call compile preprocessFileLineNumbers _loadouts;
+		};
 
 		/*-----------------------------------------------------------------------------
 		-------------------------------------------------------------------------------

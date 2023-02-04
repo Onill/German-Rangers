@@ -19,7 +19,7 @@ player addWeapon "CUP_hgun_M17_Black";
 player addHandgunItem "CUP_21Rnd_9x19_M17_Black";
 
 comment "Add containers";
-player forceAddUniform "CUP_U_B_GER_Flecktarn_2";
+player forceAddUniform "CUP_U_B_GER_Fleck_Crye";
 player addVest "CUP_V_B_GER_PVest_Fleck_RFL";
 player addBackpack "B_UAV_01_backpack_F";
 
