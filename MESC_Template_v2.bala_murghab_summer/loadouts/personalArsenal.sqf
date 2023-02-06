@@ -982,7 +982,7 @@ switch _playerGrp do
 				//------------------------------------------------------------------
 				//------------------------------------------------------------------	
 					
-				if (_loadout == "Zug_Truppfuhre") then {
+				if (_loadout == "Zug_Truppfuhrer") then {
 
 					_rifle = _rifle + 	[
 											"CUP_arifle_HK416_CQB_Black",
