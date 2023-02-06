@@ -8,5 +8,6 @@ class CLF
 		file = "gui\class_loadouts";
 		class getLoadouts {};
 		class takeLoadout {};
+		class createGUI {};
 	}; 
 };

@@ -20,7 +20,7 @@ _target = player;
 			 case "Fox_2": {_target = s4; };
 			 case "Kilo_1": {_target = s1; };
 			 case "Kilo_2": {_target = s2; };
-			 case "Lima": { _target = (units grplima select 0); hint"Erst demnÃ¤chst verfÃ¼gbar"; };
+			 case "Lima": { _target = (units grplima select 0); };
 			 default { hint"$STR_Error"; };
 		};
 		
@@ -34,11 +34,10 @@ _target = player;
 			 case "Sierra": {_target = (units grpsierra select 1); };
 			 case "Echo_1": {_target = (units grpecho1 select 1); };
 			 case "Echo_2": {_target = (units grpecho2 select 1); };
-			 case "Lima": { _target = (units grplima select 1); hint"Erst demnÃƒÂ¤chst verfÃƒÂ¼gbar"; };
+			 case "Lima": { _target = (units grplima select 1); };
 			 default { hint"$STR_Error";};
 		};
 	};
-
 		
 	if (vehicle _target == _target) then
 	{

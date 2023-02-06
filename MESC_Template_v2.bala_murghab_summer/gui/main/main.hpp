@@ -20,9 +20,10 @@ class Main_Dialog
 		Teleport,
 		Personal_Arsenal_12,
 		ZUG,
-		//Sierra,
+		Sierra,
 		//Echo,
 		//Lima,
+		//Leer31, // AusbildungsLoadouts
 		Text1,
 		Text2
 	};
@@ -105,7 +106,7 @@ class Main_Dialog
 		y = 0.374 * safezoneH + safezoneY;
 		w = 0.065625 * safezoneW;
 		h = 0.084 * safezoneH;
-		action = "closeDialog 0; _menueDialog = createDialog 'ClassLoadout_Dialog';"
+		action = "closeDialog 0; ['Zug'] call CLF_fnc_createGUI;"
 	};
 	class Sierra: RscButton
 	{
@@ -115,6 +116,7 @@ class Main_Dialog
 		y = 0.486 * safezoneH + safezoneY;
 		w = 0.065625 * safezoneW;
 		h = 0.084 * safezoneH;
+		action = "closeDialog 0; ['Sierra'] call CLF_fnc_createGUI;"
 	};
 	class Echo: RscButton
 	{
@@ -133,6 +135,7 @@ class Main_Dialog
 		y = 0.71 * safezoneH + safezoneY;
 		w = 0.065625 * safezoneW;
 		h = 0.084 * safezoneH;
+		
 	};
 	class Leer32: RscButton
 	{
@@ -145,10 +148,12 @@ class Main_Dialog
 	class Leer31: RscButton
 	{
 		idc = 1606;
+		text = "Ausbildung"; 
 		x = 0.513125 * safezoneW + safezoneX;
 		y = 0.374 * safezoneH + safezoneY;
 		w = 0.065625 * safezoneW;
 		h = 0.084 * safezoneH;
+		action = "closeDialog 0; ['Ausbildung'] call CLF_fnc_createGUI;"
 	};
 	class Personal_Arsenal_12: RscButton
 	{
