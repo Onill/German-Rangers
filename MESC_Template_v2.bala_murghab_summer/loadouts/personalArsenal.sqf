@@ -1393,7 +1393,7 @@ switch _playerGrp do
 							];
 				
 				// Create Whitelist for ACE Arsenal
-				_equipment = _rifle + _pistol + _launcher + _headgear + _facewear + _uniforms + _vests + _nvg + _optics + _attachments + _funk + _backpacks;
+				_equipment = _rifle + _pistol + _launcher + _headgear + _facewear + _uniforms + _vests + _nvg + _optics + _attachments + _funk + _backpacks + _misc;
 
 				// Fill ACE Arsenal
 				[player, _equipment, false] call ace_arsenal_fnc_addVirtualItems;
