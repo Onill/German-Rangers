@@ -320,8 +320,7 @@ if (isClass(configFile >> "cfgPatches" >> "task_force_radio")) then {
 //
 //------------------------------------------------------------------
 //------------------------------------------------------------------
-
-sleep 2;
+sleep 1;
 
 //ACE Self Interactions for Players in Base
 _condition = {player distance base < 300};
@@ -336,8 +335,21 @@ _teleport_action = ["Teleporter","Teleporter","gui\teleport\icon_teleport.paa",{
 [(typeOf player), 1, ["ACE_SelfActions","GR Base"], _teleport_action] call ace_interact_menu_fnc_addActionToClass;
 
 //Loadout GUI
-_teleport_action = ["Loadouts","Loadouts","",{ _okLoudout = createDialog "ClassLoadout_Dialog";},_condition] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions","GR Base"], _teleport_action] call ace_interact_menu_fnc_addActionToClass;
+
+	_choose_Loadout= {
+	switch (groupId group player) do 
+	  { 
+		case 'Sierra': { ['Sierra'] call CLF_fnc_createGUI;  }; 
+		case 'Echo 1': { ['Echo'] call CLF_fnc_createGUI;  };	 
+		case 'Echo 2': { ['Echo'] call CLF_fnc_createGUI;  }; 
+		//case grplima: { ['Lima'] call CLF_fnc_createGUI;  }; 
+		default { ['Zug'] call CLF_fnc_createGUI; }; 
+	  };
+	};
+
+
+_loadout_action = ["Loadouts","Loadouts","",_choose_Loadout,_condition] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions","GR Base"], _loadout_action] call ace_interact_menu_fnc_addActionToClass;
 
 
 _personal_arsenal = ["Personal Arsenal","Personal Arsenal","",{ execVM "loadouts\personalArsenal.sqf"; },_condition] call ace_interact_menu_fnc_createAction;
@@ -360,46 +372,8 @@ _personal_arsenal = ["Personal Arsenal","Personal Arsenal","",{ execVM "loadouts
 	[["ACE_ZeusActions","Mission Control"], _to_be_continued] call ace_interact_menu_fnc_addActionToZeus;
 
 
-
-
-//AddActions für Mission Control
-// Old 
-// To be removed
-laptop_start addAction ["<t color='#00ff00'>Missionsstart</t>", 
-	{
-		execVM "scripts\missionsstart.sqf";
-	}, 
-	nil, 100, false, true, "", ""
-];
-
-laptop_end addAction [
-	"<t color='#ff0000'>Ende: Mission Erfüllt</t>", 
-	{
-		execVM "scripts\missionsende.sqf";
-	}, 
-	nil, 
-	100, 
-	false, 
-	true, 
-	"", 
-	""
-];
-
-laptop_end addAction [
-	"<t color='#ff0000'>Ende: TO BE CONTINUED</t>", 
-	{
-		execVM "scripts\missionscontinue.sqf";
-	}, 
-	nil, 
-	100, 
-	false, 
-	true, 
-	"", 
-	""
-];
-
 //------------------------------------------------------------------
-
+// Old - to be removed
 
 // TELEPORT MAIN
 teleport addAction ["<t color='#ff0000'>Teleport zum Kompanieführer</t>", "(_this select 1) setPos position s1", nil, 100, false, true, "", ""];
@@ -488,10 +462,7 @@ loadouts3 addAction [("<t color=""#eb05bd"">" + ("Ausrüstung: SchwW 7 - Tropen"
 loadouts3 addAction [("<t color=""#eb05bd"">" + ("Ausrüstung: SchwW 8") + "</t>"), "loadouts\bwfleck\Echo_SchwW8.sqf",[],98,false,true,"",""];
 loadouts3 addAction [("<t color=""#eb05bd"">" + ("Ausrüstung: SchwW 8 - Tropen") + "</t>"), "loadouts\bwtropen\Echo_SchwW8.sqf",[],98,false,true,"",""];
 
-
-
 sleep 1;
-
 titleText ["Missionsvorbereitung", "BLACK IN" ];
 //Blurry Back to Visuals
 "dynamicBlur" ppEffectEnable true;
