@@ -54,7 +54,7 @@ for "_i" from 1 to 3 do {player addItemToBackpack "kat_naloxone";};
 for "_i" from 1 to 3 do {player addItemToBackpack "kat_Pulseoximeter";};
 for "_i" from 1 to 10 do {player addItemToBackpack "kat_TXA";};
 player addHeadgear "CUP_H_Ger_Cap_EP_Grn1";
-player addGoggles "rhsusf_shemagh2_gogg_grn";
+player addGoggles "CUP_G_ESS_KHK_Scarf_Face_Grn";
 
 comment "Add items";
 player linkItem "ItemMap";
