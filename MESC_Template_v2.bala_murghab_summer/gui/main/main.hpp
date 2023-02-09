@@ -21,7 +21,7 @@ class Main_Dialog
 		Personal_Arsenal_12,
 		ZUG,
 		Sierra,
-		//Echo,
+		Echo,
 		//Lima,
 		//Leer31, // AusbildungsLoadouts
 		Text1,
@@ -53,7 +53,7 @@ class Main_Dialog
 		y = 0.262 * safezoneH + safezoneY;
 		w = 0.4725 * safezoneW;
 		h = 0.56 * safezoneH;
-		colorBackground[] = {1,1,1,0.8};
+		colorBackground[] = {1,1,1,0.9};
 	};
 	class Menue: RscButton
 	{
@@ -126,6 +126,7 @@ class Main_Dialog
 		y = 0.598 * safezoneH + safezoneY;
 		w = 0.065625 * safezoneW;
 		h = 0.084 * safezoneH;
+		action = "closeDialog 0; ['Echo'] call CLF_fnc_createGUI;"
 	};
 	class Lima: RscButton
 	{
