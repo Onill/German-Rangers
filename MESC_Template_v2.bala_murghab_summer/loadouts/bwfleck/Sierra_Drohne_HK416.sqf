@@ -19,7 +19,7 @@ player addWeapon "CUP_hgun_M17_Black";
 player addHandgunItem "CUP_21Rnd_9x19_M17_Black";
 
 comment "Add containers";
-player forceAddUniform "CUP_U_B_GER_Fleck_Crye";
+player forceAddUniform "CUP_U_B_GER_Flecktarn_2";
 player addVest "CUP_V_B_GER_PVest_Fleck_RFL";
 player addBackpack "B_UAV_01_backpack_F";
 
@@ -59,8 +59,6 @@ player linkItem "ItemCompass";
 player linkItem "ItemWatch";
 player linkItem "TFAR_anprc152";
 player linkItem "B_UavTerminal";
-
-[ACE_player, currentWeapon ACE_player, currentMuzzle ACE_player] call ace_safemode_fnc_lockSafety;
 
 //Medic: 
 player setVariable ["ACE_medical_medicClass", 2, true];

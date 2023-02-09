@@ -11,9 +11,9 @@ removeHeadgear player;
 removeGoggles player;
 
 comment "Add weapons";
-player addWeapon "rhs_weap_M107";
-player addPrimaryWeaponItem "rhsusf_acc_premier";
-player addPrimaryWeaponItem "rhsusf_mag_10Rnd_STD_50BMG_M33";
+this addWeapon "srifle_GM6_F";
+this addPrimaryWeaponItem "optic_LRPS";
+this addPrimaryWeaponItem "5Rnd_127x108_Mag";
 player addWeapon "CUP_hgun_M17_Black";
 player addHandgunItem "CUP_21Rnd_9x19_M17_Black";
 
@@ -42,8 +42,7 @@ for "_i" from 1 to 5 do {player addItemToVest "ACE_epinephrine";};
 for "_i" from 1 to 3 do {player addItemToVest "ACE_morphine";};
 player addItemToVest "ItemcTabHCam";
 for "_i" from 1 to 2 do {player addItemToVest "CUP_21Rnd_9x19_M17_Black";};
-for "_i" from 1 to 3 do {player addItemToVest "rhsusf_mag_10Rnd_STD_50BMG_M33";};
-player addItemToVest "rhsusf_mag_10Rnd_STD_50BMG_mk211";
+for "_i" from 1 to 5 do {player addItemToVest "5Rnd_127x108_Mag";};
 player addItemToBackpack "CUP_H_OpsCore_Covered_Fleck";
 player addItemToBackpack "CUP_NVG_PVS15_black";
 for "_i" from 1 to 4 do {player addItemToBackpack "ACE_salineIV_250";};
@@ -63,8 +62,6 @@ player linkItem "ItemCompass";
 player linkItem "ACE_Altimeter";
 player linkItem "TFAR_anprc152";
 player linkItem "ItemAndroid";
-
-[ACE_player, currentWeapon ACE_player, currentMuzzle ACE_player] call ace_safemode_fnc_lockSafety;
 
 //Medic: 
 player setVariable ["ACE_medical_medicClass", 2, true];
