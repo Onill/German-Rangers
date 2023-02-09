@@ -73,7 +73,7 @@ class ClassLoadout_Dialog
 		//colorBackground[] = {0,0,0,0};
 		colorFocused[] = {1,1,1,0.5};
 		text = "";
-		action = "closeDialog 0; _menueDialog = createDialog 'Main_Dialog';"
+		action = "closeDialog 0; _menueDialog = createDialog 'Main_Dialog';";
 	};
 	class Picture: RscPicture
 	{

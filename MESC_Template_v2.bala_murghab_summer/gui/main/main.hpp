@@ -84,7 +84,7 @@ class Main_Dialog
 		y = 0.374 * safezoneH + safezoneY;
 		w = 0.065625 * safezoneW;
 		h = 0.084 * safezoneH;
-		action = "closeDialog 0; _menueDialog = createDialog 'Teleport_Dialog';"
+		action = "closeDialog 0; _menueDialog = createDialog 'Teleport_Dialog';";
 		colorFocused[] = {1,1,1,0.5};
 		colorText[] = {1,1,1,0.5};
 	};
@@ -106,7 +106,7 @@ class Main_Dialog
 		y = 0.374 * safezoneH + safezoneY;
 		w = 0.065625 * safezoneW;
 		h = 0.084 * safezoneH;
-		action = "closeDialog 0; ['Zug'] call CLF_fnc_createGUI;"
+		action = "closeDialog 0; ['Zug']call CLF_fnc_createGUI;";
 	};
 	class Sierra: RscButton
 	{
@@ -116,7 +116,7 @@ class Main_Dialog
 		y = 0.486 * safezoneH + safezoneY;
 		w = 0.065625 * safezoneW;
 		h = 0.084 * safezoneH;
-		action = "closeDialog 0; ['Sierra'] call CLF_fnc_createGUI;"
+		action = "closeDialog 0; ['Sierra'] call CLF_fnc_createGUI;";
 	};
 	class Echo: RscButton
 	{
@@ -126,7 +126,7 @@ class Main_Dialog
 		y = 0.598 * safezoneH + safezoneY;
 		w = 0.065625 * safezoneW;
 		h = 0.084 * safezoneH;
-		action = "closeDialog 0; ['Echo'] call CLF_fnc_createGUI;"
+		action = "closeDialog 0; ['Echo'] call CLF_fnc_createGUI;";
 	};
 	class Lima: RscButton
 	{
@@ -154,7 +154,7 @@ class Main_Dialog
 		y = 0.374 * safezoneH + safezoneY;
 		w = 0.065625 * safezoneW;
 		h = 0.084 * safezoneH;
-		action = "closeDialog 0; ['Ausbildung'] call CLF_fnc_createGUI;"
+		action = "closeDialog 0; ['Ausbildung'] call CLF_fnc_createGUI;";
 	};
 	class Personal_Arsenal_12: RscButton
 	{
@@ -164,7 +164,7 @@ class Main_Dialog
 		w = 0.065625 * safezoneW;
 		h = 0.084 * safezoneH;
 		text = "Arsenal";
-		action = "closeDialog 0; execVM 'loadouts\personalArsenal.sqf';"
+		action = "closeDialog 0; execVM 'loadouts\personalArsenal.sqf';";
 		tooltip = "$STR_P_Asenal";
 	};
 	class Leer34: RscButton
