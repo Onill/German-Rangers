@@ -30,7 +30,7 @@ player addWeapon "CUP_hgun_M17_Black";
 
 //Waffen Ausstattung
 player addPrimaryWeaponItem "CUP_acc_LLM01_L";
-player addPrimaryWeaponItem "CUP_optic_HensoldtZO_low_RDS";
+player addPrimaryWeaponItem "CUP_optic_HensoldtZO_low_RDS_pip";
 
 player addSecondaryWeaponItem "CUP_optic_SMAW_Scope";
 
@@ -76,10 +76,9 @@ player addItemToVest "CUP_HandGrenade_M67";
 //------------------------------------------------------------------
 //	Erste Hilfe in Uniform
 //------------------------------------------------------------------	
-for "_i" from 1 to 6 do {player addItemToUniform "ACE_fieldDressing";};
+for "_i" from 1 to 8 do {player addItemToUniform "ACE_fieldDressing";};
 for "_i" from 1 to 4 do {player addItemToUniform "ACE_elasticBandage";};
 for "_i" from 1 to 4 do {player addItemToUniform "ACE_packingBandage";};
-for "_i" from 1 to 2 do {player addItemToUniform "ACE_quikclot";};
 for "_i" from 1 to 2 do {player addItemToUniform "kat_chestSeal";};
 for "_i" from 1 to 2 do {player addItemToUniform "ACE_salineIV_500";};
 for "_i" from 1 to 2 do {player addItemToUniform "ACE_splint";};

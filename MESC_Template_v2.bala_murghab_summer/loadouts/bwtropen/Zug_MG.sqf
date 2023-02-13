@@ -28,7 +28,7 @@ player addWeapon "CUP_lmg_minimi_railed";
 player addWeapon "CUP_hgun_M17_Black";
 
 //Waffen Ausstattung
-player addPrimaryWeaponItem "CUP_optic_Elcan_reflex";
+player addPrimaryWeaponItem "CUP_optic_Elcan_reflex_pip";
 
 //Waffen Munition
 player addPrimaryWeaponItem "CUP_200Rnd_TE4_Red_Tracer_556x45_M249_Pouch";
@@ -68,10 +68,9 @@ for "_i" from 1 to 2 do {player addItemToVest "SmokeShell";};
 //------------------------------------------------------------------
 //	Medic
 //------------------------------------------------------------------	
-for "_i" from 1 to 6 do {player addItemToUniform "ACE_fieldDressing";};
+for "_i" from 1 to 8 do {player addItemToUniform "ACE_fieldDressing";};
 for "_i" from 1 to 4 do {player addItemToUniform "ACE_packingBandage";};
 for "_i" from 1 to 4 do {player addItemToUniform "ACE_elasticBandage";};
-for "_i" from 1 to 2 do {player addItemToUniform "ACE_quikclot";};
 for "_i" from 1 to 2 do {player addItemToUniform "ACE_tourniquet";};
 for "_i" from 1 to 2 do {player addItemToUniform "kat_chestSeal";};
 for "_i" from 1 to 2 do {player addItemToUniform "ACE_splint";};

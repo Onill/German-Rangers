@@ -29,7 +29,7 @@ player addWeapon "ACE_VMM3";
 
 //Waffen Ausstattung
 player addPrimaryWeaponItem "CUP_acc_LLM01_L";
-player addPrimaryWeaponItem "CUP_optic_Elcan_reflex";
+player addPrimaryWeaponItem "CUP_optic_Elcan_reflex_pip";
 
 //Waffen Munition
 player addPrimaryWeaponItem "CUP_30Rnd_556x45_PMAG_BLACK_PULL";

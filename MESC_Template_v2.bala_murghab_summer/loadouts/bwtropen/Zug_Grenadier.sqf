@@ -28,8 +28,8 @@ player addWeapon "CUP_arifle_HK416_AGL_Desert";
 player addWeapon "CUP_hgun_M17_Black";
 
 //Waffen Ausstattung
-player addPrimaryWeaponItem "CUP_acc_ANPEQ_15_Flashlight_Tan_L";
-player addPrimaryWeaponItem "cup_optic_elcan_reflex_coyote_pip";
+player addPrimaryWeaponItem "cup_acc_llm01_coyote_l";
+player addPrimaryWeaponItem "cup_optic_elcan_specterdr_kf_rmr_coyote_pip";
 
 //Waffen Munition
 player addPrimaryWeaponItem "CUP_30Rnd_556x45_PMAG_COYOTE_PULL";
@@ -55,8 +55,7 @@ player linkItem "CUP_NVG_PVS15_black";
 //	Munition
 //------------------------------------------------------------------	
 for "_i" from 1 to 10 do {player addItemToVest "CUP_1Rnd_HE_M203";};
-for "_i" from 1 to 2 do {player addItemToVest "1Rnd_Smoke_Grenade_shell";};
-for "_i" from 1 to 2 do {player addItemToVest "UGL_FlareWhite_F";};
+for "_i" from 1 to 6 do {player addItemToVest "1Rnd_Smoke_Grenade_shell";};
 for "_i" from 1 to 2 do {player addItemToVest "ACE_40mm_Flare_ir";};
 
 for "_i" from 1 to 7 do {player addItemToVest "CUP_30Rnd_556x45_PMAG_COYOTE_PULL";};
@@ -75,10 +74,9 @@ for "_i" from 1 to 2 do {player addItemToVest "SmokeShellRed";};
 //------------------------------------------------------------------
 //	Medic
 //------------------------------------------------------------------	
-for "_i" from 1 to 6 do {player addItemToUniform "ACE_fieldDressing";};
+for "_i" from 1 to 8 do {player addItemToUniform "ACE_fieldDressing";};
 for "_i" from 1 to 4 do {player addItemToUniform "ACE_packingBandage";};
 for "_i" from 1 to 4 do {player addItemToUniform "ACE_elasticBandage";};
-for "_i" from 1 to 2 do {player addItemToUniform "ACE_quikclot";};
 for "_i" from 1 to 2 do {player addItemToUniform "ACE_tourniquet";};
 for "_i" from 1 to 2 do {player addItemToUniform "kat_chestSeal";};
 for "_i" from 1 to 2 do {player addItemToUniform "ACE_splint";};
