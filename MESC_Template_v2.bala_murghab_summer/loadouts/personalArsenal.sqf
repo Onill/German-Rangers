@@ -10,230 +10,6 @@ _playerGrp = group player;
 //------------------------------------------------------------------
 //------------------------------------------------------------------	
 
-	_echoArsenal = [
-							"CUP_arifle_HK416_Black",
-							"CUP_arifle_HK416_Desert",
-							"CUP_arifle_HK416_Wood",
-							"CUP_arifle_HK416_CQB_Black",
-							"CUP_arifle_HK416_CQB_Desert",
-							"CUP_arifle_HK416_CQB_Wood",
-
-							"CUP_lmg_Mk48",
-							"CUP_lmg_Mk48_des",
-							"CUP_lmg_Mk48_tan",
-							"CUP_lmg_Mk48_od",
-							
-							"launch_O_Titan_short_F",
-							"launch_I_Titan_short_F",
-							"launch_B_Titan_short_F",
-							
-							"launch_MRAWS_sand_F",
-							"launch_MRAWS_green_F",
-							"launch_MRAWS_olive_F",
-							
-							"CUP_hgun_M17_Coyote",
-							"CUP_hgun_M17_Black",
-							"CUP_hgun_M17_Green",
-
-							//Weapon Attachments
-							"CUP_muzzle_snds_M16",
-							"CUP_muzzle_snds_M16_desert",
-							"cup_muzzle_snds_m16_coyote",
-							"cup_muzzle_snds_m16_camo",
-							"cup_muzzle_snds_m9",
-							"CUP_acc_CZ_M3X",
-							"CUP_acc_ANPEQ_15_Flashlight_Black_L",
-							"CUP_acc_ANPEQ_15_Top_Flashlight_Black_L",
-							"CUP_acc_ANPEQ_15_Flashlight_Tan_L",
-							"CUP_acc_ANPEQ_15_Top_Flashlight_Tan_L",
-							"cup_acc_anpeq_15_flashlight_od_l",
-							"cup_acc_anpeq_15_top_flashlight_od_l",
-
-							//Scopes
-							"CUP_optic_Elcan_SpecterDR_KF_RMR_black_pip",
-							"cup_optic_elcan_specterdr_kf_rmr_coyote_pip",
-							"CUP_optic_Elcan_SpecterDR_KF_RMR_od_pip",
-							"CUP_optic_HensoldtZO_low_RDS_pip",
-							"CUP_optic_HensoldtZO_low_RDS_desert_pip",
-							"cup_optic_hensoldtzo_low_rds_od_pip",
-							"CUP_optic_Elcan_reflex_pip",
-							"cup_optic_elcan_reflex_coyote_pip",
-							"cup_optic_elcan_reflex_od_pip",
-							"cup_optic_compm4",
-							"cup_optic_eotech553_black",
-							"cup_optic_eotech553_coyote",
-							"cup_optic_eotech553_od",
-							
-							//Mags								
-							"CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M",
-							"CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M",
-							
-							"CUP_21Rnd_9x19_M17_Black",
-							"CUP_21Rnd_9x19_M17_Coyote",
-							
-							"CUP_30Rnd_556x45_PMAG_OD_PULL",
-							"CUP_30Rnd_556x45_PMAG_OD_PULL_Tracer_Red",
-							"CUP_30Rnd_556x45_PMAG_OD_PULL_Tracer_Yellow",
-							"CUP_30Rnd_556x45_PMAG_BLACK_PULL",
-							"CUP_30Rnd_556x45_PMAG_BLACK_PULL_Tracer_Red",
-							"CUP_30Rnd_556x45_PMAG_BLACK_PULL_Tracer_Yellow",
-							"CUP_30Rnd_556x45_PMAG_COYOTE_PULL",
-							"CUP_30Rnd_556x45_PMAG_COYOTE_PULL_Tracer_Red",
-							"CUP_30Rnd_556x45_PMAG_COYOTE_PULL_Tracer_Yellow",
-							
-							"Titan_AT",
-							"MRAWS_HEAT_F",
-							"MRAWS_HEAT55_F",
-							"MRAWS_HE_F",							
-							
-							//Explosives
-							"ClaymoreDirectionalMine_Remote_Mag",
-							"CUP_HandGrenade_M67",
-							"SmokeShell",
-							"SmokeShellRed",
-							"SmokeShellGreen",
-							"B_IR_Grenade",
-							"ACE_M84",
-							"DemoCharge_Remote_Mag",
-							"APERSMineDispenser_Mag",
-							"CUP_Mine_M",
-							
-							//Backpacks
-							"TFAR_rt1523g_big_bwmod_tropen",
-							"CUP_B_GER_Medic_Tropentarn",
-							"CUP_B_GER_Pack_Tropentarn",
-							"CUP_B_GER_Pack_Flecktarn",
-							"CUP_B_GER_Medic_Flecktarn",
-							"B_UAV_01_backpack_F",
-							"B_Bergen_mcamo_F",
-							
-							//Items								
-							"ItemMap",
-							"ItemCompass",
-							"ItemWatch",
-							"ACE_MapTools",
-							"ACE_EarPlugs",
-							"ACE_IR_Strobe_Item",
-							"ACE_CableTie",
-							"ACE_Flashlight_XL50",
-							"Rangefinder",
-							"Laserbatteries",
-							"Laserdesignator_02_ghex_F",
-							"ItemAndroid",
-							"ItemcTab",
-							"ACE_EntrenchingTool",
-							"ACE_wirecutter",
-							"ItemcTabHCam",
-							"ACE_UAVBattery",
-							"B_UavTerminal",
-							"ACE_Clacker",
-							"CUP_NVG_PVS15_black",
-							
-							//Outfit
-							"CUP_H_OpsCore_Covered_Fleck",
-							"CUP_H_OpsCore_Covered_Fleck_SF",
-							"CUP_H_OpsCore_Covered_Tropen",
-							"CUP_H_OpsCore_Covered_Tropen_SF",
-							
-							"CUP_H_Ger_Boonie_desert",
-							"CUP_H_Ger_Boonie_Flecktarn",
-							
-							"CUP_V_B_GER_Armatus_BB_Fleck",
-							"CUP_V_B_GER_Armatus_BB_Trop",
-							"CUP_V_B_GER_PVest_Fleck_TL",
-							"CUP_V_B_GER_PVest_Trop_TL",
-							
-							"CUP_U_B_GER_Fleck_Crye",
-							"CUP_U_B_GER_Fleck_Crye2",
-							"CUP_U_B_GER_Crye",
-							"CUP_U_B_GER_Crye2",
-
-							//Medic
-							"ACE_fieldDressing",
-							"ACE_elasticBandage",
-							"ACE_quikclot",
-							"ACE_tourniquet",
-							"ACE_splint",
-							"ACE_morphine",
-							"ACE_epinephrine",
-							"kat_chestSeal",
-							"kat_larynx",
-							"kat_Pulseoximeter",
-							"kat_IO_FAST",
-							"kat_IV_16",
-							"kat_TXA",
-							"ACE_surgicalKit",
-							"ACE_salineIV_500",
-
-							//Facewear
-							"G_Aviator",
-							"G_Lowprofile",
-							"G_Shades_Black",
-							"G_Squares_Tinted",
-							"G_Squares",
-							"CUP_G_ESS_KHK_Dark",
-							"CUP_G_ESS_KHK_Ember",
-							"CUP_G_ESS_KHK",
-							"CUP_G_ESS_BLK_Facewrap_Black",
-							"CUP_G_ESS_RGR_Facewrap_Skull",
-							"CUP_G_ESS_KHK_Facewrap_Tan",
-							"CUP_G_ESS_KHK_Scarf_Tan",
-							"CUP_G_ESS_BLK_Scarf_Blk",
-							"CUP_G_ESS_BLK_Scarf_Grn",
-							"CUP_G_ESS_BLK_Scarf_Red",
-							"CUP_G_ESS_KHK_Scarf_Tan",
-							"CUP_G_ESS_BLK_Scarf_White",
-							"CUP_G_ESS_BLK_Scarf_Face_Blk",
-							"CUP_G_ESS_BLK_Scarf_Face_Grn",
-							"CUP_G_ESS_BLK_Scarf_Face_Red",
-							"CUP_G_ESS_KHK_Scarf_Face_Tan",
-							"CUP_G_ESS_BLK_Scarf_Face_White",
-							"CUP_PMC_Facewrap_Black",
-							"CUP_G_PMC_Facewrap_Black_Glasses_Dark",
-							"CUP_G_PMC_Facewrap_Black_Glasses_Ember",
-							"CUP_PMC_Facewrap_Tan",
-							"CUP_G_PMC_Facewrap_Tan_Glasses_Dark",
-							"CUP_G_PMC_Facewrap_Tan_Glasses_Ember",
-							"CUP_G_Scarf_Face_Blk",
-							"CUP_G_Scarf_Face_Grn",
-							"CUP_TK_NeckScarf",
-							"CUP_G_Scarf_Face_Red",
-							"CUP_G_Scarf_Face_Tan",
-							"CUP_G_Scarf_Face_White",
-							"CUP_G_Oakleys_Clr",
-							"CUP_G_Oakleys_Drk",
-							"CUP_G_Oakleys_Embr",
-							"CUP_G_TK_RoundGlasses",
-							"CUP_G_TK_RoundGlasses_blk",
-							"CUP_G_TK_RoundGlasses_gold",
-							"CUP_G_Grn_Scarf_Shades",
-							"CUP_G_Tan_Scarf_Shades",
-							"CUP_G_White_Scarf_Shades",
-							"CUP_FR_NeckScarf3",
-							"CUP_FR_NeckScarf",
-							"CUP_FR_NeckScarf2",
-							"CUP_FR_NeckScarf5",
-							"CUP_FR_NeckScarf4",
-							"CUP_RUS_Balaclava_blk",
-							"CUP_RUS_Balaclava_tan",
-							"CUP_G_ESS_BLK_Dark",
-							"CUP_G_ESS_BLK_Ember",
-							"CUP_G_ESS_BLK",
-							"CUP_G_ESS_RGR_Dark",
-							"CUP_G_ESS_RGR_Ember",
-							"CUP_G_ESS_RGR",
-							"G_Bandanna_aviator",
-							"G_Bandanna_beast",
-							"G_Bandanna_blk",
-							"G_Bandanna_khk",
-							"G_Bandanna_oli",
-							"G_Bandanna_shades",
-							"G_Bandanna_tan"
-						];
-
-
-
-//Switch to fill Arsenal according to group
 
 switch _playerGrp do
 {
@@ -241,45 +17,111 @@ switch _playerGrp do
 	//------------------------------------------------------------------
 	//------------------------------------------------------------------
 	//
-	//						Echo 1 Arsenal
+	//						Kilo (unfiltered)
+	//
+	//------------------------------------------------------------------
+	//------------------------------------------------------------------	
+
+	case grpkilo : 
+	{
+				//Holt alle Freigegebenen Ausrüstungsgegenstände der German Rangers aus GRArsenal.sqf
+				_completeArsenal = execVM "loadouts\GRArsenal.sqf";
+				
+				// Fill ACE Arsenal
+				[player, _completeArsenal, false] call ace_arsenal_fnc_addVirtualItems;
+				
+				// Open ACE Arsenal
+				_personalArsenal = [player, player, false] call ace_arsenal_fnc_openBox;				
+	};
+
+
+	//------------------------------------------------------------------
+	//------------------------------------------------------------------
+	//
+	//						Fox (unfiltered)
+	//
+	//------------------------------------------------------------------
+	//------------------------------------------------------------------	
+
+	case grpfox : 
+	{
+				//Holt alle Freigegebenen Ausrüstungsgegenstände der German Rangers aus GRArsenal.sqf
+				_completeArsenal = execVM "loadouts\GRArsenal.sqf";
+				
+				// Fill ACE Arsenal
+				[player, _completeArsenal, false] call ace_arsenal_fnc_addVirtualItems;
+				
+				// Open ACE Arsenal
+				_personalArsenal = [player, player, false] call ace_arsenal_fnc_openBox;
+	};
+	
+	
+	//------------------------------------------------------------------
+	//------------------------------------------------------------------
+	//
+	//						Lima (unfiltered)
+	//
+	//------------------------------------------------------------------
+	//------------------------------------------------------------------	
+
+	case grplima : 
+	{
+				//Holt alle Freigegebenen Ausrüstungsgegenstände der German Rangers aus GRArsenal.sqf
+				_completeArsenal = execVM "loadouts\GRArsenal.sqf";
+				
+				// Fill ACE Arsenal
+				[player, _completeArsenal, false] call ace_arsenal_fnc_addVirtualItems;
+				
+				// Open ACE Arsenal
+				_personalArsenal = [player, player, false] call ace_arsenal_fnc_openBox;				
+	};
+	
+	//------------------------------------------------------------------
+	//------------------------------------------------------------------
+	//
+	//						Echo 1 (unfiltered)
 	//
 	//------------------------------------------------------------------
 	//------------------------------------------------------------------	
 
 	case grpecho1 : 
 	{
-
+				//Holt alle Freigegebenen Ausrüstungsgegenstände der German Rangers aus GRArsenal.sqf
+				_completeArsenal = execVM "loadouts\GRArsenal.sqf";
+				
 				// Fill ACE Arsenal
-				[player, _echoArsenal, false] call ace_arsenal_fnc_addVirtualItems;
+				[player, _completeArsenal, false] call ace_arsenal_fnc_addVirtualItems;
 				
 				// Open ACE Arsenal
-				_personalArsenal = [player, player, false] call ace_arsenal_fnc_openBox;
-				
+				_personalArsenal = [player, player, false] call ace_arsenal_fnc_openBox;				
 	};
+
 
 	//------------------------------------------------------------------
 	//------------------------------------------------------------------
 	//
-	//						Echo 2 Arsenal
+	//						Echo 2 (unfiltered)
 	//
 	//------------------------------------------------------------------
 	//------------------------------------------------------------------	
 
 	case grpecho2 : 
 	{
-
+				//Holt alle Freigegebenen Ausrüstungsgegenstände der German Rangers aus GRArsenal.sqf
+				_completeArsenal = execVM "loadouts\GRArsenal.sqf";
+				
 				// Fill ACE Arsenal
-				[player, _echoArsenal, false] call ace_arsenal_fnc_addVirtualItems;
+				[player, _completeArsenal, false] call ace_arsenal_fnc_addVirtualItems;
 				
 				// Open ACE Arsenal
-				_personalArsenal = [player, player, false] call ace_arsenal_fnc_openBox;
-				
+				_personalArsenal = [player, player, false] call ace_arsenal_fnc_openBox;				
 	};
+
 
 	//------------------------------------------------------------------
 	//------------------------------------------------------------------
 	//
-	//						Sierra (unfiltered)
+	//						Sierra
 	//
 	//------------------------------------------------------------------
 	//------------------------------------------------------------------	
@@ -584,6 +426,7 @@ switch _playerGrp do
 				_optics =	[
 								"cup_optic_g36dualoptics_pip",
 								"CUP_optic_HensoldtZO_low_RDS_pip",
+								"CUP_optic_Elcan_SpecterDR_KF_RMR_black_pip",
 								"CUP_optic_Elcan_reflex_pip",
 								"cup_optic_compm4",
 								"cup_optic_eotech553_black",
@@ -678,6 +521,7 @@ switch _playerGrp do
 					_optics =	_optics + [
 									"cup_optic_g36dualoptics_desert_pip",
 									"CUP_optic_HensoldtZO_low_RDS_desert_pip",
+									"cup_optic_elcan_specterdr_kf_rmr_coyote_pip",
 									"cup_optic_elcan_reflex_coyote_pip",
 									"cup_optic_eotech553_coyote",
 									"cup_optic_ac11704_coyote"
@@ -813,6 +657,46 @@ switch _playerGrp do
 				//------------------------------------------------------------------
 				//------------------------------------------------------------------
 				//
+				//						EHB
+				//
+				//------------------------------------------------------------------
+				//------------------------------------------------------------------	
+					
+				if (_loadout == "Zug_EHB") then {
+
+					_rifle = _rifle + 	[
+											"CUP_arifle_HK416_CQB_Black",
+											"CUP_arifle_G36K",
+											"CUP_arifle_G36KA3"
+										];
+										
+					if (tarnfarbe == "tropen") then {
+
+						_rifle = _rifle + 	[
+												"CUP_arifle_HK416_CQB_Desert",
+												"CUP_arifle_G36K_camo",
+												"CUP_arifle_G36KA3_camo"						
+											];
+
+						_vests = [
+									"CUP_V_B_GER_PVest_Trop_Med",
+									"CUP_V_B_GER_PVest_Trop_Med_LT"
+								];				
+
+					}
+					else {
+						_vests = [
+									"CUP_V_B_GER_PVest_Fleck_Med",
+									"CUP_V_B_GER_PVest_Fleck_Med_LT"
+								];				
+					};
+
+				};
+
+				
+				//------------------------------------------------------------------
+				//------------------------------------------------------------------
+				//
 				//						Sanitäter
 				//
 				//------------------------------------------------------------------
@@ -911,68 +795,6 @@ switch _playerGrp do
 				};
 
 
-				//------------------------------------------------------------------
-				//------------------------------------------------------------------
-				//
-				//						Gruppenführer
-				//
-				//------------------------------------------------------------------
-				//------------------------------------------------------------------	
-					
-				if (_loadout == "Zug_Gruppenfuhrer") then {
-
-					_rifle = _rifle + 	[
-											"CUP_arifle_HK416_CQB_Black",
-											"CUP_arifle_G36K",
-											"CUP_arifle_G36KA3"
-										];
-
-					_misc = [
-								"ItemMap",
-								"ItemCompass",
-								"ItemWatch",
-								"ACE_MapTools",
-								"ACE_EarPlugs",
-								"ACE_IR_Strobe_Item",
-								"ACE_CableTie",
-								"ACE_Flashlight_XL50",
-								"Rangefinder",
-								"Laserdesignator",
-								"ItemAndroid",
-								"ItemcTab",
-								"ACE_EntrenchingTool",
-								"ACE_wirecutter",
-								"ItemcTabHCam"
-							];
-
-					if (tarnfarbe == "tropen") then {
-
-						_rifle = _rifle + 	[
-												"CUP_arifle_HK416_CQB_Desert",
-												"CUP_arifle_G36K_camo",
-												"CUP_arifle_G36KA3_camo"						
-											];
-
-						_vests = [
-									"CUP_V_B_GER_PVest_Trop_OFC",
-									"CUP_V_B_GER_PVest_Trop_TL",
-									"CUP_V_B_GER_PVest_Trop_TL_LT"
-								];
-
-						_backpacks = ["TFAR_rt1523g_big_bwmod_tropen"];
-
-					}
-					else {
-						_vests = [
-									"CUP_V_B_GER_PVest_Fleck_OFC",
-									"CUP_V_B_GER_PVest_Fleck_TL",
-									"CUP_V_B_GER_PVest_Fleck_TL_LT"
-								];
-
-						_backpacks = ["TFAR_rt1523g_big_bwmod_fleck"];
-					};
-				};
-
 
 				//------------------------------------------------------------------
 				//------------------------------------------------------------------
@@ -1006,7 +828,8 @@ switch _playerGrp do
 								"ACE_CableTie",
 								"ACE_Flashlight_XL50",
 								"Rangefinder",
-								"Laserdesignator",
+								"Laserbatteries",
+								"Laserdesignator_02_ghex_F",
 								"ItemAndroid",
 								"ItemcTab",
 								"ACE_EntrenchingTool",
@@ -1029,22 +852,23 @@ switch _playerGrp do
 					};
 				};
 
+
 				//------------------------------------------------------------------
 				//------------------------------------------------------------------
 				//
-				//						Zugführer
+				//						Gruppenführer
 				//
 				//------------------------------------------------------------------
 				//------------------------------------------------------------------	
 					
-				if (_loadout == "Zug_Zugfuhrer") then {
+				if (_loadout == "Zug_Gruppenfuhrer") then {
 
 					_rifle = _rifle + 	[
 											"CUP_arifle_HK416_CQB_Black",
 											"CUP_arifle_G36K",
 											"CUP_arifle_G36KA3"
 										];
-					
+
 					_misc = [
 								"ItemMap",
 								"ItemCompass",
@@ -1055,55 +879,13 @@ switch _playerGrp do
 								"ACE_CableTie",
 								"ACE_Flashlight_XL50",
 								"Rangefinder",
-								"Laserdesignator",
+								"Laserbatteries",
+								"Laserdesignator_02_ghex_F",
 								"ItemAndroid",
 								"ItemcTab",
-								"ACE_RangeCard",
-								"ACE_Kestrel4500",
-								"ACE_SpottingScope",
 								"ACE_EntrenchingTool",
 								"ACE_wirecutter",
-								"ItemcTabHCam",
-								"ACE_marker_flags_black",
-								"ACE_marker_flags_green",
-								"ACE_marker_flags_yellow",
-								"ACE_marker_flags_red",
-								"ACE_fieldDressing",
-								"ACE_elasticBandage",
-								"ACE_quikclot",
-								"ACE_tourniquet",
-								"ACE_splint",
-								"ACE_morphine",
-								"ACE_epinephrine",
-								"kat_chestSeal",
-								"kat_larynx",
-								"kat_Pulseoximeter",
-								"kat_IO_FAST",
-								"kat_IV_16",
-								"kat_TXA",
-								"ACE_surgicalKit",
-								"ACE_salineIV_500",
-								//Explosives
-								"ClaymoreDirectionalMine_Remote_Mag",
-								"CUP_HandGrenade_M67",
-								"SmokeShell",
-								"SmokeShellRed",
-								"SmokeShellGreen",
-								"B_IR_Grenade",
-								"ACE_M84",
-								"DemoCharge_Remote_Mag",
-								//Mags								
-								"CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M",
-								"CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M",
-								"CUP_21Rnd_9x19_M17_Black",
-								"CUP_21Rnd_9x19_M17_Coyote",
-								"Titan_AT",
-								"CUP_30Rnd_556x45_PMAG_BLACK_PULL",
-								"CUP_30Rnd_556x45_PMAG_BLACK_PULL_Tracer_Red",
-								"CUP_30Rnd_556x45_PMAG_BLACK_PULL_Tracer_Yellow",
-								"CUP_30Rnd_556x45_PMAG_COYOTE_PULL",
-								"CUP_30Rnd_556x45_PMAG_COYOTE_PULL_Tracer_Red",
-								"CUP_30Rnd_556x45_PMAG_COYOTE_PULL_Tracer_Yellow"
+								"ItemcTabHCam"
 							];
 
 					if (tarnfarbe == "tropen") then {
@@ -1132,177 +914,7 @@ switch _playerGrp do
 
 						_backpacks = ["TFAR_rt1523g_big_bwmod_fleck"];
 					};
-
-
 				};
-
-
-				//------------------------------------------------------------------
-				//------------------------------------------------------------------
-				//
-				//						AvD
-				//
-				//------------------------------------------------------------------
-				//------------------------------------------------------------------	
-
-					
-				if (_loadout == "Zug_Fox_AvD") then {
-
-					_rifle = _rifle + 	[
-											"CUP_arifle_HK416_CQB_Black",
-											"CUP_arifle_G36K",
-											"CUP_arifle_G36KA3"
-										];
-					
-					_misc = [
-								"ItemMap",
-								"ItemCompass",
-								"ItemWatch",
-								"ACE_MapTools",
-								"ACE_EarPlugs",
-								"ACE_IR_Strobe_Item",
-								"ACE_CableTie",
-								"ACE_Flashlight_XL50",
-								"Rangefinder",
-								"Laserdesignator",
-								"ItemAndroid",
-								"ItemcTab",
-								"ACE_RangeCard",
-								"ACE_Kestrel4500",
-								"ACE_SpottingScope",
-								"ACE_EntrenchingTool",
-								"ACE_wirecutter",
-								"ItemcTabHCam",
-								"ACE_marker_flags_black",
-								"ACE_marker_flags_green",
-								"ACE_marker_flags_yellow",
-								"ACE_marker_flags_red",
-								"ACE_fieldDressing",
-								"ACE_elasticBandage",
-								"ACE_quikclot",
-								"ACE_tourniquet",
-								"ACE_splint",
-								"ACE_morphine",
-								"ACE_epinephrine",
-								"kat_chestSeal",
-								"kat_larynx",
-								"kat_Pulseoximeter",
-								"kat_IO_FAST",
-								"kat_IV_16",
-								"kat_TXA",
-								"ACE_surgicalKit",
-								"ACE_salineIV_500"
-							];
-
-					if (tarnfarbe == "tropen") then {
-
-						_rifle = _rifle + 	[
-												"CUP_arifle_HK416_CQB_Desert",
-												"CUP_arifle_G36K_camo",
-												"CUP_arifle_G36KA3_camo"						
-											];
-
-						_vests = [
-									"CUP_V_B_GER_PVest_Trop_Med",
-									"CUP_V_B_GER_PVest_Trop_Med_LT"
-								];
-
-						_backpacks = [
-										"CUP_B_GER_Pack_Tropentarn",
-										"CUP_B_GER_Medic_Tropentarn"
-									];
-					}
-					else {
-						_vests = [
-									"CUP_V_B_GER_PVest_Fleck_Med",
-									"CUP_V_B_GER_PVest_Fleck_Med_LT"
-								];
-
-						_backpacks = [
-										"CUP_B_GER_Pack_Flecktarn",
-										"CUP_B_GER_Medic_Flecktarn"
-									];
-
-					};
-				};
-
-
-				//------------------------------------------------------------------
-				//------------------------------------------------------------------
-				//
-				//						Nahsicherer
-				//
-				//------------------------------------------------------------------
-				//------------------------------------------------------------------	
-
-				if (_loadout == "Zug_Fox_Nahsicherer") then {
-
-					_rifle = _rifle + 	[
-											"CUP_arifle_HK416_CQB_Black",
-											"CUP_arifle_G36K",
-											"CUP_arifle_G36KA3"
-										];
-					
-
-					_backpacks = [
-									"TFAR_rt1523g_big_bwmod_tropen",
-									"CUP_B_GER_Pack_Tropentarn",
-									"CUP_B_GER_Medic_Tropentarn"
-								];
-					
-					_misc = [
-								"ItemMap",
-								"ItemCompass",
-								"ItemWatch",
-								"ACE_MapTools",
-								"ACE_EarPlugs",
-								"ACE_IR_Strobe_Item",
-								"ACE_CableTie",
-								"ACE_Flashlight_XL50",
-								"Rangefinder",
-								"Laserdesignator",
-								"ItemAndroid",
-								"ItemcTab",
-								"ACE_EntrenchingTool",
-								"ACE_wirecutter",
-								"ItemcTabHCam"
-							];
-
-					if (tarnfarbe == "tropen") then {
-
-						_rifle = _rifle + 	[
-												"CUP_arifle_HK416_CQB_Desert",
-												"CUP_arifle_G36K_camo",
-												"CUP_arifle_G36KA3_camo"						
-											];
-
-						_vests = [
-									"CUP_V_B_GER_PVest_Trop_RFL",
-									"CUP_V_B_GER_PVest_Trop_RFL_LT"
-								];
-
-						_backpacks = [
-										"TFAR_rt1523g_big_bwmod_tropen",
-										"CUP_B_GER_Pack_Tropentarn",
-										"CUP_B_GER_Medic_Tropentarn"
-									];
-					}
-					else {
-						_vests = [
-									"CUP_V_B_GER_PVest_Fleck_RFL",
-									"CUP_V_B_GER_PVest_Fleck_RFL_LT"
-								];
-
-						_backpacks = [
-										"TFAR_rt1523g_big_bwmod_fleck",
-										"CUP_B_GER_Pack_Flecktarn",
-										"CUP_B_GER_Medic_Flecktarn"
-									];
-
-					};
-				};	
-
-
 
 
 				//------------------------------------------------------------------
