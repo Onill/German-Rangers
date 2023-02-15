@@ -1,7 +1,8 @@
 //Get Player Group for Switch 
 _playerGrp = group player;
 
-
+//Setzt die Tarnfarbe des Arsenals auf Tropen. Ist nur für das Rosche Tropen Tarn Arsenal benötigt
+tarnfarbe = "tropen";
 
 _completeArsenal = [
 						//Rifles

@@ -222,8 +222,11 @@ _loadout_action = ["Loadouts","Loadouts","",_choose_Loadout,_condition] call ace
 [(typeOf player), 1, ["ACE_SelfActions","GR Base"], _loadout_action] call ace_interact_menu_fnc_addActionToClass;
 
 
-_personal_arsenal = ["Personal Arsenal","Personal Arsenal","",{ execVM "loadouts\personalArsenal.sqf"; },_condition] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions","GR Base"], _personal_arsenal] call ace_interact_menu_fnc_addActionToClass;
+_personal_arsenal_fleck = ["Personal Arsenal Fleck","Personal Arsenal Fleck","",{ execVM "loadouts\personalArsenal_fleck.sqf"; },_condition] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions","GR Base"], _personal_arsenal_fleck] call ace_interact_menu_fnc_addActionToClass;
+
+_personal_arsenal_tropen = ["Personal Arsenal Tropen","Personal Arsenal Tropen","",{ execVM "loadouts\personalArsenal_tropen.sqf"; },_condition] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions","GR Base"], _personal_arsenal_tropen] call ace_interact_menu_fnc_addActionToClass;
 
 //Von Kaserne zu Übungsplatz
 teleport1 addAction ["<t color='#ff0000'>Übungsplatz KW/LW</t>", "(_this select 1) setPos [14675.5,8289.28,0]", nil, 100, false, true, "", ""];

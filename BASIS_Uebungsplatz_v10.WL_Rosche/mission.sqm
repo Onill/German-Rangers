@@ -20,18 +20,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=8260;
+		nextID=8293;
 	};
 	class Camera
 	{
-		pos[]={1817.9377,56.193424,5605.8281};
-		dir[]={-0.31479445,-0.79520464,-0.51838535};
-		up[]={-0.41282061,0.60614955,-0.6798107};
-		aside[]={-0.85481513,-6.9011003e-007,0.51909775};
+		pos[]={1813.0573,40.516148,5618.3496};
+		dir[]={-0.18246101,-0.50405103,-0.84423071};
+		up[]={-0.10648231,0.86365998,-0.49268913};
+		aside[]={-0.97747445,1.3141107e-007,0.21125872};
 	};
 };
 binarizationWanted=0;
-sourceName="BASIS_Uebungsplatz_v8";
+sourceName="BASIS_Uebungsplatz_v10";
 addons[]=
 {
 	"A3_Structures_F_Civ_Camping",
@@ -2007,6 +2007,7 @@ class Mission
 					};
 					id=98249;
 					type="CUP_B_Dingo_GER_Wdl";
+					atlOffset=0.17204857;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2344,14 +2345,13 @@ class Mission
 						angles[]={0,4.510324,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						disableSimulation=1;
 					};
 					id=98246;
 					type="Land_MapBoard_F";
-					atlOffset=0.022180557;
+					atlOffset=0.30080032;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -3434,7 +3434,7 @@ class Mission
 								angles[]={0,1.5757039,0};
 							};
 							side="West";
-							flags=6;
+							flags=2;
 							class Attributes
 							{
 								class Inventory
@@ -3499,7 +3499,7 @@ class Mission
 							};
 							id=98248;
 							type="CUP_B_GER_BW_Fleck_Soldier";
-							atlOffset=0.051021576;
+							atlOffset=0.30570984;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -3652,7 +3652,7 @@ class Mission
 					text="Checkpoint Bravo";
 					type="mil_destroy";
 					id=98245;
-					atlOffset=0.030227661;
+					atlOffset=0.2666626;
 				};
 				class Item56
 				{
@@ -47389,6 +47389,7 @@ class Mission
 							};
 							id=106795;
 							type="TargetP_Inf4_F";
+							atlOffset=0.23342896;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -47423,6 +47424,7 @@ class Mission
 							};
 							id=106796;
 							type="TargetP_Inf4_F";
+							atlOffset=0.17743683;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -47450,13 +47452,13 @@ class Mission
 								angles[]={0,4.8698521,0};
 							};
 							side="Empty";
-							flags=4;
 							class Attributes
 							{
 								dynamicSimulation=1;
 							};
 							id=106797;
 							type="TargetP_Inf4_F";
+							atlOffset=0.46384048;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -99258,7 +99260,6 @@ class Mission
 				{
 					dataType="Layer";
 					name="Exerzierplatz";
-					state=1;
 					class Entities
 					{
 						items=38;
@@ -108273,7 +108274,7 @@ class Mission
 										};
 									};
 									id=110089;
-									atlOffset=-0.0063085556;
+									atlOffset=0.0048789978;
 								};
 								class Item3
 								{
@@ -108707,7 +108708,7 @@ class Mission
 											name="stab2";
 											id=110263;
 											type="ModuleCurator_F";
-											atlOffset=0.010830879;
+											atlOffset=0.010831833;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -108913,7 +108914,7 @@ class Mission
 											name="ausbilder_2";
 											id=110449;
 											type="ModuleCurator_F";
-											atlOffset=0.0013170242;
+											atlOffset=0.0013160706;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -109120,7 +109121,7 @@ class Mission
 											name="lima_2";
 											id=110484;
 											type="ModuleCurator_F";
-											atlOffset=0.010000229;
+											atlOffset=0.0099992752;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -109320,7 +109321,7 @@ class Mission
 								};
 							};
 							id=109382;
-							atlOffset=-0.0031900406;
+							atlOffset=-0.0034255981;
 						};
 						class Item33
 						{
@@ -109644,7 +109645,7 @@ class Mission
 						};
 					};
 					id=109378;
-					atlOffset=5.9279919;
+					atlOffset=5.9278049;
 				};
 				class Item5
 				{
@@ -127264,7 +127265,7 @@ class Mission
 							};
 							id=109915;
 							type="Land_Bandage_F";
-							atlOffset=1.9073486e-006;
+							atlOffset=0.021900177;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -127300,7 +127301,7 @@ class Mission
 							};
 							id=109995;
 							type="Land_Bandage_F";
-							atlOffset=0.85939026;
+							atlOffset=0.88126183;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -127336,7 +127337,7 @@ class Mission
 							};
 							id=110000;
 							type="Land_Bandage_F";
-							atlOffset=0.85693359;
+							atlOffset=0.87880516;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -127372,7 +127373,7 @@ class Mission
 							};
 							id=110001;
 							type="Land_Bandage_F";
-							atlOffset=0.85795975;
+							atlOffset=0.87983131;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -127408,7 +127409,7 @@ class Mission
 							};
 							id=110006;
 							type="Land_Bandage_F";
-							atlOffset=0.90351868;
+							atlOffset=0.92539024;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -127444,7 +127445,7 @@ class Mission
 							};
 							id=110007;
 							type="Land_Bandage_F";
-							atlOffset=0.85860443;
+							atlOffset=0.880476;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -127480,7 +127481,7 @@ class Mission
 							};
 							id=110010;
 							type="Land_Bandage_F";
-							atlOffset=0.85939026;
+							atlOffset=0.88126183;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -127791,7 +127792,6 @@ class Mission
 								angles[]={0,5.2044845,0};
 							};
 							side="Empty";
-							flags=4;
 							class Attributes
 							{
 								createAsSimpleObject=1;
@@ -127800,7 +127800,7 @@ class Mission
 							};
 							id=109957;
 							type="Land_Defibrillator_F";
-							atlOffset=0.00024604797;
+							atlOffset=0.073072433;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -127836,6 +127836,7 @@ class Mission
 							};
 							id=109958;
 							type="Land_Defibrillator_F";
+							atlOffset=0.072826385;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -129027,6 +129028,7 @@ class Mission
 								angles[]={0,0.30111557,0};
 							};
 							side="Empty";
+							flags=4;
 							class Attributes
 							{
 								createAsSimpleObject=1;
@@ -129035,7 +129037,7 @@ class Mission
 							};
 							id=109964;
 							type="Land_PainKillers_F";
-							atlOffset=0.775877;
+							atlOffset=0.00024604797;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -129071,7 +129073,7 @@ class Mission
 							};
 							id=110015;
 							type="Land_PainKillers_F";
-							atlOffset=1.2015419;
+							atlOffset=1.2412491;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -129107,7 +129109,7 @@ class Mission
 							};
 							id=110017;
 							type="Land_PainKillers_F";
-							atlOffset=1.1992416;
+							atlOffset=1.2389488;
 							class CustomAttributes
 							{
 								class Attribute0
