@@ -19,4 +19,4 @@ private ["_loudout","_loudoutIndex","_index","_tarnData"];
 		lbSetData [2100, _forEachIndex, _tarnData select _forEachIndex];	 
 	} forEach _Tarn;
 	
-	lbSetCurSel [2100, tarnMuster];
+	lbSetCurSel [2100, tarnfarbe];
