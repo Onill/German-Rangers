@@ -1,0 +1,5 @@
+images\presentations\ScreensaverOrientierung.paa,images\presentations\InhaltOrientierung.paa,images\presentations\Karte.paa,images\presentations\Karte2.paa,images\presentations\Kompass.paa,images\presentations\MapTools.paa,images\presentations\Gelande1.paa,images\presentations\Gelande2.paa,images\presentations\Gelande3.paa,images\presentations\Gelande4.paa,images\presentations\Gelande5.paa,images\presentations\Gelande6.paa,images\presentations\PosBest1.paa,images\presentations\PosBest2.paa,images\presentations\PosBest3.paa,images\presentations\PosBest4.paa,images\presentations\PosBest5.paa,images\presentations\PosBest6.paa
+
+Screensaver,Inhalt,Karte1,Karte2,Kompass,MapTools,Gelande1,Gelande2,Gelande3,Gelande4,Gelande5,Gelande6,Position1,Position2,Position3,Position4,Position5,Position6
+
+Orientierung

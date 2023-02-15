@@ -1,0 +1,41 @@
+author			= "Dalleburn | NeisAel | Jan";
+loadScreen 		= "a3\data_f_exp_a\Data\FM_LEARN_Nexus1_ca.paa";
+
+OnLoadName 		= "Übungsplatz";
+OnLoadMission   = "Übung macht den Meister";
+OnLoadIntro 	= "";
+
+overviewText 		= "Übungsplatz der German Rangers<br/><br/>Addons: CBA, CUP, ACE, KAT, LAMBS_Danger.fsm, Rosche";
+overviewTextLocked 	= "";
+overviewPicture 	= "a3\data_f_exp_a\Data\FM_LEARN_Nexus1_ca.paa";
+
+
+forceRotorLibSimulation = 0;
+allowFunctionsRecompile = 1;
+
+enableItemsDropping = 0;  	//Disable dropping items while swimming. 0 = Disable 1 = Enable
+//joinUnassigned 	= 0;	//auto assigned a free playable slot in the mission lobby 0:disable 1:enable
+allowFunctionsLog 	= 1;	//log to the RPT file 0:disable 1:enable
+enableDebugConsole 	= 1;	//access to the Debug Console
+showSquadRadar      = 0;  	//Defines if the Squad Radar is visible.
+showGroupIndicator 	= 0;   	//When set to 1, changes default GPS mini map into a radar like display that indicates group members relative position to the player
+disabledAI 			= 1;  	//When 1, removes all playable units which do not have a human player. When 0, a logging out player will have AI take control of his character
+
+// Respawn ============================================================
+
+respawn 			= 3;
+respawnDelay 		= 10;
+
+corpseManagerMode 	= 1; 	//Type of removed bodies: 0 - none, 1 - all, 2 - only respawnable, 3 - only non-respawnable
+corpseLimit 		= 35; 	//Max number of bodies which can be available at the same time. When exceeded, start deleting immediately.
+corpseRemovalMinTime = 600; 	//Minimal time in seconds a body stays in the scene (can't be removed sooner).
+corpseRemovalMaxTime = 1200; 	//Maximal time in seconds after which a dead body is removed (can't stay longer)
+
+wreckManagerMode 	= 1; 	//Type of removed wrecks: 0 - none, 1 - all, 2 - only respawnable, 3 - only non-respawnable
+wreckLimit 			= 10; 	//Max number of wrecks which can be available at the same time. When exceeded, start deleting immediately.
+wreckRemovalMinTime = 1200; 	//Minimal time in seconds a wreck stays in the scene (can't be removed sooner).
+wreckRemovalMaxTime = 1800; 	//Maximal time in seconds after which a wreck is removed (can't stay longer)
+zeusCompositionScriptLevel = 2; // // 0: all scripts are forbidden - 1: only attributes are allowed (including custom attributes added by mods) - 2: all scripts are allowed including init scripts
+
+// GUI ============================================================
+#include "gui\config.hpp"

@@ -1,0 +1,5 @@
+images\presentations\ScreensaverFernmelde.paa,images\presentations\InhaltFernmelde.paa,images\presentations\Funkspruch.paa,images\presentations\Funkspruch1.paa,images\presentations\Anrufarten.paa,images\presentations\Anrufarten1.paa,images\presentations\Verkehrsoffnung.paa,images\presentations\SchlechteVerstandigung.paa,images\presentations\Ruckfragen.paa,images\presentations\LangeMeldungen.paa,images\presentations\Flash.paa
+
+Screensaver,Inhalt,Funkspruch1,Funkspruch2,Anrufarten1,Anrufarten2,Verkehrsöffnung,SchlechteVerständigung,Rückfragen,LangeMeldungen,Flash
+
+Fernmeldewesen
