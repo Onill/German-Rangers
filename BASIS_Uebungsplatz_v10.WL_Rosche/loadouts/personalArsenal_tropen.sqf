@@ -1001,7 +1001,6 @@ switch _playerGrp do
 											"CUP_arifle_AG36_camo",
 											"CUP_arifle_G36A3_AG36_camo",
 											"CUP_arifle_HK416_AGL_Desert"
-
 										];
 						_vests = [
 									"CUP_V_B_GER_PVest_Trop_Gren",
