@@ -366,6 +366,16 @@ sleep 1;
 
 titleText ["Missionsvorbereitung", "BLACK IN" ];
 
+//IDAP Ressources AddActions
+_Wasserpalette = ["WasserPalette","Wasserpalette entladen","",{"Land_WaterBottle_01_stack_F" createVehicle [8369.04,7023.96,0];},{true}] call ace_interact_menu_fnc_createAction;
+[containerWater, 0, ["ACE_MainActions"], _Wasserpalette] call ace_interact_menu_fnc_addActionToObject;
+
+_Wasserpalette = ["WasserPalette","Wasserpalette entladen","",{"Land_PaperBox_01_small_closed_white_IDAP_F" createVehicle [8368.94,7034.32,0];},{true}] call ace_interact_menu_fnc_createAction;
+[containerFood, 0, ["ACE_MainActions"], _Wasserpalette] call ace_interact_menu_fnc_addActionToObject;
+
+_Wasserpalette = ["WasserPalette","Wasserpalette entladen","",{"Land_PaperBox_01_small_closed_white_med_F" createVehicle [8369.04,7023.96,0];},{true}] call ace_interact_menu_fnc_createAction;
+[containerMed, 0, ["ACE_MainActions"], _Wasserpalette] call ace_interact_menu_fnc_addActionToObject;
+
 //Blurry Back to Visuals
 "dynamicBlur" ppEffectEnable true;
 "dynamicBlur" ppEffectAdjust [6];
