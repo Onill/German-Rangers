@@ -163,18 +163,6 @@ if(count _playermods > 0) then {
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 //
-//							Dynamic Groups
-//
-//------------------------------------------------------------------
-//------------------------------------------------------------------
-
-//DynamicGroups_Function Function needs to be initialized on server and client. Clients can then use action TeamSwitch ("U" by default) to access the Dynamic Groups interface.
-["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;			//Exec on client
-
-
-//------------------------------------------------------------------
-//------------------------------------------------------------------
-//
 //							Loadouts
 //
 //------------------------------------------------------------------
@@ -239,6 +227,7 @@ teleport1 addAction ["<t color='#ff0000'>Übungsplatz Granaten/Minen</t>", "(_th
 teleport2 addAction ["<t color='#ff0000'>Kaserne</t>", "(_this select 1) setPos [1798.6,5571.76,0]", nil, 100, false, true, "", ""];
 teleport4 addAction ["<t color='#ff0000'>Kaserne</t>", "(_this select 1) setPos [1798.6,5571.76,0]", nil, 100, false, true, "", ""];
 teleport5 addAction ["<t color='#ff0000'>Kaserne</t>", "(_this select 1) setPos [1798.6,5571.76,0]", nil, 100, false, true, "", ""];
+teleport6 addAction ["<t color='#ff0000'>Kaserne</t>", "(_this select 1) setPos [1798.6,5571.76,0]", nil, 100, false, true, "", ""];
 
 //Orientierungsmarsch
 teleport3 addAction ["<t color='#ff0000'>Position 1</t>", "(_this select 1) setPos position OLauf_1", nil, 100, false, true, "", ""];

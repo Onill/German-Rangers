@@ -1,11 +1,11 @@
 author			= "Dalleburn | NeisAel | Jan";
 loadScreen 		= "a3\data_f_exp_a\Data\FM_LEARN_Nexus1_ca.paa";
 
-OnLoadName 		= "Übungsplatz";
-OnLoadMission   = "Übung macht den Meister";
+OnLoadName 		= "von-Moltke Kaserne - Stützpunkt";
+OnLoadMission   = "Willkommen in der von-Moltke Kaserne, Stützpunkt und Ausbildungsort der German Rangers";
 OnLoadIntro 	= "";
 
-overviewText 		= "Übungsplatz der German Rangers<br/><br/>Addons: CBA, CUP, ACE, KAT, LAMBS_Danger.fsm, Rosche";
+overviewText 		= "Willkommen in der von-Moltke Kaserne, Stützpunkt und Ausbildungsort der German Rangers<br/><br/>Addons: CBA, CUP, ACE, KAT, LAMBS_Danger.fsm, Rosche";
 overviewTextLocked 	= "";
 overviewPicture 	= "a3\data_f_exp_a\Data\FM_LEARN_Nexus1_ca.paa";
 
@@ -39,3 +39,21 @@ zeusCompositionScriptLevel = 2; // // 0: all scripts are forbidden - 1: only att
 
 // GUI ============================================================
 #include "gui\config.hpp"
+
+// Kopf =========================================================
+class Header
+{
+ gameType = COOP;
+ minPlayers = 1;
+ maxPlayers = 103;
+};
+
+class CfgTaskEnhancements
+{
+   enable       = 1;            //0: disable new task features (default), 1: enable new task features & add new task markers and task widgets into the map
+   3d           = 0;            //0: do not use new 3D markers (default), 1: replace task waypoints with new 3D markers
+   3dDrawDist   = 600;        	//3d marker draw distance (default: 2000)
+   share        = 1;            //0: do not count assigned players (default), 1: count how many players have the task assigned
+   propagate    = 1;            //0: do not propagate (default), 1: propagate shared tasks to subordinates
+};
+
