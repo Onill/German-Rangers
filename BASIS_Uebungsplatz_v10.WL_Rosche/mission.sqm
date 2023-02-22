@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=8425;
+		nextID=8458;
 	};
 	class Camera
 	{
-		pos[]={2086.9775,230.06705,5011.9883};
-		dir[]={0.57069719,-0.30612412,-0.76208562};
-		up[]={0.18355009,0.9519645,-0.24510159};
-		aside[]={-0.80051643,-6.1040919e-007,-0.59947699};
+		pos[]={1831.2787,40.422462,5606.2119};
+		dir[]={-0.45132366,-0.56189162,-0.69324225};
+		up[]={-0.3065663,0.82721084,-0.47089207};
+		aside[]={-0.83804774,1.4901161e-008,0.54559684};
 	};
 };
 binarizationWanted=0;
@@ -101894,6 +101894,7 @@ class Mission
 									{
 									};
 									id=98612;
+									atlOffset=-6.6900001;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -103274,6 +103275,7 @@ class Mission
 									{
 									};
 									id=98614;
+									atlOffset=-6.6900001;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -103719,6 +103721,7 @@ class Mission
 												name="grpkilo";
 											};
 											id=110090;
+											atlOffset=-6.6900001;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -104155,6 +104158,7 @@ class Mission
 												name="grpfox";
 											};
 											id=110095;
+											atlOffset=-6.6900001;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -105089,6 +105093,7 @@ class Mission
 												name="grpalpha";
 											};
 											id=110100;
+											atlOffset=-6.6900001;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -106026,6 +106031,7 @@ class Mission
 												name="grpbravo";
 											};
 											id=110115;
+											atlOffset=-6.6900001;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -106952,6 +106958,7 @@ class Mission
 												name="grpcharlie";
 											};
 											id=110130;
+											atlOffset=-6.6900001;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -107881,6 +107888,7 @@ class Mission
 												name="grpdelta";
 											};
 											id=110145;
+											atlOffset=-6.6900001;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -108213,6 +108221,7 @@ class Mission
 												name="grpsierra";
 											};
 											id=110160;
+											atlOffset=-6.6900001;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -108652,6 +108661,7 @@ class Mission
 												name="grpecho1";
 											};
 											id=110165;
+											atlOffset=-6.6900001;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -109087,6 +109097,7 @@ class Mission
 												name="grpecho2";
 											};
 											id=110170;
+											atlOffset=-6.6900001;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -109525,6 +109536,7 @@ class Mission
 												name="grplima";
 											};
 											id=110477;
+											atlOffset=-6.6900001;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -109545,7 +109557,7 @@ class Mission
 										};
 									};
 									id=110089;
-									atlOffset=0.0048789978;
+									atlOffset=-6.6900001;
 								};
 								class Item3
 								{
@@ -110592,7 +110604,7 @@ class Mission
 								};
 							};
 							id=109382;
-							atlOffset=-0.0034255981;
+							atlOffset=-10.828271;
 						};
 						class Item33
 						{
@@ -110816,7 +110828,7 @@ class Mission
 						};
 					};
 					id=109378;
-					atlOffset=-4.9778271;
+					atlOffset=-5.7806797;
 				};
 				class Item5
 				{
@@ -113092,7 +113104,7 @@ class Mission
 						{
 							dataType="Trigger";
 							position[]={1919.3979,15.299707,5555.3379};
-							angle=5.2359872;
+							angle=5.2359862;
 							class Attributes
 							{
 								onActivation="G12 animate [""Door_1_Rot"", 1]";
@@ -113304,7 +113316,7 @@ class Mission
 								dynamicSimulation=1;
 							};
 							id=109660;
-							atlOffset=0.16337967;
+							atlOffset=-6.6900001;
 						};
 						class Item52
 						{
@@ -113356,7 +113368,7 @@ class Mission
 						};
 					};
 					id=109379;
-					atlOffset=0.067169189;
+					atlOffset=-4.7846346;
 				};
 				class Item6
 				{
@@ -144008,7 +144020,7 @@ class Mission
 				};
 			};
 			id=109381;
-			atlOffset=0.52895832;
+			atlOffset=0.59377003;
 		};
 		class Item4
 		{

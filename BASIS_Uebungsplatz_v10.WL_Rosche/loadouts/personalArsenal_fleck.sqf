@@ -1,6 +1,9 @@
 //Get Player Group for Switch 
 _playerGrp = group player;
 
+//Setzt die Tarnfarbe des Arsenals auf Fleck. Ist nur für das Rosche Fleck Tarn Arsenal benötigt
+tarnfarbe = "fleck";
+
 _completeArsenal = [
 						//Rifles
 						"CUP_arifle_HK416_Black",
@@ -1447,6 +1450,8 @@ switch _playerGrp do
 
 				// Wait until Arsenal is closed by Player
 				waitUntil { player getVariable "arsenalClosed" };
+				
+				[player, true, false] call ace_arsenal_fnc_removeVirtualItems;
 
 				// Fill Player Inventory with Items previously saved at the beginning of this Switch Case
 				{player addItem _x} forEach _playerItems;

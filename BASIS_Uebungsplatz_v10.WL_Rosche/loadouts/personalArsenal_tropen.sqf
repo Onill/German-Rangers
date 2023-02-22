@@ -1450,6 +1450,8 @@ switch _playerGrp do
 				// Wait until Arsenal is closed by Player
 				waitUntil { player getVariable "arsenalClosed" };
 
+				[player, true, false] call ace_arsenal_fnc_removeVirtualItems;		
+
 				// Fill Player Inventory with Items previously saved at the beginning of this Switch Case
 				{player addItem _x} forEach _playerItems;
 
