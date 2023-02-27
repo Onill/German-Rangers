@@ -19,7 +19,7 @@ titleText ["Missionsvorbereitung", "BLACK FADED" ];
 //------------------------------------------------------------------
 
 // Muss vom Missionmaker UNBEDIGT gesetzt werden! Aktiviert nutzung der Datenbank (für Kampagnen benötigt)
-useDatabase = true;
+useDatabase = false;
 publicVariable "useDatabase";
 
 // Muss vom Missionmaker UNBEDIGT gesetzt werden! Entscheidet ob Fleck oder Tropentarn getragen wird "fleck" / "tropen".
@@ -28,6 +28,7 @@ publicVariable "tarnfarbe";
 
 // briefingName
 null = [] execVM "scripts\briefing.sqf";
+
 
 //------------------------------------------------------------------
 //------------------------------------------------------------------
@@ -247,14 +248,14 @@ PPeffect_colorC ppEffectEnable true;
 PPeffect_colorC ppEffectCommit 0;
 */
 
-/*
+
 // Recolor Post-Processing - Desert/Winter
 "colorCorrections" ppEffectAdjust 	[1,1,-0.01,[0.0, 0.0, 0.0, 0.0],[1, 0.8, 0.6, 0.6],[0.199, 0.587, 0.114, 0.0]]; 
 "colorCorrections" ppEffectEnable true; 
 "colorCorrections" ppEffectCommit 0; 
 "filmGrain" ppEffectAdjust 	[0.04,1,1,0.1,1,false];      
 "filmGrain" ppEffectEnable true;    
-*/
+
 
 /*
 // Recolor Post-Processing - brownish, bright african
@@ -281,7 +282,7 @@ PPeffect_colorC ppEffectCommit 0;
 	newspapers (Optional): Boolean - true if flying newspapers will be present (default is true)
 */
 
-//[player, 0.9, 0.5, true] call BIS_fnc_sandstorm;
+[player, 0.9, 0.5, true] call BIS_fnc_sandstorm;
 
 
 //------------------------------------------------------------------
@@ -330,23 +331,44 @@ if (isClass(configFile >> "cfgPatches" >> "task_force_radio")) then {
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 
+teleport addAction ["<t color='#ff0000'>Teleport zum Stützpunkt</t>", "(_this select 1) setPos [8380.69,7119.34,0]", nil, 100, false, true, "", ""];
+
 sleep 1;
 
-//ACE Self Interactions for Players in Base
-_condition = {player distance base < 300};
-_empty_statement = {"Nothing"};
+_condition = {player distance base < 50};
+_empty_statement = {createDialog "Main_Dialog";}; //  {"Nothing"};
 
 // Creating a Sub Menu Category GR Base with Logo
 _base_menu = ["GR Base","GR Base","images\GermanRangersLogo.paa",_empty_statement,_condition] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions"], _base_menu] call ace_interact_menu_fnc_addActionToClass;
 
 //Open Teleport GUI via Self Interaction Menu in Subcategory GR Base
-_teleport_action = ["Teleporter","Teleporter","",{ _ok = createDialog "Teleport_Dialog";},_condition] call ace_interact_menu_fnc_createAction;
+_teleport_action = ["Teleporter","Teleporter","gui\teleport\icon_teleport.paa",{ _ok = createDialog "Teleport_Dialog";},_condition] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","GR Base"], _teleport_action] call ace_interact_menu_fnc_addActionToClass;
+
+//Loadout GUI
+
+	_choose_Loadout= {
+	switch (groupId group player) do 
+	  { 
+		case 'Sierra': { ['Sierra'] call CLF_fnc_createGUI;  }; 
+		case 'Echo 1': { ['Echo'] call CLF_fnc_createGUI;  };	 
+		case 'Echo 2': { ['Echo'] call CLF_fnc_createGUI;  }; 
+		//case grplima: { ['Lima'] call CLF_fnc_createGUI;  }; 
+		default { ['Zug'] call CLF_fnc_createGUI; }; 
+	  };
+	};
+
+
+_loadout_action = ["Loadouts","Loadouts","",_choose_Loadout,_condition] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions","GR Base"], _loadout_action] call ace_interact_menu_fnc_addActionToClass;
+
+
+_personal_arsenal = ["Personal Arsenal","Personal Arsenal","",{ execVM "loadouts\personalArsenal.sqf"; },_condition] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions","GR Base"], _personal_arsenal] call ace_interact_menu_fnc_addActionToClass;
 
 
 //		New Mission Control
-
 
 	// Creating a Sub Menu Category GR Base with Logo
 	_mission_control = ["Mission Control","Mission Control","images\GermanRangersLogo.paa",{}, {true}] call ace_interact_menu_fnc_createAction;
@@ -361,19 +383,55 @@ _teleport_action = ["Teleporter","Teleporter","",{ _ok = createDialog "Teleport_
 	_to_be_continued = ["Ende: TO BE CONTINUED","Ende: TO BE CONTINUED","",{ execVM "scripts\missionscontinue.sqf"; },{true}] call ace_interact_menu_fnc_createAction;
 	[["ACE_ZeusActions","Mission Control"], _to_be_continued] call ace_interact_menu_fnc_addActionToZeus;
 
+
+_playerGrp = group player;
+
+if (_playerGrp == grplima || _playerGrp == grpkilo) then {
+
+	_zug1 = ["Zug1","Zug Typ 1 - Munition","",{["zug1"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	[limasupply, 0, ["ACE_MainActions"], _zug1] call ace_interact_menu_fnc_addActionToObject;
+
+	_zug2 = ["Zug2","Zug Typ 2 - Explosiv","",{["zug2"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	[limasupply, 0, ["ACE_MainActions"], _zug2] call ace_interact_menu_fnc_addActionToObject;
+
+	_zug3 = ["Zug3","Zug Typ 3 - Granaten","",{["zug3"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	[limasupply, 0, ["ACE_MainActions"], _zug3] call ace_interact_menu_fnc_addActionToObject;
+
+	_zug4 = ["Zug4","Zug Typ 4 - Ausrüstung","",{["zug4"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	[limasupply, 0, ["ACE_MainActions"], _zug4] call ace_interact_menu_fnc_addActionToObject;
+
+	_zug5 = ["Zug5","Zug Typ 5 - Waffen","",{["zug5"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	[limasupply, 0, ["ACE_MainActions"], _zug5] call ace_interact_menu_fnc_addActionToObject;
+
+	_zug6 = ["Zug6","Zug Typ 6 - AT","",{["zug6"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	[limasupply, 0, ["ACE_MainActions"], _zug6] call ace_interact_menu_fnc_addActionToObject;
+
+	_san1 = ["San1","San 1 - Allgemein","",{["san1"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	[limasupply, 0, ["ACE_MainActions"], _san1] call ace_interact_menu_fnc_addActionToObject;
+
+	_san2 = ["San2","San 2 - Spezial","",{["san2"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	[limasupply, 0, ["ACE_MainActions"], _san2] call ace_interact_menu_fnc_addActionToObject;
+
+	_sierra1 = ["Sierra1","Sierra Munition","",{["sierra1"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	[limasupply, 0, ["ACE_MainActions"], _sierra1] call ace_interact_menu_fnc_addActionToObject;
+
+	_echo1 = ["Echo1","Echo Typ 1 - Munition","",{["echo1"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	[limasupply, 0, ["ACE_MainActions"], _echo1] call ace_interact_menu_fnc_addActionToObject;
+
+	_echo2 = ["Echo1","Echo Typ 2 - Explosivmunition","",{["echo2"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	[limasupply, 0, ["ACE_MainActions"], _echo2] call ace_interact_menu_fnc_addActionToObject;
+
+	_echo3 = ["Echo1","Echo Typ 3 - AT","",{["echo3"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	[limasupply, 0, ["ACE_MainActions"], _echo3] call ace_interact_menu_fnc_addActionToObject;
+
+	_echo4 = ["Echo1","Echo Typ 4 - Ausrüstung","",{["echo4"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	[limasupply, 0, ["ACE_MainActions"], _echo4] call ace_interact_menu_fnc_addActionToObject;
+
+};
+
 sleep 1;
 
 titleText ["Missionsvorbereitung", "BLACK IN" ];
-
-//IDAP Ressources AddActions
-_Wasserpalette = ["WasserPalette","Wasserpalette entladen","",{"Land_WaterBottle_01_stack_F" createVehicle [8369.04,7023.96,0];},{true}] call ace_interact_menu_fnc_createAction;
-[containerWater, 0, ["ACE_MainActions"], _Wasserpalette] call ace_interact_menu_fnc_addActionToObject;
-
-_Wasserpalette = ["WasserPalette","Wasserpalette entladen","",{"Land_PaperBox_01_small_closed_white_IDAP_F" createVehicle [8368.94,7034.32,0];},{true}] call ace_interact_menu_fnc_createAction;
-[containerFood, 0, ["ACE_MainActions"], _Wasserpalette] call ace_interact_menu_fnc_addActionToObject;
-
-_Wasserpalette = ["WasserPalette","Wasserpalette entladen","",{"Land_PaperBox_01_small_closed_white_med_F" createVehicle [8369.04,7023.96,0];},{true}] call ace_interact_menu_fnc_createAction;
-[containerMed, 0, ["ACE_MainActions"], _Wasserpalette] call ace_interact_menu_fnc_addActionToObject;
 
 //Blurry Back to Visuals
 "dynamicBlur" ppEffectEnable true;
