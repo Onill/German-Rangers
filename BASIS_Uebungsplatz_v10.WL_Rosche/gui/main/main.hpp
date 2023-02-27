@@ -22,7 +22,7 @@ class Main_Dialog
 		ZUG,
 		Sierra,
 		Echo,
-		//Lima,
+		Lima,
 		//Leer31, // AusbildungsLoadouts
 		Text1,
 		Text2
@@ -38,13 +38,14 @@ class Main_Dialog
 	{
 		idc = 1009;
 		x = 0.257187 * safezoneW + safezoneX;
-		y = 0.192 * safezoneH + safezoneY;
+		y = 0.198 * safezoneH + safezoneY;
 		w = 0.4725 * safezoneW;
 		h = 0.098 * safezoneH;
 		colorBackground[] = {COLOR_MENUE_BACKGROUND};
 		style = ST_CENTER;
-		text = "Menue"; //--- ToDo: Localize;
+		text = "Menue";
 		sizeEx = "0.09/ (getResolution select 5)";
+		
 	};
 	class Background: RscText
 	{
@@ -136,6 +137,7 @@ class Main_Dialog
 		y = 0.71 * safezoneH + safezoneY;
 		w = 0.065625 * safezoneW;
 		h = 0.084 * safezoneH;
+		action = "closeDialog 0; ['Lima'] call CLF_fnc_createGUI;";
 		
 	};
 	class Leer32: RscButton

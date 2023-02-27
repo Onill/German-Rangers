@@ -23,7 +23,9 @@ titleText ["Missionsvorbereitung", "BLACK FADED" ];
 tarnfarbe = "fleck";
 publicVariable "tarnfarbe";
 
-
+// Für die GUI:
+// 0 = Flecktarn, 1 = Tropentarn
+tarnMuster = 1;
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 //

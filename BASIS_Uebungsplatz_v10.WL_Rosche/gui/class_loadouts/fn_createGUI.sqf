@@ -16,12 +16,12 @@ switch (_LoadoutClass) do
 		loudout =["Infiltration 1","Infiltration 2","Infiltration 3","Infiltration 4 HVT","Infiltration 4 Drohne","SchwW 1","SchwW 2","SchwW 3","SchwW 4","SchwW 7","SchwW 8"];
 		loudoutIndex =["Echo_Infiltration_1","Echo_Infiltration_2","Echo_Infiltration_3","Echo_Infiltration_4_HVT","Echo_Infiltration_4_Drohne","Echo_SchwW1","Echo_SchwW2","Echo_SchwW3","Echo_SchwW4","Echo_SchwW7","Echo_SchwW8",""];
 	};
-	/**
+	
 	case "Lima": {  
-		loudout =["",];
-		loudoutIndex =["",];
+		loudout =["Lima Standart","----","Trainingsabend","Training Schutze","Ausbildung"];
+		loudoutIndex =["Lima_01","","trainingsabend","training_schutze","ausbildung"];
 	};
-	**/
+	
 	case "Ausbildung": {  
 		loudout =["Ausbilder","Ausbildung","AGA 4","Trainings-Abend","Training Schutze","Rekrut"];
 		loudoutIndex =["ausbilder","ausbildung","ausbildung_aga4","trainingsabend","training_schutze","rekrut"];
