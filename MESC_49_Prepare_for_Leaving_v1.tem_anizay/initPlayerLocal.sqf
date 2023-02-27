@@ -332,19 +332,41 @@ if (isClass(configFile >> "cfgPatches" >> "task_force_radio")) then {
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 
+teleport addAction ["<t color='#ff0000'>Teleport zum Stützpunkt</t>", "(_this select 1) setPos [8380.69,7119.34,0]", nil, 100, false, true, "", ""];
+
 sleep 1;
 
-//ACE Self Interactions for Players in Base
-_condition = {player distance base < 300};
-_empty_statement = {"Nothing"};
+_condition = {player distance base < 50};
+_empty_statement = {createDialog "Main_Dialog";}; //  {"Nothing"};
 
 // Creating a Sub Menu Category GR Base with Logo
 _base_menu = ["GR Base","GR Base","images\GermanRangersLogo.paa",_empty_statement,_condition] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions"], _base_menu] call ace_interact_menu_fnc_addActionToClass;
 
 //Open Teleport GUI via Self Interaction Menu in Subcategory GR Base
-_teleport_action = ["Teleporter","Teleporter","",{ _ok = createDialog "Teleport_Dialog";},_condition] call ace_interact_menu_fnc_createAction;
+_teleport_action = ["Teleporter","Teleporter","gui\teleport\icon_teleport.paa",{ _ok = createDialog "Teleport_Dialog";},_condition] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","GR Base"], _teleport_action] call ace_interact_menu_fnc_addActionToClass;
+
+//Loadout GUI
+
+	_choose_Loadout= {
+	switch (groupId group player) do 
+	  { 
+		case 'Sierra': { ['Sierra'] call CLF_fnc_createGUI;  }; 
+		case 'Echo 1': { ['Echo'] call CLF_fnc_createGUI;  };	 
+		case 'Echo 2': { ['Echo'] call CLF_fnc_createGUI;  }; 
+		//case grplima: { ['Lima'] call CLF_fnc_createGUI;  }; 
+		default { ['Zug'] call CLF_fnc_createGUI; }; 
+	  };
+	};
+
+
+_loadout_action = ["Loadouts","Loadouts","",_choose_Loadout,_condition] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions","GR Base"], _loadout_action] call ace_interact_menu_fnc_addActionToClass;
+
+
+_personal_arsenal = ["Personal Arsenal","Personal Arsenal","",{ execVM "loadouts\personalArsenal.sqf"; },_condition] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions","GR Base"], _personal_arsenal] call ace_interact_menu_fnc_addActionToClass;
 
 
 //		New Mission Control
@@ -361,6 +383,7 @@ _teleport_action = ["Teleporter","Teleporter","",{ _ok = createDialog "Teleport_
 
 	_to_be_continued = ["Ende: TO BE CONTINUED","Ende: TO BE CONTINUED","",{ execVM "scripts\missionscontinue.sqf"; },{true}] call ace_interact_menu_fnc_createAction;
 	[["ACE_ZeusActions","Mission Control"], _to_be_continued] call ace_interact_menu_fnc_addActionToZeus;
+
 
 _playerGrp = group player;
 

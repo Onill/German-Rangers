@@ -51,7 +51,7 @@ for "_i" from 1 to 2 do {player addItemToVest "SmokeShell";};
 player addItemToVest "SmokeShellGreen";
 player addItemToVest "SmokeShellRed";
 player addHeadgear "CUP_H_Ger_Cap_EP_Grn1";
-player addGoggles "CUP_G_ESS_RGR_Facewrap_Tropical";
+player addGoggles "CUP_G_ESS_RGR_Facewrap_Grn";
 
 comment "Add items";
 player linkItem "ItemMap";
@@ -59,8 +59,6 @@ player linkItem "ItemCompass";
 player linkItem "ItemWatch";
 player linkItem "TFAR_anprc152";
 player linkItem "B_UavTerminal";
-
-[ACE_player, currentWeapon ACE_player, currentMuzzle ACE_player] call ace_safemode_fnc_lockSafety;
 
 //Medic: 
 player setVariable ["ACE_medical_medicClass", 2, true];

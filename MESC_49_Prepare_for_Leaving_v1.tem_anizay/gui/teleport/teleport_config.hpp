@@ -1,6 +1,8 @@
-class ONI
+#include "XEH_PREP.sqf"
+
+class TPF
 {
-	tag="ONI";
+	tag="TPF";
 	class functions
 	{
 		file = "gui\teleport";

@@ -1,5 +1,5 @@
 
-comment "Exported from Arsenal by Milos";
+comment "Exported from Arsenal by Angel";
 
 comment "[!] UNIT MUST BE LOCAL [!]";
 if (!local player) exitWith {};
@@ -17,7 +17,7 @@ removeGoggles player;
 comment "Add weapons";
 player addWeapon "CUP_srifle_G22_des";
 player addPrimaryWeaponItem "CUP_muzzle_snds_AWM";
-player addPrimaryWeaponItem "rhsusf_acc_premier";
+player addPrimaryWeaponItem "optic_LRPS";
 player addPrimaryWeaponItem "CUP_5Rnd_762x67_G22";
 player addPrimaryWeaponItem "CUP_bipod_VLTOR_Modpod";
 player addWeapon "CUP_hgun_M17_Black";
@@ -63,7 +63,7 @@ for "_i" from 1 to 3 do {player addItemToBackpack "kat_naloxone";};
 for "_i" from 1 to 3 do {player addItemToBackpack "kat_Pulseoximeter";};
 for "_i" from 1 to 10 do {player addItemToBackpack "kat_TXA";};
 player addHeadgear "CUP_H_Ger_Cap_EP_Tan1";
-player addGoggles "rhsusf_shemagh2_gogg_tan";
+player addGoggles "CUP_G_ESS_KHK_Scarf_Face_Tan";
 
 comment "Add items";
 player linkItem "ItemMap";
@@ -71,8 +71,6 @@ player linkItem "ItemCompass";
 player linkItem "ACE_Altimeter";
 player linkItem "TFAR_anprc152";
 player linkItem "ItemAndroid";
-
-[ACE_player, currentWeapon ACE_player, currentMuzzle ACE_player] call ace_safemode_fnc_lockSafety;
 
 //Medic: 
 player setVariable ["ACE_medical_medicClass", 2, true];

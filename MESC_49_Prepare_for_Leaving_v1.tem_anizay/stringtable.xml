@@ -5,6 +5,26 @@
             <English>Confirm</English>
             <German>Bestätigen</German>
         </Key>
+		<Key ID="STR_Error">
+            <English>Error</English>
+            <German>Fehler</German>
+        </Key>
+		<Key ID="STR_Dialog_T_Vehicle">
+            <English>No room in squad's vehicle.</English>
+            <German>Kein Platz im Fahrzeug der Gruppe.</German>
+        </Key>
+		<Key ID="STR_Confirm_Loadout">
+            <English>Take Loadout</English>
+            <German>Loadout ausrüsten</German>
+        </Key>	
+		<Key ID="STR_P_Asenal">
+            <English>Personal Arsenal, to change equipment</English>
+            <German>Persönliches Arsenal, zum Wechseln von Ausrüstung</German>
+        </Key>
+		<Key ID="STR_Arsenal">
+            <English>Arsenal</English>
+            <German>Arsenal</German>
+        </Key>
     </Package>
 </Project>
 
