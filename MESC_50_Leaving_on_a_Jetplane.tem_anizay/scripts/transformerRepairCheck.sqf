@@ -10,7 +10,9 @@ if (_engineer < 2) then {
 };
 
 
-if ("ToolKit" in _items) then { }
+if ("ToolKit" in _items) then {
+	hint "Toolkit";
+}
 else {
 	_error = true;
 	_missingString = _missingString + " Dir fehlt ein Toolkit.";
