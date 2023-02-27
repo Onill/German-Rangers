@@ -1,0 +1,26 @@
+while {alive radioemitter} do {
+	radioemitter say3D "Track_C_18";
+	sleep 167;
+	radioemitter say3D "Track_P_05";
+	sleep 252;
+	radioemitter say3D "News_Jingle";
+	sleep 8;
+	radioemitter say3D "News_idap";
+	sleep 15;
+	radioemitter say3D "Track_C_19";
+	sleep 167;
+	radioemitter say3D "Track_P_03";
+	sleep 94;
+	radioemitter say3D "News_Jingle";
+	sleep 8;
+	radioemitter say3D "News_rescued";
+	sleep 16;
+	radioemitter say3D "Track_R_02";
+	sleep 157;
+	radioemitter say3D "Track_R_04";
+	sleep 162;
+	radioemitter say3D "News_Jingle";
+	sleep 8;
+	radioemitter say3D "News_aircraft";
+	sleep 13;
+};
