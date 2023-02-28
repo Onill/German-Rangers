@@ -38,17 +38,16 @@ _target = player;
 			 default { hint"$STR_Error";};
 		};
 	};
-		
+	
+	if (isNil _target) exitWith {hint"Ziel nicht gefunden"};
+	
 	if (vehicle _target == _target) then
 	{
-
 	_position = getPos _target;		
 	(player) setPos _position;
 
 	}
-
 	else
-
 	{
 		if ((vehicle _target) emptyPositions "cargo"== 0) then
 		{hint "No room in squad leader's vehicle."}
