@@ -1,29 +1,8 @@
-if (isServer) exitWith {};
+//if (isServer) exitWith {};
 
 playMusic "Outro_Success";
 
-titleText ["<img image='images\GermanRangersLogo.paa' shadow='0' size='10'/> <br/>
-			<t color='#ffffff' size='5' font='RobotoCondensed' shadow = '2' >M I S S I O N   E R F Ü L L T</t>
-			<br/>
-			<br/>
-			<t color='#ffffff' size='1.5' font='RobotoCondensed' shadow = '2' >Auftrag erfolreich abgeschlossen.</t>", 
-			"PLAIN", 2, true, true
-		];
-
-sleep 21;
-
-titleText ["", "BLACK OUT", 1, true, true];
-sleep 2.5;
-cutText ["", "BLACK IN", 3, true, true];
-
-
-titleText ["<br/><br/><br/><br/><img image='images\GermanRangersLogo.paa' shadow='0' size='10'/><br/><br/>
-			<t color='#ffffff' size='3' font='RobotoCondensed' shadow = '2' >G U T E   A R B E I T ,   R A N G E R S</t>
-			<br/>
-			<br/>
-			<t color='#ffffff' size='1.5' font='RobotoCondensed' shadow = '2' >Sammeln zur Nachbesprechung im Lagezentrum.</t>", "PLAIN", 2, true, true];
-
-
+sleep 60;
 
 //Camera creating - always add to the script to make the camera work
 _camera = "camera" camCreate [0,0,0];
@@ -41,82 +20,164 @@ showCinemaBorder true;
 //launch = [player,10,4,360,0.1] execVM "camera.sqf";
 
 
-_target = player;
-_distance = 10;
-_height = 1;
+_targetv = plane1;
+_target = player;;
+_distance = 2;
+_height = 2;
 _angle = 0;
 _maxAngle = 360;
 _speed = 0.061;
 _fade = false;
 
-_camera camSetpos position _target;
-_camera camSettarget _target;
-_center = [position _target select 0, position _target select 1,_height];
-_camera camSetPos _center;
-_camera camSetTarget _target;
+
+//Ramp Shot
+_camera camSettarget _targetv;
+_camera camSetRelPos [0,-20,-4];
+_camera camCommit 0;
+sleep 5;
+
+//Rotor Shot
+_camera camSettarget _targetv;
+_camera camSetRelPos [15,5,0];
+_camera camCommit 0;
+sleep 10;
+
+//Bird Shot
+_camera camSettarget _targetv;
+_camera camSetRelPos [0,-10,40];
+_camera camCommit 0;
+sleep 5;
+
+//Front Shot
+_camera camSettarget _targetv;
+_camera camSetRelPos [2,100,2];
+_camera camCommit 0;
+sleep 10;
+
+_camera camSettarget _targetv;
+_height = 10;
+_camera camSetPos [8513.84,7160.85,10];
 _camera camCommit 0;
 
-while {_height < 50} do {
+while {_height < 70} do {
 	_height = _height + 1;
 
-	_camera camSetRelPos [0,0,_height];
+	_camera camSetPos [8513.84,7160.85,_height];
 	_camera camCommit 0.4;
 	sleep 0.4;
-	
-	if (_height > 40 && _fade == false) then {
-		cutText ["", "BLACK OUT", 1, true, true];
-		_fade = true;
-	};
-
 };
+
+//Front Shot
+_camera camSettarget _targetv;
+_camera camSetRelPos [10,150,-5];
+_camera camCommit 0;
+sleep 6;
+
+//Radar Station Shot
+_camera camSettarget _targetv;
+_camera camSetPos [8299.09,8629.69,50];
+_camera camCommit 0;
+sleep 20;
+
+//Shot 1
+_camera camSettarget _targetv;
+_camera camSetRelPos [-20,20,200];
+_camera camCommit 0;
+sleep 10;
+
+//Shot 2
+_camera camSettarget _targetv;
+_camera camSetRelPos [-100,500,20];
+_camera camCommit 0;
+sleep 10;
+
+//Shot 3
+_camera camSettarget _targetv;
+_camera camSetRelPos [5,100,10];
+_camera camCommit 0;
+sleep 10;
+
+
+//Mosque Shot
+_camera camSettarget _targetv;
+_height = 8;
+_camera camSetPos [3945.55,7253.61,8];
+_camera camCommit 0;
+
+while {_height < 70} do {
+	_height = _height + 1;
+
+	_camera camSetPos [3945.55,7253.61,_height];
+	_camera camCommit 0.4;
+	sleep 0.4;
+};
+
+//Lake Shot
+_camera camSettarget _targetv;
+_camera camSetPos [1895.91,5953.55,20];
+_camera camCommit 0;
+sleep 16;
+
+ace_hearing_disableVolumeUpdate = true;
+
+10 fadeSpeech 0;
+10 fadeRadio 0;
+10 fadeSound 0;
+
+titleText ["", "BLACK", 2, true, true];
+sleep 2;
+
+titleText ["<t color='#ffffff' size='1.4'>Seit 2001 waren Deutsche Soldaten in Afghanistan stationiert.<br/>Zuerst im Rahmen der Operation ISAF , seit 2015 in der Operation Resolute Support.</t>", "BLACK FADED", 2, true, true];
+sleep 6;
+
+titleText ["", "BLACK FADED", 2, true, true];
+sleep 1;
+
+titleText ["<t color='#ffffff' size='1.4'>2011 waren 5.433 Soldaten in Afghanistan stationiert.</t>", "BLACK FADED", 2, true, true];
+sleep 6;
+
+titleText ["", "BLACK FADED", 2, true, true];
+sleep 1;
+
+titleText ["<t color='#ffffff' size='1.4'>2021 wurde Operation Resolute Support beendet und alle NATO und US Streitkräfte aus Afghanistan abgezogen.</t>", "BLACK FADED", 2, true, true];
+sleep 6;
+
+titleText ["", "BLACK FADED", 2, true, true];
+sleep 1;
+
+titleText ["<t color='#ffffff' size='1.4'>Der Einsatz in Afghanistan ist für Deutschland der blutigste Krieg seit dem zweiten Weltkrieg.</t>", "BLACK FADED", 2, true, true];
+sleep 7;
+
+titleText ["", "BLACK FADED", 2, true, true];
+sleep 1;
+
+titleText ["<t color='#ffffff' size='1.4'>Bis 2021 starben in Afghanisten ca. 48.000 Zivilisten durch Terror und Kriegshandlungen.</t>", "BLACK FADED", 2, true, true];
+sleep 7;
+
+titleText ["", "BLACK FADED", 2, true, true];
+sleep 1;
+
+titleText ["<t color='#ffffff' size='1.4'>Seit dem Abzug der NATO 2021 steht das halbe Land und die Hauptstadt Kabul wieder unter der Kontrolle der Taliban.</t>", "BLACK FADED", 2, true, true];
+sleep 6;
+
+titleText ["", "BLACK IN", 0, true, true];
 
 sleep 1;
 
-cutText ["", "BLACK IN", 3, true, true];
-_fade = false;
+titleText ["<t color='#ffffff' size='1.4'>Während des Afghanistan Krieges starben 62 deutsche Soldaten und Polizisten.</t>", "PLAIN", 2, true, true];
+sleep 5;
 
-_height = 4;
-		
-while {_angle < _maxAngle} do {
-	_angle = _angle + 1;
+titleText ["<t color='#ffffff' size='1.4'>Die Zahl der Verwundeten an Leib und Seele ist um ein vielfaches höher.</t>", "PLAIN", 2, true, true];
+sleep 5;
 
-	_camera camSetRelPos [_distance*cos(_angle),_distance*sin(_angle),_height];
-	_camera camCommit 0.04;
-	sleep 0.04;
-
-	if (_angle > 337 && _fade == false) then {
-		cutText ["", "BLACK OUT", 1, true, true];
-		_fade = true;
-	};
-	
-};
-
-_camera camSetRelPos [0,60,4];
-
+titleText ["", "PLAIN", 2, true, true];
 sleep 1;
 
-cutText ["", "BLACK IN", 3, true, true];
-_fade = false;
+titleText ["<img image='images\GermanRangersLogo.paa' shadow='0' size='10'/> <br/>
+			<t color='#ffffff' size='3' font='RobotoCondensed' shadow = '2' >M I S S I O N   E R F O L G R E I C H</t>", 
+			"PLAIN", 2, true, true
+		];
 
-_range = 60;
+sleep 4;
 
-while {_range > -60} do {
-	_range = _range - 0.7;
-
-	_camera camSetRelPos [0,_range,4];
-	_camera camCommit 0.07;
-	sleep 0.07;
-	
-	if (_range < -50  && _fade == false) then {
-		cutText ["", "BLACK OUT", 1, true, true];
-		_fade = true;
-	};
-
-};
-
-["End1", true, 0, false, false] call BIS_fnc_endMission;
-
-//Camera destroying - terminates the 'camera view'
-_camera CameraEffect ["Terminate","back"];
-CamDestroy _camera;
-
+["End1", true, 2, false, false] call BIS_fnc_endMission;

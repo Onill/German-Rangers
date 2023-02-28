@@ -72,9 +72,9 @@ CamDestroy _camera;
 sleep 1;
 
 //Title Text Spawns
-titleText ["<t color='#ffffff' size='1.5'>31.07.2022: Fünf Tage nach der Schlacht um Bala Murghab</t>", "PLAIN DOWN", 2, true, true];
+titleText ["<t color='#ffffff' size='1.5'>31.07.2022: Einen Monat nach der Schlacht um Bala Murghab</t>", "PLAIN DOWN", 2, true, true];
 sleep 6;
-titleText ["<t color='#ffffff' size='1.5'>Die OPZ hat die MESC Mission offiziell für beendet erklärt.</t>", "PLAIN DOWN", 2, true, true];
+titleText ["<t color='#ffffff' size='1.5'>Die NATO hat die MESC Mission offiziell für beendet erklärt.</t>", "PLAIN DOWN", 2, true, true];
 sleep 8;
 
 //Camera creating - always add to the script to make the camera work
@@ -136,7 +136,7 @@ sleep 1;
 _camera camSettarget _targetv;
 _camera camSetRelPos [0,500,200];
 _camera camCommit 0;
-titleText ["<t color='#ffffff' size='1'>B A L A   M U R G H A B - 26.06.2022 - German Rangers<br/>____________________</t><br/><t color='#ffffff' size='5'>Operation Torch Part II</t>", "PLAIN", 1, true, true];
+titleText ["<t color='#ffffff' size='1'>B A L A   M U R G H A B - 31.07.2022 - German Rangers<br/>____________________</t><br/><t color='#ffffff' size='5'>Prepare for Leaving</t><br/><br/><img image='images\GermanRangersLogo.paa' shadow='0' size='8'/><img image='images\cc_Pics\mesc1.paa' shadow='0' size='8'/>", "PLAIN", 1, true, true];
 sleep 5;
 
 //Camera destroying - terminates the 'camera view'

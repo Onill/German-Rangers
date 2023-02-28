@@ -22,20 +22,6 @@
 saveDatabase = false;
 publicVariable "saveDatabase";
 
-transformerRepaired_1 = false;
-publicVariable "transformerRepaired_1";
-
-transformerRepaired_2 = false;
-publicVariable "transformerRepaired_2";
-
-transformerRepaired_3 = false;
-publicVariable "transformerRepaired_3";
-
-null = [] execVM "scripts\HAtransformerRepair1.sqf";
-null = [] execVM "scripts\HAtransformerRepair2.sqf";
-null = [] execVM "scripts\HAtransformerRepair3.sqf";
-
-null = [] execVM "scripts\airfieldNoise.sqf";
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 //

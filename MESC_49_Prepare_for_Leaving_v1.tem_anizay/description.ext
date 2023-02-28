@@ -1,11 +1,11 @@
 author			= "GerRng Mission Making Team";
 loadScreen 		= "a3\data_f_exp_a\Data\FM_LEARN_Nexus1_ca.paa";
 
-OnLoadName 		= "Operation Torch Part II";
-OnLoadMission   = "Die Ranger rücken weiter den Bala Murghab Fluss Richtung Süden vor.";
+OnLoadName 		= "Prepare for Leaving";
+OnLoadMission   = "Die Ranger werden zurückverlegt nach Anizay um dort den Abzug vorzubereiten.";
 OnLoadIntro 	= "";
 
-overviewText 		= "Bei der Sicherung der Bala Murghab Region kämpfen die Ranger mit Hinterhalten und versuchen die Stellungen des Feindes zu finden.<br/><br/>Addons: CBA, CUP, ACE, LAMBS_Danger.fsm, JBad, Bala Murghab";
+overviewText 		= "Nach der Schlacht um Bala Murghabt werden die Ranger fünf Tage später zurückverlegt um den Abzug vorzubereiten.<br/><br/>Addons: CBA, CUP, ACE, LAMBS_Danger.fsm, JBad, Bala Murghab";
 overviewTextLocked 	= "";
 overviewPicture 	= "a3\data_f_exp_a\Data\FM_LEARN_Nexus1_ca.paa";
 
@@ -69,7 +69,7 @@ class Header
 {
  gameType = COOP;
  minPlayers = 1;
- maxPlayers = 78;
+ maxPlayers = 81;
 };
 
 class CfgTaskEnhancements

@@ -203,10 +203,6 @@ if(count _playermods > 0) then {
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 
-//Spezial Loadout
-execVM "loadouts\bwtropen\Reise.sqf";
-
-/*
 	if useDatabase then {
 
 		// INIDB
@@ -231,7 +227,6 @@ execVM "loadouts\bwtropen\Reise.sqf";
 	else {
 		call compile preprocessFileLineNumbers "loadouts\loadoutInit.sqf";
 	};
-*/
 
 //------------------------------------------------------------------
 //------------------------------------------------------------------
@@ -332,8 +327,6 @@ if (isClass(configFile >> "cfgPatches" >> "task_force_radio")) then {
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 
-teleport addAction ["<t color='#ff0000'>Teleport zum Stützpunkt</t>", "(_this select 1) setPos [8380.69,7119.34,0]", nil, 100, false, true, "", ""];
-
 sleep 1;
 
 _condition = {player distance base < 50};
@@ -375,14 +368,9 @@ _personal_arsenal = ["Personal Arsenal","Personal Arsenal","",{ execVM "loadouts
 	_mission_control = ["Mission Control","Mission Control","images\GermanRangersLogo.paa",{}, {true}] call ace_interact_menu_fnc_createAction;
 	[["ACE_ZeusActions"], _mission_control] call ace_interact_menu_fnc_addActionToZeus;
 	
-	_start_mission = ["Missionsstart","Missionsstart","",{ execVM "scripts\missionsstart.sqf"; },{true}] call ace_interact_menu_fnc_createAction;
-	[["ACE_ZeusActions","Mission Control"], _start_mission] call ace_interact_menu_fnc_addActionToZeus;
-
-	_mission_succesful = ["Ende: Mission Erfüllt","Ende: Mission Erfüllt","",{ execVM "scripts\missionsende.sqf"; },{true}] call ace_interact_menu_fnc_createAction;
+	_mission_succesful = ["Ende: Mission Erfüllt","Ende: Mission Erfüllt","",{ execVM "scripts\missionend.sqf"; },{true}] call ace_interact_menu_fnc_createAction;
 	[["ACE_ZeusActions","Mission Control"], _mission_succesful] call ace_interact_menu_fnc_addActionToZeus;
 
-	_to_be_continued = ["Ende: TO BE CONTINUED","Ende: TO BE CONTINUED","",{ execVM "scripts\missionscontinue.sqf"; },{true}] call ace_interact_menu_fnc_createAction;
-	[["ACE_ZeusActions","Mission Control"], _to_be_continued] call ace_interact_menu_fnc_addActionToZeus;
 
 
 _playerGrp = group player;
