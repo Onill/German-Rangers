@@ -10,7 +10,7 @@ clearMagazineCargoGlobal _box;
 clearItemCargoGlobal _box;
 clearBackpackCargoGlobal _box;
 
-_box addItemCargoGlobal ["SmokeShell",30];
-_box addItemCargoGlobal ["SmokeShellGreen",30];
-_box addItemCargoGlobal ["SmokeShellRed",30];
-_box addItemCargoGlobal ["CUP_HandGrenade_M67",30];
+_box addMagazineCargoGlobal ["SmokeShell",30];
+_box addMagazineCargoGlobal ["SmokeShellGreen",30];
+_box addMagazineCargoGlobal ["SmokeShellRed",30];
+_box addMagazineCargoGlobal ["CUP_HandGrenade_M67",30];

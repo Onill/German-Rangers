@@ -139,26 +139,26 @@ sleep 6;
 titleText ["", "BLACK FADED", 2, true, true];
 sleep 1;
 
-titleText ["<t color='#ffffff' size='1.4'>2021 wurde Operation Resolute Support beendet und alle NATO und US Streitkräfte aus Afghanistan abgezogen.</t>", "BLACK FADED", 2, true, true];
-sleep 6;
-
-titleText ["", "BLACK FADED", 2, true, true];
-sleep 1;
-
-titleText ["<t color='#ffffff' size='1.4'>Der Einsatz in Afghanistan ist für Deutschland der blutigste Krieg seit dem zweiten Weltkrieg.</t>", "BLACK FADED", 2, true, true];
-sleep 7;
-
-titleText ["", "BLACK FADED", 2, true, true];
-sleep 1;
-
 titleText ["<t color='#ffffff' size='1.4'>Bis 2021 starben in Afghanisten ca. 48.000 Zivilisten durch Terror und Kriegshandlungen.</t>", "BLACK FADED", 2, true, true];
 sleep 7;
 
 titleText ["", "BLACK FADED", 2, true, true];
 sleep 1;
 
-titleText ["<t color='#ffffff' size='1.4'>Seit dem Abzug der NATO 2021 steht das halbe Land und die Hauptstadt Kabul wieder unter der Kontrolle der Taliban.</t>", "BLACK FADED", 2, true, true];
+titleText ["<t color='#ffffff' size='1.4'>2021 wurde Operation Resolute Support beendet und alle NATO und US Streitkräfte aus Afghanistan abgezogen.</t>", "BLACK FADED", 2, true, true];
 sleep 6;
+
+titleText ["", "BLACK FADED", 2, true, true];
+sleep 1;
+
+titleText ["<t color='#ffffff' size='1.4'>Seit dem Abzug der NATO 2021 stehen das halbe Land und die Hauptstadt Kabul wieder unter der Kontrolle der Taliban.</t>", "BLACK FADED", 2, true, true];
+sleep 6;
+
+titleText ["", "BLACK FADED", 2, true, true];
+sleep 1;
+
+titleText ["<t color='#ffffff' size='1.4'>Der Einsatz in Afghanistan ist für Deutschland der blutigste Konflikt seit dem zweiten Weltkrieg.</t>", "BLACK FADED", 2, true, true];
+sleep 7;
 
 titleText ["", "BLACK IN", 0, true, true];
 

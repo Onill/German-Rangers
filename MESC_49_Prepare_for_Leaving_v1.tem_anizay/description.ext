@@ -1,11 +1,11 @@
 author			= "GerRng Mission Making Team";
 loadScreen 		= "a3\data_f_exp_a\Data\FM_LEARN_Nexus1_ca.paa";
 
-OnLoadName 		= "Prepare for Leaving";
+OnLoadName 		= "OP Pullback";
 OnLoadMission   = "Die Ranger werden zurückverlegt nach Anizay um dort den Abzug vorzubereiten.";
 OnLoadIntro 	= "";
 
-overviewText 		= "Nach der Schlacht um Bala Murghabt werden die Ranger fünf Tage später zurückverlegt um den Abzug vorzubereiten.<br/><br/>Addons: CBA, CUP, ACE, LAMBS_Danger.fsm, JBad, Bala Murghab";
+overviewText 		= "Nach der Schlacht um Bala Murghab werden die Ranger einen Monat später nach Anizay zurückverlegt um den Abzug vorzubereiten.<br/><br/>Addons: CBA, CUP, ACE, LAMBS_Danger.fsm, JBad, Bala Murghab";
 overviewTextLocked 	= "";
 overviewPicture 	= "a3\data_f_exp_a\Data\FM_LEARN_Nexus1_ca.paa";
 
@@ -92,16 +92,10 @@ class CfgMusic
 		sound[]	= {"sounds\GR_Intro_Bara.ogg", db + 0, 1.0 };
 	};
 	
-	class Outro_Success
-	{
-		name	= "Outro_Success";
-		sound[]	= {"sounds\outro_success.ogg", db - 1, 1.0 };
-	};
-	
 	class Outro_Continue
 	{
 		name	= "Outro_Continue";
-		sound[]	= {"sounds\outro_continue.ogg", db - 1, 1.0 };
+		sound[]	= {"sounds\GR_Outro_Jetplane.ogg", db - 1, 1.0 };
 	};
 };
 

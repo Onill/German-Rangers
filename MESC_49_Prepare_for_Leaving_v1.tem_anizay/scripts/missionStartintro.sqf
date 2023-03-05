@@ -1,6 +1,6 @@
 //Intro___________________________________________________________________
 
-//if (isServer) exitWith {};
+if (isServer) exitWith {};
 
 //Start Music
 playMusic "MyIntro";
@@ -27,14 +27,14 @@ _camera camCommit 0;
 sleep 5;
 
 //Cockpit Shot
-_camera camSettarget _targetv;
+_camera camSettarget heli1;
 _camera camSetRelPos [0,5.02,0];
 _camera camCommit 0;
 sleep 3;
 
 //Player Shot
-_camera camSettarget player;
-_camera camSetRelPos [3,3,0];
+_camera camSettarget heli1;
+_camera camSetRelPos [3,3,-1];
 _camera camCommit 0;
 sleep 3;
 
@@ -74,7 +74,7 @@ sleep 1;
 //Title Text Spawns
 titleText ["<t color='#ffffff' size='1.5'>31.07.2022: Einen Monat nach der Schlacht um Bala Murghab</t>", "PLAIN DOWN", 2, true, true];
 sleep 6;
-titleText ["<t color='#ffffff' size='1.5'>Die NATO hat die MESC Mission offiziell für beendet erklärt.</t>", "PLAIN DOWN", 2, true, true];
+titleText ["<t color='#ffffff' size='1.5'>Die NATO hat die Operation Chroma Conclave offiziell für beendet erklärt.</t>", "PLAIN DOWN", 2, true, true];
 sleep 8;
 
 //Camera creating - always add to the script to make the camera work
@@ -83,7 +83,7 @@ _camera cameraEffect ["internal","back"];
 
 
 //Front Shot
-_camera camSettarget _targetv;
+_camera camSettarget heli2;
 _camera camSetRelPos [100,100,100];
 _camera camCommit 0;
 titleText ["", "PLAIN DOWN", 2, true, true];
@@ -94,17 +94,17 @@ titleText ["", "PLAIN DOWN", 2, true, true];
 sleep 1;
 
 //Front Shot
-_camera camSettarget _targetv;
+_camera camSettarget heli1;
 _camera camSetRelPos [200,0,50];
 _camera camCommit 0;
 sleep 1;
-titleText ["<t color='#ffffff' size='1.5'>Zur Durchführung des Logistikauftrages hat die OPZ die Gruppe LIMA ins Leben gerufen, die den Rückbau organisieren wird.</t>", "PLAIN DOWN", 0.7, true, true];
+titleText ["<t color='#ffffff' size='1.5'>Zur Ergänzung der Kompanie wurde die Gruppe LIMA ins Leben gerufen. Lima wurde bereits zum Landay Airfield verbracht und hat bereits erste Instruktionen für das Verfahren des Rückzugs erhalten.</t>", "PLAIN DOWN", 0.7, true, true];
 sleep 10;
 titleText ["", "PLAIN DOWN", 2, true, true];
 sleep 1;
 
 //Front Shot
-_camera camSettarget _targetv;
+_camera camSettarget heli3;
 _camera camSetRelPos [0,500,200];
 _camera camCommit 0;
 sleep 1;
@@ -114,7 +114,7 @@ titleText ["", "PLAIN DOWN", 2, true, true];
 sleep 1;
 
 //Front Shot
-_camera camSettarget _targetv;
+_camera camSettarget heli1;
 _camera camSetRelPos [100,0,200];
 _camera camCommit 0;
 sleep 1;
@@ -124,7 +124,7 @@ titleText ["", "PLAIN DOWN", 2, true, true];
 sleep 1;
 
 //Front Shot
-_camera camSettarget _targetv;
+_camera camSettarget heli2;
 _camera camSetRelPos [200,200,100];
 _camera camCommit 0;
 sleep 1;
@@ -133,10 +133,10 @@ sleep 9;
 titleText ["", "PLAIN DOWN", 2, true, true];
 sleep 1;
 
-_camera camSettarget _targetv;
+_camera camSettarget heli3;
 _camera camSetRelPos [0,500,200];
 _camera camCommit 0;
-titleText ["<t color='#ffffff' size='1'>B A L A   M U R G H A B - 31.07.2022 - German Rangers<br/>____________________</t><br/><t color='#ffffff' size='5'>Prepare for Leaving</t><br/><br/><img image='images\GermanRangersLogo.paa' shadow='0' size='8'/><img image='images\cc_Pics\mesc1.paa' shadow='0' size='8'/>", "PLAIN", 1, true, true];
+titleText ["<t color='#ffffff' size='1'>B A L A   M U R G H A B - 31.07.2022 - German Rangers<br/>____________________</t><br/><t color='#ffffff' size='5'>Operation Pullback</t><br/><br/><img image='images\GermanRangersLogo.paa' shadow='0' size='8'/><img image='images\cc_Pics\mesc1.paa' shadow='0' size='8'/>", "PLAIN", 1, true, true];
 sleep 5;
 
 //Camera destroying - terminates the 'camera view'
@@ -150,7 +150,7 @@ _camera = "camera" camCreate [0,0,0];
 _camera cameraEffect ["internal","back"];
 
 //Front Shot
-_camera camSettarget _targetv;
+_camera camSettarget heli1;
 _camera camSetRelPos [0,150,10];
 _camera camCommit 0;
 
@@ -164,7 +164,7 @@ _camera camCommit 0;
 sleep 8;
 
 //Front Shot
-_camera camSettarget _targetv;
+_camera camSettarget heli2;
 _camera camSetRelPos [-100,-100,10];
 _camera camCommit 0;
 

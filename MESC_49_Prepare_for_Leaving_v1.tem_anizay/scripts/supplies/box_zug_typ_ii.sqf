@@ -10,10 +10,10 @@ clearMagazineCargoGlobal _box;
 clearItemCargoGlobal _box;
 clearBackpackCargoGlobal _box;
 
-_box addItemCargoGlobal ["CUP_1Rnd_HE_M203",15];
-_box addItemCargoGlobal ["UGL_FlareWhite_F",10];
-_box addItemCargoGlobal ["1Rnd_SmokeRed_Grenade_shell",15];
-_box addItemCargoGlobal ["1Rnd_Smoke_Grenade_shell",15];
-_box addItemCargoGlobal ["CUP_SMAW_HEAA_M",6];
-_box addItemCargoGlobal ["CUP_SMAW_Spotting",2];
+_box addMagazineCargoGlobal ["CUP_1Rnd_HE_M203",15];
+_box addMagazineCargoGlobal ["UGL_FlareWhite_F",10];
+_box addMagazineCargoGlobal ["1Rnd_SmokeRed_Grenade_shell",15];
+_box addMagazineCargoGlobal ["1Rnd_Smoke_Grenade_shell",15];
+_box addMagazineCargoGlobal ["CUP_SMAW_HEAA_M",6];
+_box addMagazineCargoGlobal ["CUP_SMAW_Spotting",2];
 
