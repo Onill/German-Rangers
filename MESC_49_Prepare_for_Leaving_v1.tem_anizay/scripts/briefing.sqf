@@ -32,3 +32,16 @@ Nach der Eroberung Afghanistans durch die Taliban, und die Flucht des Regierungs
 Mit diesen Problemen konfrontiert wurde eine internationale Koalition gegründet, um die rechtmäßige Regierung wieder einzusetzen und die Bevölkerung zu schützen. 
 Die German Rangers werden aufgrund ihrer zurückliegenden erfolgreichen Einsatzhistorie die Speerspitze bilden und als erste NATO-Kräfte im Einsatzgebiet agieren.
 "]];
+
+player createDiaryRecord ["Intel", ["Fotos", "
+<font face='PuristaMedium' size=14 color='#fc9700'>Sichergestellte Fotos</font> <br/>
+26.07.2022 / 15:30 AM<br/>
+<br/>
+<img image ='images\cc_pics\cc_airfield.paa' width='360'/><br/>
+<br/>
+<img image ='images\cc_pics\cc_ausbildung.paa' width='360'/><br/>
+<br/>
+<img image ='images\cc_pics\cc_group.paa' width='360'/><br/>
+<br/>
+<img image ='images\cc_pics\cc_highmeeting.paa' width='360'/>
+"]];

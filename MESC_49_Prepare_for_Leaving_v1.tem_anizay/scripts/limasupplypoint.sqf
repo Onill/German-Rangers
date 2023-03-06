@@ -1,9 +1,11 @@
+if (! isServer) exitWith {};
+
 _supply = _this select 0;
 
 switch (_supply) do
 {
 	case "zug1": {
-				_box = "ACE_Box_Ammo" createVehicle getMarkerPos "limaSupplyMarker";
+				_box = "ACE_Box_Ammo" createVehicle getMarkerPos "limaSupplyMarker";				
 				[_box] execvm "scripts\supplies\box_zug_typ_i.sqf";
 			};
 	case "zug2": {

@@ -1,11 +1,11 @@
 author			= "GerRng Mission Making Team";
 loadScreen 		= "a3\data_f_exp_a\Data\FM_LEARN_Nexus1_ca.paa";
 
-OnLoadName 		= "Operation Torch Part II";
-OnLoadMission   = "Die Ranger rücken weiter den Bala Murghab Fluss Richtung Süden vor.";
+OnLoadName 		= "OP Pullback";
+OnLoadMission   = "Die Ranger werden zurückverlegt nach Anizay um dort den Abzug vorzubereiten.";
 OnLoadIntro 	= "";
 
-overviewText 		= "Bei der Sicherung der Bala Murghab Region kämpfen die Ranger mit Hinterhalten und versuchen die Stellungen des Feindes zu finden.<br/><br/>Addons: CBA, CUP, ACE, LAMBS_Danger.fsm, JBad, Bala Murghab";
+overviewText 		= "Nach der Schlacht um Bala Murghab werden die Ranger einen Monat später nach Anizay zurückverlegt um den Abzug vorzubereiten.<br/><br/>Addons: CBA, CUP, ACE, LAMBS_Danger.fsm, JBad, Bala Murghab";
 overviewTextLocked 	= "";
 overviewPicture 	= "a3\data_f_exp_a\Data\FM_LEARN_Nexus1_ca.paa";
 
@@ -69,7 +69,7 @@ class Header
 {
  gameType = COOP;
  minPlayers = 1;
- maxPlayers = 78;
+ maxPlayers = 81;
 };
 
 class CfgTaskEnhancements
@@ -92,16 +92,10 @@ class CfgMusic
 		sound[]	= {"sounds\GR_Intro_Bara.ogg", db + 0, 1.0 };
 	};
 	
-	class Outro_Success
-	{
-		name	= "Outro_Success";
-		sound[]	= {"sounds\outro_success.ogg", db - 1, 1.0 };
-	};
-	
 	class Outro_Continue
 	{
 		name	= "Outro_Continue";
-		sound[]	= {"sounds\outro_continue.ogg", db - 1, 1.0 };
+		sound[]	= {"sounds\GR_Outro_Jetplane.ogg", db - 1, 1.0 };
 	};
 };
 

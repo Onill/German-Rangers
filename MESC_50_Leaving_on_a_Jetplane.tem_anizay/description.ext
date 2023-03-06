@@ -95,13 +95,7 @@ class CfgMusic
 	class Outro_Success
 	{
 		name	= "Outro_Success";
-		sound[]	= {"sounds\outro_success.ogg", db - 1, 1.0 };
-	};
-	
-	class Outro_Continue
-	{
-		name	= "Outro_Continue";
-		sound[]	= {"sounds\outro_continue.ogg", db - 1, 1.0 };
+		sound[]	= {"sounds\GR_Outro_Time.ogg", db - 1, 1.0 };
 	};
 };
 

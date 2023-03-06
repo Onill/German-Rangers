@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=110508;
+		nextID=110834;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=8458;
+		nextID=8491;
 	};
 	class Camera
 	{
-		pos[]={1831.2787,40.422462,5606.2119};
-		dir[]={-0.45132366,-0.56189162,-0.69324225};
-		up[]={-0.3065663,0.82721084,-0.47089207};
-		aside[]={-0.83804774,1.4901161e-008,0.54559684};
+		pos[]={1791.7728,31.683477,5603.8828};
+		dir[]={0.39023244,-0.50004643,-0.77309263};
+		up[]={0.2253287,0.86599857,-0.44640049};
+		aside[]={-0.89271808,0,-0.45061553};
 	};
 };
 binarizationWanted=0;
@@ -100530,7 +100530,6 @@ class Mission
 				{
 					dataType="Layer";
 					name="Exerzierplatz";
-					state=1;
 					class Entities
 					{
 						items=36;
@@ -101683,1619 +101682,6 @@ class Mission
 								items=4;
 								class Item0
 								{
-									dataType="Group";
-									side="Independent";
-									class Entities
-									{
-										items=3;
-										class Item0
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={1817.541,15.428051,5566.062};
-												angles[]={0,2.0009327,6.2818937};
-											};
-											side="Independent";
-											flags=6;
-											class Attributes
-											{
-												init="this setGroupID [""Ausbilder""];" \n "this setVariable [""loadout"", ""Ausbilder""]; ";
-												name="s_99";
-												description="Ausbilder 1@AUSBILDER";
-												isPlayable=1;
-												class Inventory
-												{
-													map="ItemMap";
-												};
-											};
-											id=98613;
-											type="B_Soldier_F";
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male12ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.03;
-														};
-													};
-												};
-												nAttributes=3;
-											};
-										};
-										class Item1
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={1818.925,15.426206,5568.1489};
-												angles[]={0,2.0009327,6.2818937};
-											};
-											side="Independent";
-											flags=4;
-											class Attributes
-											{
-												init="this setGroupID [""Ausbilder""];" \n "this setVariable [""loadout"", ""Ausbilder""]; ";
-												name="s_100";
-												description="Ausbilder 2@AUSBILDER";
-												isPlayable=1;
-												class Inventory
-												{
-													map="ItemMap";
-												};
-											};
-											id=110446;
-											type="B_Soldier_F";
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male12ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.03;
-														};
-													};
-												};
-												nAttributes=3;
-											};
-										};
-										class Item2
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={1820.512,15.424089,5570.792};
-												angles[]={0,2.0009327,6.2818937};
-											};
-											side="Independent";
-											flags=4;
-											class Attributes
-											{
-												init="this setGroupID [""Ausbilder""];" \n "this setVariable [""loadout"", ""Ausbilder""]; ";
-												name="s_101";
-												description="Ausbilder 3@AUSBILDER";
-												isPlayable=1;
-												class Inventory
-												{
-													map="ItemMap";
-												};
-											};
-											id=110448;
-											type="B_Soldier_F";
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male12ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.03;
-														};
-													};
-												};
-												nAttributes=3;
-											};
-										};
-									};
-									class Attributes
-									{
-									};
-									id=98612;
-									atlOffset=-6.6900001;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="groupID";
-											expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="AUSBILDER";
-												};
-											};
-										};
-										nAttributes=1;
-									};
-								};
-								class Item1
-								{
-									dataType="Group";
-									side="Independent";
-									class Entities
-									{
-										items=20;
-										class Item0
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={1822.848,15.420975,5560.6108};
-												angles[]={0,5.227994,6.2818937};
-											};
-											side="Independent";
-											flags=6;
-											class Attributes
-											{
-												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
-												name="s_79";
-												description="Rekrut@REKRUTEN";
-												isPlayable=1;
-												class Inventory
-												{
-													map="ItemMap";
-												};
-											};
-											id=98615;
-											type="B_Soldier_F";
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male12ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.03;
-														};
-													};
-												};
-												nAttributes=3;
-											};
-										};
-										class Item1
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={1823.6281,15.419935,5561.9849};
-												angles[]={0,5.227994,6.2818937};
-											};
-											side="Independent";
-											flags=4;
-											class Attributes
-											{
-												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
-												name="s_80";
-												description="Rekrut";
-												isPlayable=1;
-												class Inventory
-												{
-													map="ItemMap";
-												};
-											};
-											id=98616;
-											type="B_Soldier_F";
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male02ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0.98000002;
-														};
-													};
-												};
-												nAttributes=3;
-											};
-										};
-										class Item2
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={1824.4091,15.41919,5563.3628};
-												angles[]={6.2818937,5.227994,0};
-											};
-											side="Independent";
-											flags=4;
-											class Attributes
-											{
-												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
-												name="s_81";
-												description="Rekrut";
-												isPlayable=1;
-												class Inventory
-												{
-													map="ItemMap";
-												};
-											};
-											id=98617;
-											type="B_Soldier_F";
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male10ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.04;
-														};
-													};
-												};
-												nAttributes=3;
-											};
-										};
-										class Item3
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={1825.1851,15.421024,5564.7388};
-												angles[]={6.2818937,5.227994,0};
-											};
-											side="Independent";
-											flags=4;
-											class Attributes
-											{
-												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
-												name="s_82";
-												description="Rekrut";
-												isPlayable=1;
-												class Inventory
-												{
-													map="ItemMap";
-												};
-											};
-											id=98618;
-											type="B_Soldier_F";
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male09ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.04;
-														};
-													};
-												};
-												nAttributes=3;
-											};
-										};
-										class Item4
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={1825.97,15.421439,5566.1147};
-												angles[]={0,5.227994,0};
-											};
-											side="Independent";
-											flags=4;
-											class Attributes
-											{
-												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
-												name="s_83";
-												description="Rekrut";
-												isPlayable=1;
-												class Inventory
-												{
-													map="ItemMap";
-												};
-											};
-											id=98619;
-											type="B_Soldier_F";
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=2;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male12ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.03;
-														};
-													};
-												};
-												nAttributes=3;
-											};
-										};
-										class Item5
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={1821.024,15.423407,5561.646};
-												angles[]={0,5.227994,6.2818937};
-											};
-											side="Independent";
-											flags=4;
-											class Attributes
-											{
-												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
-												name="s_84";
-												description="Rekrut";
-												isPlayable=1;
-												class Inventory
-												{
-													map="ItemMap";
-												};
-											};
-											id=98620;
-											type="B_Soldier_F";
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male01ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0.94999999;
-														};
-													};
-												};
-												nAttributes=3;
-											};
-										};
-										class Item6
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={1821.799,15.422374,5563.02};
-												angles[]={0,5.227994,6.2818937};
-											};
-											side="Independent";
-											flags=4;
-											class Attributes
-											{
-												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
-												name="s_85";
-												description="Rekrut";
-												isPlayable=1;
-												class Inventory
-												{
-													map="ItemMap";
-												};
-											};
-											id=98621;
-											type="B_Soldier_F";
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male08ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.02;
-														};
-													};
-												};
-												nAttributes=3;
-											};
-										};
-										class Item7
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={1822.579,15.421333,5564.4019};
-												angles[]={0,5.227994,6.2818937};
-											};
-											side="Independent";
-											flags=4;
-											class Attributes
-											{
-												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
-												name="s_86";
-												description="Rekrut";
-												isPlayable=1;
-												class Inventory
-												{
-													map="ItemMap";
-												};
-											};
-											id=98622;
-											type="B_Soldier_F";
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male06ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.01;
-														};
-													};
-												};
-												nAttributes=3;
-											};
-										};
-										class Item8
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={1823.359,15.421439,5565.7778};
-												angles[]={0,5.227994,0};
-											};
-											side="Independent";
-											flags=4;
-											class Attributes
-											{
-												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
-												name="s_87";
-												description="Rekrut";
-												isPlayable=1;
-												class Inventory
-												{
-													map="ItemMap";
-												};
-											};
-											id=98623;
-											type="B_Soldier_F";
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male03ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0.99000001;
-														};
-													};
-												};
-												nAttributes=3;
-											};
-										};
-										class Item9
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={1824.14,15.421439,5567.1519};
-												angles[]={0,5.227994,0};
-											};
-											side="Independent";
-											flags=4;
-											class Attributes
-											{
-												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
-												name="s_88";
-												description="Rekrut";
-												isPlayable=1;
-												class Inventory
-												{
-													map="ItemMap";
-												};
-											};
-											id=98624;
-											type="B_Soldier_F";
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male03ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0.99000001;
-														};
-													};
-												};
-												nAttributes=3;
-											};
-										};
-										class Item10
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={1826.79,15.438439,5567.7148};
-												angles[]={0,5.2291985,0};
-											};
-											side="Independent";
-											flags=4;
-											class Attributes
-											{
-												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
-												name="s_89";
-												description="Rekrut";
-												isPlayable=1;
-												class Inventory
-												{
-													map="ItemMap";
-												};
-											};
-											id=98625;
-											type="B_Soldier_F";
-											atlOffset=0.017000198;
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male12ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.03;
-														};
-													};
-												};
-												nAttributes=3;
-											};
-										};
-										class Item11
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={1827.572,15.437439,5569.0869};
-												angles[]={0,5.2291985,0};
-											};
-											side="Independent";
-											flags=4;
-											class Attributes
-											{
-												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
-												name="s_90";
-												description="Rekrut";
-												isPlayable=1;
-												class Inventory
-												{
-													map="ItemMap";
-												};
-											};
-											id=98626;
-											type="B_Soldier_F";
-											atlOffset=0.015999794;
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male02ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0.98000002;
-														};
-													};
-												};
-												nAttributes=3;
-											};
-										};
-										class Item12
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={1828.354,15.434441,5570.4648};
-												angles[]={0,5.2291985,0};
-											};
-											side="Independent";
-											flags=4;
-											class Attributes
-											{
-												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
-												name="s_91";
-												description="Rekrut";
-												isPlayable=1;
-												class Inventory
-												{
-													map="ItemMap";
-												};
-											};
-											id=98627;
-											type="B_Soldier_F";
-											atlOffset=0.013001442;
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male10ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.04;
-														};
-													};
-												};
-												nAttributes=3;
-											};
-										};
-										class Item13
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={1829.132,15.435439,5571.8398};
-												angles[]={0,5.2291985,0};
-											};
-											side="Independent";
-											flags=4;
-											class Attributes
-											{
-												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
-												name="s_92";
-												description="Rekrut";
-												isPlayable=1;
-												class Inventory
-												{
-													map="ItemMap";
-												};
-											};
-											id=98628;
-											type="B_Soldier_F";
-											atlOffset=0.013999939;
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male09ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.04;
-														};
-													};
-												};
-												nAttributes=3;
-											};
-										};
-										class Item14
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={1829.9189,15.434988,5573.2148};
-												angles[]={6.2778587,5.2291985,0};
-											};
-											side="Independent";
-											flags=4;
-											class Attributes
-											{
-												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
-												name="s_93";
-												description="Rekrut";
-												isPlayable=1;
-												class Inventory
-												{
-													map="ItemMap";
-												};
-											};
-											id=98629;
-											type="B_Soldier_F";
-											atlOffset=0.010001183;
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=2;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male12ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.03;
-														};
-													};
-												};
-												nAttributes=3;
-											};
-										};
-										class Item15
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={1824.967,15.438439,5568.752};
-												angles[]={0,5.2291985,0};
-											};
-											side="Independent";
-											flags=4;
-											class Attributes
-											{
-												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
-												name="s_94";
-												description="Rekrut";
-												isPlayable=1;
-												class Inventory
-												{
-													map="ItemMap";
-												};
-											};
-											id=98630;
-											type="B_Soldier_F";
-											atlOffset=0.017000198;
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male01ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0.94999999;
-														};
-													};
-												};
-												nAttributes=3;
-											};
-										};
-										class Item16
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={1825.744,15.437439,5570.125};
-												angles[]={0,5.2291985,0};
-											};
-											side="Independent";
-											flags=4;
-											class Attributes
-											{
-												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
-												name="s_95";
-												description="Rekrut";
-												isPlayable=1;
-												class Inventory
-												{
-													map="ItemMap";
-												};
-											};
-											id=98631;
-											type="B_Soldier_F";
-											atlOffset=0.015999794;
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male08ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.02;
-														};
-													};
-												};
-												nAttributes=3;
-											};
-										};
-										class Item17
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={1826.526,15.434441,5571.5059};
-												angles[]={0,5.2291985,0};
-											};
-											side="Independent";
-											flags=4;
-											class Attributes
-											{
-												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
-												name="s_96";
-												description="Rekrut";
-												isPlayable=1;
-												class Inventory
-												{
-													map="ItemMap";
-												};
-											};
-											id=98632;
-											type="B_Soldier_F";
-											atlOffset=0.013001442;
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male06ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=1.01;
-														};
-													};
-												};
-												nAttributes=3;
-											};
-										};
-										class Item18
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={1827.307,15.435206,5572.8809};
-												angles[]={6.2778587,5.2291985,0};
-											};
-											side="Independent";
-											flags=4;
-											class Attributes
-											{
-												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
-												name="s_97";
-												description="Rekrut";
-												isPlayable=1;
-												class Inventory
-												{
-													map="ItemMap";
-												};
-											};
-											id=98633;
-											type="B_Soldier_F";
-											atlOffset=0.012000084;
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male03ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0.99000001;
-														};
-													};
-												};
-												nAttributes=3;
-											};
-										};
-										class Item19
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={1828.09,15.434528,5574.2539};
-												angles[]={6.2778587,5.2291985,0};
-											};
-											side="Independent";
-											flags=4;
-											class Attributes
-											{
-												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
-												name="s_98";
-												description="Rekrut";
-												isPlayable=1;
-												class Inventory
-												{
-													map="ItemMap";
-												};
-											};
-											id=98634;
-											type="B_Soldier_F";
-											atlOffset=0.0039997101;
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="ace_isMedic";
-													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="STRING";
-															value="Male03ENG";
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															singleType="SCALAR";
-															value=0.99000001;
-														};
-													};
-												};
-												nAttributes=3;
-											};
-										};
-									};
-									class Attributes
-									{
-									};
-									id=98614;
-									atlOffset=-6.6900001;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="groupID";
-											expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
-											class Value
-											{
-												class data
-												{
-													singleType="STRING";
-													value="REKRUTEN";
-												};
-											};
-										};
-										nAttributes=1;
-									};
-								};
-								class Item2
-								{
 									dataType="Layer";
 									name="German Rangers Playerbase v1";
 									class Entities
@@ -103337,7 +101723,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110091;
+													id=110719;
 													type="B_officer_F";
 													class CustomAttributes
 													{
@@ -103438,7 +101824,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110092;
+													id=110720;
 													type="B_officer_F";
 													atlOffset=1.9073486e-006;
 													class CustomAttributes
@@ -103540,7 +101926,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110093;
+													id=110721;
 													type="B_officer_F";
 													atlOffset=9.5367432e-007;
 													class CustomAttributes
@@ -103642,7 +102028,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110094;
+													id=110722;
 													type="B_officer_F";
 													atlOffset=9.5367432e-007;
 													class CustomAttributes
@@ -103720,8 +102106,7 @@ class Mission
 											{
 												name="grpkilo";
 											};
-											id=110090;
-											atlOffset=-6.6900001;
+											id=110718;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -103776,7 +102161,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110096;
+													id=110724;
 													type="B_Soldier_SL_F";
 													class CustomAttributes
 													{
@@ -103877,7 +102262,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110097;
+													id=110725;
 													type="B_Soldier_SL_F";
 													class CustomAttributes
 													{
@@ -103978,7 +102363,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110098;
+													id=110726;
 													type="B_medic_F";
 													atlOffset=-9.5367432e-007;
 													class CustomAttributes
@@ -104080,7 +102465,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110099;
+													id=110727;
 													type="B_Soldier_F";
 													class CustomAttributes
 													{
@@ -104157,8 +102542,7 @@ class Mission
 											{
 												name="grpfox";
 											};
-											id=110095;
-											atlOffset=-6.6900001;
+											id=110723;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -104213,7 +102597,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110101;
+													id=110729;
 													type="B_Soldier_SL_F";
 													class CustomAttributes
 													{
@@ -104275,7 +102659,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110102;
+													id=110730;
 													type="B_Soldier_TL_F";
 													atlOffset=9.5367432e-007;
 													class CustomAttributes
@@ -104338,7 +102722,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110103;
+													id=110731;
 													type="B_Soldier_TL_F";
 													atlOffset=9.5367432e-007;
 													class CustomAttributes
@@ -104401,7 +102785,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110104;
+													id=110732;
 													type="B_Soldier_GL_F";
 													atlOffset=9.5367432e-007;
 													class CustomAttributes
@@ -104464,7 +102848,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110105;
+													id=110733;
 													type="B_medic_F";
 													class CustomAttributes
 													{
@@ -104539,7 +102923,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110106;
+													id=110734;
 													type="B_Soldier_F";
 													class CustomAttributes
 													{
@@ -104601,7 +102985,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110107;
+													id=110735;
 													type="B_Soldier_F";
 													class CustomAttributes
 													{
@@ -104663,7 +103047,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110108;
+													id=110736;
 													type="B_Soldier_F";
 													atlOffset=9.5367432e-007;
 													class CustomAttributes
@@ -104726,7 +103110,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110109;
+													id=110737;
 													type="B_Soldier_F";
 													atlOffset=9.5367432e-007;
 													class CustomAttributes
@@ -104789,7 +103173,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110110;
+													id=110738;
 													type="B_Soldier_F";
 													atlOffset=9.5367432e-007;
 													class CustomAttributes
@@ -104865,7 +103249,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110111;
+													id=110739;
 													type="B_soldier_M_F";
 													atlOffset=9.5367432e-007;
 													class CustomAttributes
@@ -104928,7 +103312,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110112;
+													id=110740;
 													type="B_soldier_AR_F";
 													atlOffset=9.5367432e-007;
 													class CustomAttributes
@@ -104991,7 +103375,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110113;
+													id=110741;
 													type="B_Soldier_F";
 													atlOffset=9.5367432e-007;
 													class CustomAttributes
@@ -105054,7 +103438,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110114;
+													id=110742;
 													type="B_Soldier_F";
 													class CustomAttributes
 													{
@@ -105092,8 +103476,7 @@ class Mission
 											{
 												name="grpalpha";
 											};
-											id=110100;
-											atlOffset=-6.6900001;
+											id=110728;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -105148,7 +103531,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110116;
+													id=110744;
 													type="B_Soldier_SL_F";
 													class CustomAttributes
 													{
@@ -105211,7 +103594,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110117;
+													id=110745;
 													type="B_Soldier_TL_F";
 													class CustomAttributes
 													{
@@ -105273,7 +103656,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110118;
+													id=110746;
 													type="B_Soldier_TL_F";
 													class CustomAttributes
 													{
@@ -105335,7 +103718,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110119;
+													id=110747;
 													type="B_Soldier_GL_F";
 													atlOffset=9.5367432e-007;
 													class CustomAttributes
@@ -105398,7 +103781,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110120;
+													id=110748;
 													type="B_medic_F";
 													atlOffset=9.5367432e-007;
 													class CustomAttributes
@@ -105474,7 +103857,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110121;
+													id=110749;
 													type="B_Soldier_F";
 													atlOffset=9.5367432e-007;
 													class CustomAttributes
@@ -105537,7 +103920,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110122;
+													id=110750;
 													type="B_Soldier_F";
 													atlOffset=9.5367432e-007;
 													class CustomAttributes
@@ -105600,7 +103983,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110123;
+													id=110751;
 													type="B_Soldier_F";
 													atlOffset=9.5367432e-007;
 													class CustomAttributes
@@ -105663,7 +104046,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110124;
+													id=110752;
 													type="B_Soldier_F";
 													atlOffset=9.5367432e-007;
 													class CustomAttributes
@@ -105726,7 +104109,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110125;
+													id=110753;
 													type="B_Soldier_F";
 													atlOffset=9.5367432e-007;
 													class CustomAttributes
@@ -105802,7 +104185,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110126;
+													id=110754;
 													type="B_soldier_M_F";
 													atlOffset=9.5367432e-007;
 													class CustomAttributes
@@ -105865,7 +104248,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110127;
+													id=110755;
 													type="B_soldier_AR_F";
 													atlOffset=9.5367432e-007;
 													class CustomAttributes
@@ -105928,7 +104311,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110128;
+													id=110756;
 													type="B_Soldier_F";
 													atlOffset=9.5367432e-007;
 													class CustomAttributes
@@ -105991,7 +104374,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110129;
+													id=110757;
 													type="B_Soldier_F";
 													atlOffset=9.5367432e-007;
 													class CustomAttributes
@@ -106030,8 +104413,7 @@ class Mission
 											{
 												name="grpbravo";
 											};
-											id=110115;
-											atlOffset=-6.6900001;
+											id=110743;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -106086,7 +104468,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110131;
+													id=110759;
 													type="B_Soldier_SL_F";
 													class CustomAttributes
 													{
@@ -106148,7 +104530,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110132;
+													id=110760;
 													type="B_Soldier_TL_F";
 													class CustomAttributes
 													{
@@ -106210,7 +104592,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110133;
+													id=110761;
 													type="B_Soldier_TL_F";
 													class CustomAttributes
 													{
@@ -106272,7 +104654,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110134;
+													id=110762;
 													type="B_Soldier_GL_F";
 													class CustomAttributes
 													{
@@ -106334,7 +104716,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110135;
+													id=110763;
 													type="B_medic_F";
 													class CustomAttributes
 													{
@@ -106409,7 +104791,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110136;
+													id=110764;
 													type="B_Soldier_F";
 													class CustomAttributes
 													{
@@ -106471,7 +104853,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110137;
+													id=110765;
 													type="B_Soldier_F";
 													class CustomAttributes
 													{
@@ -106533,7 +104915,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110138;
+													id=110766;
 													type="B_Soldier_F";
 													class CustomAttributes
 													{
@@ -106595,7 +104977,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110139;
+													id=110767;
 													type="B_Soldier_F";
 													class CustomAttributes
 													{
@@ -106657,7 +105039,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110140;
+													id=110768;
 													type="B_Soldier_F";
 													class CustomAttributes
 													{
@@ -106732,7 +105114,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110141;
+													id=110769;
 													type="B_soldier_M_F";
 													class CustomAttributes
 													{
@@ -106794,7 +105176,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110142;
+													id=110770;
 													type="B_soldier_AR_F";
 													atlOffset=9.5367432e-007;
 													class CustomAttributes
@@ -106857,7 +105239,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110143;
+													id=110771;
 													type="B_Soldier_F";
 													class CustomAttributes
 													{
@@ -106919,7 +105301,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110144;
+													id=110772;
 													type="B_Soldier_F";
 													class CustomAttributes
 													{
@@ -106957,8 +105339,7 @@ class Mission
 											{
 												name="grpcharlie";
 											};
-											id=110130;
-											atlOffset=-6.6900001;
+											id=110758;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -107013,7 +105394,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110146;
+													id=110774;
 													type="B_Soldier_SL_F";
 													class CustomAttributes
 													{
@@ -107075,7 +105456,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110147;
+													id=110775;
 													type="B_Soldier_TL_F";
 													class CustomAttributes
 													{
@@ -107137,7 +105518,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110148;
+													id=110776;
 													type="B_Soldier_TL_F";
 													class CustomAttributes
 													{
@@ -107199,7 +105580,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110149;
+													id=110777;
 													type="B_Soldier_GL_F";
 													atlOffset=-9.5367432e-007;
 													class CustomAttributes
@@ -107262,7 +105643,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110150;
+													id=110778;
 													type="B_medic_F";
 													class CustomAttributes
 													{
@@ -107337,7 +105718,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110151;
+													id=110779;
 													type="B_Soldier_F";
 													class CustomAttributes
 													{
@@ -107399,7 +105780,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110152;
+													id=110780;
 													type="B_Soldier_F";
 													class CustomAttributes
 													{
@@ -107461,7 +105842,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110153;
+													id=110781;
 													type="B_Soldier_F";
 													class CustomAttributes
 													{
@@ -107523,7 +105904,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110154;
+													id=110782;
 													type="B_Soldier_F";
 													atlOffset=-9.5367432e-007;
 													class CustomAttributes
@@ -107586,7 +105967,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110155;
+													id=110783;
 													type="B_Soldier_F";
 													atlOffset=-9.5367432e-007;
 													class CustomAttributes
@@ -107662,7 +106043,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110156;
+													id=110784;
 													type="B_soldier_M_F";
 													atlOffset=-9.5367432e-007;
 													class CustomAttributes
@@ -107725,7 +106106,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110157;
+													id=110785;
 													type="B_soldier_AR_F";
 													class CustomAttributes
 													{
@@ -107787,7 +106168,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110158;
+													id=110786;
 													type="B_Soldier_F";
 													class CustomAttributes
 													{
@@ -107849,7 +106230,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110159;
+													id=110787;
 													type="B_Soldier_F";
 													class CustomAttributes
 													{
@@ -107887,8 +106268,7 @@ class Mission
 											{
 												name="grpdelta";
 											};
-											id=110145;
-											atlOffset=-6.6900001;
+											id=110773;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -107913,7 +106293,7 @@ class Mission
 											side="West";
 											class Entities
 											{
-												items=4;
+												items=5;
 												class Item0
 												{
 													dataType="Object";
@@ -107943,7 +106323,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110161;
+													id=110789;
 													type="B_recon_TL_F";
 													class CustomAttributes
 													{
@@ -108018,7 +106398,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110162;
+													id=110790;
 													type="B_sniper_F";
 													class CustomAttributes
 													{
@@ -108093,7 +106473,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110163;
+													id=110791;
 													type="B_recon_F";
 													class CustomAttributes
 													{
@@ -108168,9 +106548,84 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110164;
+													id=110792;
 													type="B_recon_F";
 													atlOffset=-9.5367432e-007;
+													class CustomAttributes
+													{
+														class Attribute0
+														{
+															property="ace_isMedic";
+															expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+															class Value
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=2;
+																};
+															};
+														};
+														class Attribute1
+														{
+															property="speaker";
+															expression="_this setspeaker _value;";
+															class Value
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="Male10ENG";
+																};
+															};
+														};
+														class Attribute2
+														{
+															property="pitch";
+															expression="_this setpitch _value;";
+															class Value
+															{
+																class data
+																{
+																	singleType="SCALAR";
+																	value=1.04;
+																};
+															};
+														};
+														nAttributes=3;
+													};
+												};
+												class Item4
+												{
+													dataType="Object";
+													class PositionInfo
+													{
+														position[]={1791.6289,15.471955,5580.2432};
+														angles[]={0,2.1268058,0};
+													};
+													side="West";
+													flags=5;
+													class Attributes
+													{
+														init="this setGroupID [""Sierra""];" \n "this setVariable [""loadout"", ""Sierra_NaSi_Cutter""]; ";
+														name="s81";
+														description="Nahsicherer";
+														isPlayable=1;
+														class Inventory
+														{
+															class uniform
+															{
+																typeName="U_B_CombatUniform_mcam";
+																isBackpack=0;
+															};
+															map="ItemMap";
+															compass="ItemCompass";
+															watch="ItemWatch";
+															radio="ItemRadio";
+														};
+													};
+													id=110793;
+													type="B_recon_F";
 													class CustomAttributes
 													{
 														class Attribute0
@@ -108220,8 +106675,7 @@ class Mission
 											{
 												name="grpsierra";
 											};
-											id=110160;
-											atlOffset=-6.6900001;
+											id=110788;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -108276,7 +106730,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110166;
+													id=110795;
 													type="B_recon_TL_F";
 													class CustomAttributes
 													{
@@ -108377,7 +106831,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110167;
+													id=110796;
 													type="B_recon_F";
 													atlOffset=-9.5367432e-007;
 													class CustomAttributes
@@ -108480,7 +106934,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110168;
+													id=110797;
 													type="B_recon_F";
 													atlOffset=-9.5367432e-007;
 													class CustomAttributes
@@ -108582,7 +107036,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110169;
+													id=110798;
 													type="B_recon_F";
 													atlOffset=0.11001015;
 													class CustomAttributes
@@ -108660,8 +107114,7 @@ class Mission
 											{
 												name="grpecho1";
 											};
-											id=110165;
-											atlOffset=-6.6900001;
+											id=110794;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -108716,7 +107169,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110171;
+													id=110800;
 													type="B_recon_TL_F";
 													class CustomAttributes
 													{
@@ -108817,7 +107270,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110172;
+													id=110801;
 													type="B_recon_F";
 													class CustomAttributes
 													{
@@ -108918,7 +107371,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110173;
+													id=110802;
 													type="B_recon_F";
 													class CustomAttributes
 													{
@@ -109019,7 +107472,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110174;
+													id=110803;
 													type="B_recon_F";
 													class CustomAttributes
 													{
@@ -109096,8 +107549,7 @@ class Mission
 											{
 												name="grpecho2";
 											};
-											id=110170;
-											atlOffset=-6.6900001;
+											id=110799;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -109152,7 +107604,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110478;
+													id=110805;
 													type="B_Soldier_TL_F";
 													class CustomAttributes
 													{
@@ -109253,7 +107705,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110480;
+													id=110806;
 													type="B_soldier_repair_F";
 													atlOffset=0.027998924;
 													class CustomAttributes
@@ -109355,7 +107807,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110481;
+													id=110807;
 													type="B_soldier_repair_F";
 													atlOffset=0.023999214;
 													class CustomAttributes
@@ -109457,7 +107909,7 @@ class Mission
 															radio="ItemRadio";
 														};
 													};
-													id=110482;
+													id=110808;
 													type="B_soldier_repair_F";
 													atlOffset=0.022999763;
 													class CustomAttributes
@@ -109535,8 +107987,7 @@ class Mission
 											{
 												name="grplima";
 											};
-											id=110477;
-											atlOffset=-6.6900001;
+											id=110804;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -109557,9 +108008,9 @@ class Mission
 										};
 									};
 									id=110089;
-									atlOffset=-6.6900001;
+									atlOffset=0.0048789978;
 								};
-								class Item3
+								class Item1
 								{
 									dataType="Layer";
 									name="GerRng Tech Slots v1";
@@ -110602,9 +109053,1620 @@ class Mission
 									id=110254;
 									atlOffset=-0.0028772354;
 								};
+								class Item2
+								{
+									dataType="Group";
+									side="Independent";
+									class Entities
+									{
+										items=3;
+										class Item0
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={1817.541,15.428051,5566.062};
+												angles[]={-0,2.0009327,6.2818937};
+											};
+											side="Independent";
+											flags=6;
+											class Attributes
+											{
+												init="this setGroupID [""Ausbilder""];" \n "this setVariable [""loadout"", ""Ausbilder""]; ";
+												name="s_99";
+												description="Ausbilder 1@AUSBILDER";
+												isPlayable=1;
+												class Inventory
+												{
+													map="ItemMap";
+												};
+											};
+											id=110810;
+											type="B_Soldier_F";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ace_isMedic";
+													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Male12ENG";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1.03;
+														};
+													};
+												};
+												nAttributes=3;
+											};
+										};
+										class Item1
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={1818.925,15.426206,5568.1489};
+												angles[]={-0,2.0009327,6.2818937};
+											};
+											side="Independent";
+											flags=4;
+											class Attributes
+											{
+												init="this setGroupID [""Ausbilder""];" \n "this setVariable [""loadout"", ""Ausbilder""]; ";
+												name="s_100";
+												description="Ausbilder 2@AUSBILDER";
+												isPlayable=1;
+												class Inventory
+												{
+													map="ItemMap";
+												};
+											};
+											id=110811;
+											type="B_Soldier_F";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ace_isMedic";
+													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Male12ENG";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1.03;
+														};
+													};
+												};
+												nAttributes=3;
+											};
+										};
+										class Item2
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={1820.512,15.424089,5570.792};
+												angles[]={-0,2.0009327,6.2818937};
+											};
+											side="Independent";
+											flags=4;
+											class Attributes
+											{
+												init="this setGroupID [""Ausbilder""];" \n "this setVariable [""loadout"", ""Ausbilder""]; ";
+												name="s_101";
+												description="Ausbilder 3@AUSBILDER";
+												isPlayable=1;
+												class Inventory
+												{
+													map="ItemMap";
+												};
+											};
+											id=110812;
+											type="B_Soldier_F";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ace_isMedic";
+													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Male12ENG";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1.03;
+														};
+													};
+												};
+												nAttributes=3;
+											};
+										};
+									};
+									class Attributes
+									{
+									};
+									id=110809;
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="groupID";
+											expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="AUSBILDER";
+												};
+											};
+										};
+										nAttributes=1;
+									};
+								};
+								class Item3
+								{
+									dataType="Group";
+									side="Independent";
+									class Entities
+									{
+										items=20;
+										class Item0
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={1822.848,15.420975,5560.6108};
+												angles[]={-0,5.227994,6.2818937};
+											};
+											side="Independent";
+											flags=6;
+											class Attributes
+											{
+												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
+												name="s_79";
+												description="Rekrut@REKRUTEN";
+												isPlayable=1;
+												class Inventory
+												{
+													map="ItemMap";
+												};
+											};
+											id=110814;
+											type="B_Soldier_F";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ace_isMedic";
+													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Male12ENG";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1.03;
+														};
+													};
+												};
+												nAttributes=3;
+											};
+										};
+										class Item1
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={1823.6281,15.419935,5561.9849};
+												angles[]={-0,5.227994,6.2818937};
+											};
+											side="Independent";
+											flags=4;
+											class Attributes
+											{
+												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
+												name="s_80";
+												description="Rekrut";
+												isPlayable=1;
+												class Inventory
+												{
+													map="ItemMap";
+												};
+											};
+											id=110815;
+											type="B_Soldier_F";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ace_isMedic";
+													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Male02ENG";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0.98000002;
+														};
+													};
+												};
+												nAttributes=3;
+											};
+										};
+										class Item2
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={1824.4091,15.41919,5563.3628};
+												angles[]={6.2818937,5.227994,0};
+											};
+											side="Independent";
+											flags=4;
+											class Attributes
+											{
+												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
+												name="s_81";
+												description="Rekrut";
+												isPlayable=1;
+												class Inventory
+												{
+													map="ItemMap";
+												};
+											};
+											id=110816;
+											type="B_Soldier_F";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ace_isMedic";
+													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Male10ENG";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1.04;
+														};
+													};
+												};
+												nAttributes=3;
+											};
+										};
+										class Item3
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={1825.1851,15.421024,5564.7388};
+												angles[]={6.2818937,5.227994,0};
+											};
+											side="Independent";
+											flags=4;
+											class Attributes
+											{
+												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
+												name="s_82";
+												description="Rekrut";
+												isPlayable=1;
+												class Inventory
+												{
+													map="ItemMap";
+												};
+											};
+											id=110817;
+											type="B_Soldier_F";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ace_isMedic";
+													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Male09ENG";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1.04;
+														};
+													};
+												};
+												nAttributes=3;
+											};
+										};
+										class Item4
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={1825.97,15.421439,5566.1147};
+												angles[]={-0,5.227994,0};
+											};
+											side="Independent";
+											flags=4;
+											class Attributes
+											{
+												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
+												name="s_83";
+												description="Rekrut";
+												isPlayable=1;
+												class Inventory
+												{
+													map="ItemMap";
+												};
+											};
+											id=110818;
+											type="B_Soldier_F";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ace_isMedic";
+													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=2;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Male12ENG";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1.03;
+														};
+													};
+												};
+												nAttributes=3;
+											};
+										};
+										class Item5
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={1821.024,15.423407,5561.646};
+												angles[]={-0,5.227994,6.2818937};
+											};
+											side="Independent";
+											flags=4;
+											class Attributes
+											{
+												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
+												name="s_84";
+												description="Rekrut";
+												isPlayable=1;
+												class Inventory
+												{
+													map="ItemMap";
+												};
+											};
+											id=110819;
+											type="B_Soldier_F";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ace_isMedic";
+													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Male01ENG";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0.94999999;
+														};
+													};
+												};
+												nAttributes=3;
+											};
+										};
+										class Item6
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={1821.799,15.422374,5563.02};
+												angles[]={-0,5.227994,6.2818937};
+											};
+											side="Independent";
+											flags=4;
+											class Attributes
+											{
+												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
+												name="s_85";
+												description="Rekrut";
+												isPlayable=1;
+												class Inventory
+												{
+													map="ItemMap";
+												};
+											};
+											id=110820;
+											type="B_Soldier_F";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ace_isMedic";
+													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Male08ENG";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1.02;
+														};
+													};
+												};
+												nAttributes=3;
+											};
+										};
+										class Item7
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={1822.579,15.421333,5564.4019};
+												angles[]={-0,5.227994,6.2818937};
+											};
+											side="Independent";
+											flags=4;
+											class Attributes
+											{
+												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
+												name="s_86";
+												description="Rekrut";
+												isPlayable=1;
+												class Inventory
+												{
+													map="ItemMap";
+												};
+											};
+											id=110821;
+											type="B_Soldier_F";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ace_isMedic";
+													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Male06ENG";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1.01;
+														};
+													};
+												};
+												nAttributes=3;
+											};
+										};
+										class Item8
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={1823.359,15.421439,5565.7778};
+												angles[]={-0,5.227994,0};
+											};
+											side="Independent";
+											flags=4;
+											class Attributes
+											{
+												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
+												name="s_87";
+												description="Rekrut";
+												isPlayable=1;
+												class Inventory
+												{
+													map="ItemMap";
+												};
+											};
+											id=110822;
+											type="B_Soldier_F";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ace_isMedic";
+													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Male03ENG";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0.99000001;
+														};
+													};
+												};
+												nAttributes=3;
+											};
+										};
+										class Item9
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={1824.14,15.421439,5567.1519};
+												angles[]={-0,5.227994,0};
+											};
+											side="Independent";
+											flags=4;
+											class Attributes
+											{
+												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
+												name="s_88";
+												description="Rekrut";
+												isPlayable=1;
+												class Inventory
+												{
+													map="ItemMap";
+												};
+											};
+											id=110823;
+											type="B_Soldier_F";
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ace_isMedic";
+													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Male03ENG";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0.99000001;
+														};
+													};
+												};
+												nAttributes=3;
+											};
+										};
+										class Item10
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={1826.79,15.438439,5567.7148};
+												angles[]={-0,5.2291985,0};
+											};
+											side="Independent";
+											flags=4;
+											class Attributes
+											{
+												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
+												name="s_89";
+												description="Rekrut";
+												isPlayable=1;
+												class Inventory
+												{
+													map="ItemMap";
+												};
+											};
+											id=110824;
+											type="B_Soldier_F";
+											atlOffset=0.017000198;
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ace_isMedic";
+													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Male12ENG";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1.03;
+														};
+													};
+												};
+												nAttributes=3;
+											};
+										};
+										class Item11
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={1827.572,15.437439,5569.0869};
+												angles[]={-0,5.2291985,0};
+											};
+											side="Independent";
+											flags=4;
+											class Attributes
+											{
+												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
+												name="s_90";
+												description="Rekrut";
+												isPlayable=1;
+												class Inventory
+												{
+													map="ItemMap";
+												};
+											};
+											id=110825;
+											type="B_Soldier_F";
+											atlOffset=0.015999794;
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ace_isMedic";
+													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Male02ENG";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0.98000002;
+														};
+													};
+												};
+												nAttributes=3;
+											};
+										};
+										class Item12
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={1828.354,15.434441,5570.4648};
+												angles[]={-0,5.2291985,0};
+											};
+											side="Independent";
+											flags=4;
+											class Attributes
+											{
+												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
+												name="s_91";
+												description="Rekrut";
+												isPlayable=1;
+												class Inventory
+												{
+													map="ItemMap";
+												};
+											};
+											id=110826;
+											type="B_Soldier_F";
+											atlOffset=0.013001442;
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ace_isMedic";
+													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Male10ENG";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1.04;
+														};
+													};
+												};
+												nAttributes=3;
+											};
+										};
+										class Item13
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={1829.132,15.435439,5571.8398};
+												angles[]={-0,5.2291985,0};
+											};
+											side="Independent";
+											flags=4;
+											class Attributes
+											{
+												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
+												name="s_92";
+												description="Rekrut";
+												isPlayable=1;
+												class Inventory
+												{
+													map="ItemMap";
+												};
+											};
+											id=110827;
+											type="B_Soldier_F";
+											atlOffset=0.013999939;
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ace_isMedic";
+													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Male09ENG";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1.04;
+														};
+													};
+												};
+												nAttributes=3;
+											};
+										};
+										class Item14
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={1829.9189,15.434988,5573.2148};
+												angles[]={6.2778587,5.2291985,0};
+											};
+											side="Independent";
+											flags=4;
+											class Attributes
+											{
+												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
+												name="s_93";
+												description="Rekrut";
+												isPlayable=1;
+												class Inventory
+												{
+													map="ItemMap";
+												};
+											};
+											id=110828;
+											type="B_Soldier_F";
+											atlOffset=0.010001183;
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ace_isMedic";
+													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=2;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Male12ENG";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1.03;
+														};
+													};
+												};
+												nAttributes=3;
+											};
+										};
+										class Item15
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={1824.967,15.438439,5568.752};
+												angles[]={-0,5.2291985,0};
+											};
+											side="Independent";
+											flags=4;
+											class Attributes
+											{
+												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
+												name="s_94";
+												description="Rekrut";
+												isPlayable=1;
+												class Inventory
+												{
+													map="ItemMap";
+												};
+											};
+											id=110829;
+											type="B_Soldier_F";
+											atlOffset=0.017000198;
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ace_isMedic";
+													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Male01ENG";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0.94999999;
+														};
+													};
+												};
+												nAttributes=3;
+											};
+										};
+										class Item16
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={1825.744,15.437439,5570.125};
+												angles[]={-0,5.2291985,0};
+											};
+											side="Independent";
+											flags=4;
+											class Attributes
+											{
+												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
+												name="s_95";
+												description="Rekrut";
+												isPlayable=1;
+												class Inventory
+												{
+													map="ItemMap";
+												};
+											};
+											id=110830;
+											type="B_Soldier_F";
+											atlOffset=0.015999794;
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ace_isMedic";
+													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Male08ENG";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1.02;
+														};
+													};
+												};
+												nAttributes=3;
+											};
+										};
+										class Item17
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={1826.526,15.434441,5571.5059};
+												angles[]={-0,5.2291985,0};
+											};
+											side="Independent";
+											flags=4;
+											class Attributes
+											{
+												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
+												name="s_96";
+												description="Rekrut";
+												isPlayable=1;
+												class Inventory
+												{
+													map="ItemMap";
+												};
+											};
+											id=110831;
+											type="B_Soldier_F";
+											atlOffset=0.013001442;
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ace_isMedic";
+													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Male06ENG";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=1.01;
+														};
+													};
+												};
+												nAttributes=3;
+											};
+										};
+										class Item18
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={1827.307,15.435206,5572.8809};
+												angles[]={6.2778587,5.2291985,0};
+											};
+											side="Independent";
+											flags=4;
+											class Attributes
+											{
+												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
+												name="s_97";
+												description="Rekrut";
+												isPlayable=1;
+												class Inventory
+												{
+													map="ItemMap";
+												};
+											};
+											id=110832;
+											type="B_Soldier_F";
+											atlOffset=0.012000084;
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ace_isMedic";
+													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Male03ENG";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0.99000001;
+														};
+													};
+												};
+												nAttributes=3;
+											};
+										};
+										class Item19
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={1828.09,15.434528,5574.2539};
+												angles[]={6.2778587,5.2291985,0};
+											};
+											side="Independent";
+											flags=4;
+											class Attributes
+											{
+												init="this setGroupID [""Rekruten""];" \n "this setVariable [""loadout"", ""Rekrut""]; ";
+												name="s_98";
+												description="Rekrut";
+												isPlayable=1;
+												class Inventory
+												{
+													map="ItemMap";
+												};
+											};
+											id=110833;
+											type="B_Soldier_F";
+											atlOffset=0.0039997101;
+											class CustomAttributes
+											{
+												class Attribute0
+												{
+													property="ace_isMedic";
+													expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0;
+														};
+													};
+												};
+												class Attribute1
+												{
+													property="speaker";
+													expression="_this setspeaker _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="STRING";
+															value="Male03ENG";
+														};
+													};
+												};
+												class Attribute2
+												{
+													property="pitch";
+													expression="_this setpitch _value;";
+													class Value
+													{
+														class data
+														{
+															singleType="SCALAR";
+															value=0.99000001;
+														};
+													};
+												};
+												nAttributes=3;
+											};
+										};
+									};
+									class Attributes
+									{
+									};
+									id=110813;
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="groupID";
+											expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+											class Value
+											{
+												class data
+												{
+													singleType="STRING";
+													value="REKRUTEN";
+												};
+											};
+										};
+										nAttributes=1;
+									};
+								};
 							};
 							id=109382;
-							atlOffset=-10.828271;
+							atlOffset=0.0017852783;
 						};
 						class Item33
 						{
@@ -110828,7 +110890,7 @@ class Mission
 						};
 					};
 					id=109378;
-					atlOffset=-5.7806797;
+					atlOffset=-4.9793568;
 				};
 				class Item5
 				{
@@ -144020,7 +144082,7 @@ class Mission
 				};
 			};
 			id=109381;
-			atlOffset=0.59377003;
+			atlOffset=0.58988285;
 		};
 		class Item4
 		{
@@ -144510,11 +144572,11 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=28;
+			nextID=15;
 		};
 		class Links
 		{
-			items=28;
+			items=15;
 			class Item0
 			{
 				linkID=0;
@@ -144618,8 +144680,8 @@ class Mission
 			class Item10
 			{
 				linkID=10;
-				item0=110091;
-				item1=110261;
+				item0=110488;
+				item1=110489;
 				class CustomData
 				{
 					type="Sync";
@@ -144628,8 +144690,8 @@ class Mission
 			class Item11
 			{
 				linkID=11;
-				item0=110092;
-				item1=110262;
+				item0=110490;
+				item1=110491;
 				class CustomData
 				{
 					type="Sync";
@@ -144638,8 +144700,8 @@ class Mission
 			class Item12
 			{
 				linkID=12;
-				item0=110093;
-				item1=110264;
+				item0=110492;
+				item1=110494;
 				class CustomData
 				{
 					type="Sync";
@@ -144648,8 +144710,8 @@ class Mission
 			class Item13
 			{
 				linkID=13;
-				item0=110094;
-				item1=110263;
+				item0=110495;
+				item1=110496;
 				class CustomData
 				{
 					type="Sync";
@@ -144658,136 +144720,6 @@ class Mission
 			class Item14
 			{
 				linkID=14;
-				item0=110096;
-				item1=110259;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item15
-			{
-				linkID=15;
-				item0=110097;
-				item1=110262;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item16
-			{
-				linkID=16;
-				item0=110279;
-				item1=98613;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item17
-			{
-				linkID=17;
-				item0=110449;
-				item1=110446;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item18
-			{
-				linkID=18;
-				item0=110450;
-				item1=110448;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item19
-			{
-				linkID=19;
-				item0=110483;
-				item1=110478;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item20
-			{
-				linkID=20;
-				item0=110484;
-				item1=110480;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item21
-			{
-				linkID=21;
-				item0=110485;
-				item1=110481;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item22
-			{
-				linkID=22;
-				item0=110486;
-				item1=110482;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item23
-			{
-				linkID=23;
-				item0=110488;
-				item1=110489;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item24
-			{
-				linkID=24;
-				item0=110490;
-				item1=110491;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item25
-			{
-				linkID=25;
-				item0=110492;
-				item1=110494;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item26
-			{
-				linkID=26;
-				item0=110495;
-				item1=110496;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item27
-			{
-				linkID=27;
 				item0=110497;
 				item1=110498;
 				class CustomData

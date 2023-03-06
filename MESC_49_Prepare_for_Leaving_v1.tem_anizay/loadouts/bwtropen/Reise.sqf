@@ -50,13 +50,3 @@ player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "ItemWatch";
 player linkItem "TFAR_anprc152";
-
-
-//Medic: 
-player setVariable ["ACE_medical_medicClass", 0, true];
-
-//Combat Engineer:
-player setVariable ["ACE_isEngineer", 0, true];
-
-//Explosive Specialist:
-player setVariable ["ACE_isEOD", false, true];

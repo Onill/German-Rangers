@@ -356,7 +356,7 @@ _teleport_action = ["Teleporter","Teleporter","gui\teleport\icon_teleport.paa",{
 		case 'Sierra': { ['Sierra'] call CLF_fnc_createGUI;  }; 
 		case 'Echo 1': { ['Echo'] call CLF_fnc_createGUI;  };	 
 		case 'Echo 2': { ['Echo'] call CLF_fnc_createGUI;  }; 
-		//case grplima: { ['Lima'] call CLF_fnc_createGUI;  }; 
+		case 'Lima': { ['Lima'] call CLF_fnc_createGUI;  }; 
 		default { ['Zug'] call CLF_fnc_createGUI; }; 
 	  };
 	};
@@ -379,9 +379,6 @@ _personal_arsenal = ["Personal Arsenal","Personal Arsenal","",{ execVM "loadouts
 	_start_mission = ["Missionsstart","Missionsstart","",{ execVM "scripts\missionsstart.sqf"; },{true}] call ace_interact_menu_fnc_createAction;
 	[["ACE_ZeusActions","Mission Control"], _start_mission] call ace_interact_menu_fnc_addActionToZeus;
 
-	_mission_succesful = ["Ende: Mission Erfüllt","Ende: Mission Erfüllt","",{ execVM "scripts\missionsende.sqf"; },{true}] call ace_interact_menu_fnc_createAction;
-	[["ACE_ZeusActions","Mission Control"], _mission_succesful] call ace_interact_menu_fnc_addActionToZeus;
-
 	_to_be_continued = ["Ende: TO BE CONTINUED","Ende: TO BE CONTINUED","",{ execVM "scripts\missionscontinue.sqf"; },{true}] call ace_interact_menu_fnc_createAction;
 	[["ACE_ZeusActions","Mission Control"], _to_be_continued] call ace_interact_menu_fnc_addActionToZeus;
 
@@ -390,43 +387,43 @@ _playerGrp = group player;
 
 if (_playerGrp == grplima || _playerGrp == grpkilo) then {
 
-	_zug1 = ["Zug1","Zug Typ 1 - Munition","",{["zug1"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	_zug1 = ["Zug1","Zug Typ 1 - Munition","",{[["zug1"], "scripts\limasupplypoint.sqf"] remoteExec ["execVM"];},{true}] call ace_interact_menu_fnc_createAction;
 	[limasupply, 0, ["ACE_MainActions"], _zug1] call ace_interact_menu_fnc_addActionToObject;
 
-	_zug2 = ["Zug2","Zug Typ 2 - Explosiv","",{["zug2"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	_zug2 = ["Zug2","Zug Typ 2 - Explosiv","",{[["zug2"], "scripts\limasupplypoint.sqf"] remoteExec ["execVM"];},{true}] call ace_interact_menu_fnc_createAction;
 	[limasupply, 0, ["ACE_MainActions"], _zug2] call ace_interact_menu_fnc_addActionToObject;
 
-	_zug3 = ["Zug3","Zug Typ 3 - Granaten","",{["zug3"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	_zug3 = ["Zug3","Zug Typ 3 - Granaten","",{[["zug3"], "scripts\limasupplypoint.sqf"] remoteExec ["execVM"];},{true}] call ace_interact_menu_fnc_createAction;
 	[limasupply, 0, ["ACE_MainActions"], _zug3] call ace_interact_menu_fnc_addActionToObject;
 
-	_zug4 = ["Zug4","Zug Typ 4 - Ausrüstung","",{["zug4"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	_zug4 = ["Zug4","Zug Typ 4 - Ausrüstung","",{[["zug4"], "scripts\limasupplypoint.sqf"] remoteExec ["execVM"];},{true}] call ace_interact_menu_fnc_createAction;
 	[limasupply, 0, ["ACE_MainActions"], _zug4] call ace_interact_menu_fnc_addActionToObject;
 
-	_zug5 = ["Zug5","Zug Typ 5 - Waffen","",{["zug5"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	_zug5 = ["Zug5","Zug Typ 5 - Waffen","",{[["zug5"], "scripts\limasupplypoint.sqf"] remoteExec ["execVM"];},{true}] call ace_interact_menu_fnc_createAction;
 	[limasupply, 0, ["ACE_MainActions"], _zug5] call ace_interact_menu_fnc_addActionToObject;
 
-	_zug6 = ["Zug6","Zug Typ 6 - AT","",{["zug6"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	_zug6 = ["Zug6","Zug Typ 6 - AT","",{[["zug6"], "scripts\limasupplypoint.sqf"] remoteExec ["execVM"];},{true}] call ace_interact_menu_fnc_createAction;
 	[limasupply, 0, ["ACE_MainActions"], _zug6] call ace_interact_menu_fnc_addActionToObject;
 
-	_san1 = ["San1","San 1 - Allgemein","",{["san1"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	_san1 = ["San1","San 1 - Allgemein","",{[["san1"], "scripts\limasupplypoint.sqf"] remoteExec ["execVM"];},{true}] call ace_interact_menu_fnc_createAction;
 	[limasupply, 0, ["ACE_MainActions"], _san1] call ace_interact_menu_fnc_addActionToObject;
 
-	_san2 = ["San2","San 2 - Spezial","",{["san2"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	_san2 = ["San2","San 2 - Spezial","",{[["san2"], "scripts\limasupplypoint.sqf"] remoteExec ["execVM"];},{true}] call ace_interact_menu_fnc_createAction;
 	[limasupply, 0, ["ACE_MainActions"], _san2] call ace_interact_menu_fnc_addActionToObject;
 
-	_sierra1 = ["Sierra1","Sierra Munition","",{["sierra1"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	_sierra1 = ["Sierra1","Sierra Munition","",{[["sierra1"], "scripts\limasupplypoint.sqf"] remoteExec ["execVM"];},{true}] call ace_interact_menu_fnc_createAction;
 	[limasupply, 0, ["ACE_MainActions"], _sierra1] call ace_interact_menu_fnc_addActionToObject;
 
-	_echo1 = ["Echo1","Echo Typ 1 - Munition","",{["echo1"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	_echo1 = ["Echo1","Echo Typ 1 - Munition","",{[["echo1"], "scripts\limasupplypoint.sqf"] remoteExec ["execVM"];},{true}] call ace_interact_menu_fnc_createAction;
 	[limasupply, 0, ["ACE_MainActions"], _echo1] call ace_interact_menu_fnc_addActionToObject;
 
-	_echo2 = ["Echo1","Echo Typ 2 - Explosivmunition","",{["echo2"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	_echo2 = ["Echo1","Echo Typ 2 - Explosivmunition","",{[["echo2"], "scripts\limasupplypoint.sqf"] remoteExec ["execVM"];},{true}] call ace_interact_menu_fnc_createAction;
 	[limasupply, 0, ["ACE_MainActions"], _echo2] call ace_interact_menu_fnc_addActionToObject;
 
-	_echo3 = ["Echo1","Echo Typ 3 - AT","",{["echo3"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	_echo3 = ["Echo1","Echo Typ 3 - AT","",{[["echo3"], "scripts\limasupplypoint.sqf"] remoteExec ["execVM"];},{true}] call ace_interact_menu_fnc_createAction;
 	[limasupply, 0, ["ACE_MainActions"], _echo3] call ace_interact_menu_fnc_addActionToObject;
 
-	_echo4 = ["Echo1","Echo Typ 4 - Ausrüstung","",{["echo4"]execVM "scripts\limasupplypoint.sqf";},{true}] call ace_interact_menu_fnc_createAction;
+	_echo4 = ["Echo1","Echo Typ 4 - Ausrüstung","",{[["echo4"], "scripts\limasupplypoint.sqf"] remoteExec ["execVM"];},{true}] call ace_interact_menu_fnc_createAction;
 	[limasupply, 0, ["ACE_MainActions"], _echo4] call ace_interact_menu_fnc_addActionToObject;
 
 };
