@@ -21,7 +21,7 @@ _target = player;
 			 case "Kilo_1": {_target = s1; };
 			 case "Kilo_2": {_target = s2; };
 			 case "Lima": { _target = (units grplima select 0); };
-			 default { hint"$STR_Error"; };
+			 default { hint localize "$STR_Error"; };
 		};
 		
 	if (player == _target) then {
@@ -35,7 +35,7 @@ _target = player;
 			 case "Echo_1": {_target = (units grpecho1 select 1); };
 			 case "Echo_2": {_target = (units grpecho2 select 1); };
 			 case "Lima": { _target = (units grplima select 1); };
-			 default { hint"$STR_Error";};
+			 default { hint localize "$STR_Error"; };
 		};
 	};
 		

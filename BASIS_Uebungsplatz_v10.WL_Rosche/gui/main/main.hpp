@@ -165,8 +165,8 @@ class Main_Dialog
 		y = 0.486 * safezoneH + safezoneY;
 		w = 0.065625 * safezoneW;
 		h = 0.084 * safezoneH;
-		text = "Arsenal";
-		action = "closeDialog 0; execVM 'loadouts\personalArsenal.sqf';";
+		text = "Flecktarn Arsenal";
+		action = "closeDialog 0; execVM 'loadouts\personalArsenal_fleck.sqf';";
 		tooltip = "$STR_P_Asenal";
 	};
 	class Leer34: RscButton
@@ -200,6 +200,9 @@ class Main_Dialog
 		y = 0.598 * safezoneH + safezoneY;
 		w = 0.065625 * safezoneW;
 		h = 0.084 * safezoneH;
+		text = "Troptarn Arsenal";
+		action = "closeDialog 0; execVM 'loadouts\personalArsenal_tropen.sqf';";
+		tooltip = "$STR_P_Asenal";
 	};
 	class Leer14: RscButton
 	{
