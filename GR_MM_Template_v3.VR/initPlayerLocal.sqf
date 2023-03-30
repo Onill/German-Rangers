@@ -351,6 +351,7 @@ sleep 1;
 //Kann Alternativ mit dieser Zeile Ausgetauscht werden um immer aktiviert zu sein:
 //_condition = {true}; 
 _condition = {player distance base < 50 || missionstarted == false};
+_conditionWaffenkammer = {player distance waffenkammer < 8};
 _empty_statement = {createDialog "Main_Dialog";}; //  {"Nothing"};
 
 // Creating a Sub Menu Category GR Base with Logo
@@ -382,6 +383,8 @@ _loadout_action = ["Loadouts","Loadouts","",_choose_Loadout,_condition] call ace
 _personal_arsenal = ["Personal Arsenal","Personal Arsenal","",{ execVM "loadouts\personalArsenal.sqf"; },_condition] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","GR Base"], _personal_arsenal] call ace_interact_menu_fnc_addActionToClass;
 
+_waffenkammer = ["Waffenkammer","Waffenkammer","",{ execVM "loadouts\waffenkammer.sqf"; },_conditionWaffenkammer] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions","GR Base"], _waffenkammer] call ace_interact_menu_fnc_addActionToClass;
 
 //		New Mission Control
 
