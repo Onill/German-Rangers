@@ -820,13 +820,24 @@ switch _playerGrp do
 				private _magazineCount = {_x in _compatibleMagazines} count magazines player;
 
 				// Remove Magazines so they are not in the _playerItems Array for Refilling
-				// Magazines will be added when Arsenal is closed fitting for Weapon an Camo
+				// Magazines will be added when Arsenal is closed fitting for Weapon and Camo
 				{player removeMagazines _x;} forEach _compatibleMagazines;
 				{player removePrimaryWeaponItem _x;} forEach _compatibleMagazines;
 
 				// Save all Player Items
 				// Removing these items makes them Invisible in the Arsenal so Players can not accidentally remove Stuff from their Inventory
-				private _playerItems = itemsWithMagazines player;
+				
+				//Items from uniform
+				private _uniformItems = uniformItems player;
+				private _vestItems = vestItems player;
+				private _backpackitems = "";
+				
+				_backpack = str backpack player;
+				
+				if (_backpack != "") then {
+					_backpackitems = backpackItems player; 
+					hint "Backpack true";
+				};
 
 				// Makes Inventory completely empty so Players only see the stuff they are allowed to add
 				removeAllItemsWithMagazines player;
@@ -1451,6 +1462,21 @@ switch _playerGrp do
 				[player, true, false] call ace_arsenal_fnc_removeVirtualItems;
 
 				// Fill Player Inventory with Items previously saved at the beginning of this Switch Case
+				private _playerItems = [];
+				{if (player canAddItemToUniform _x) then {player addItemtoUniform _x} else {_playerItems = _playerItems + _x};} forEach _uniformItems;
+				{if (player canAddItemToVest _x) then {player addItemtoVest _x} else {_playerItems = _playerItems + _x};} forEach _vestItems;
+				if (_backpack != "") then {
+				
+					{
+						if (player canAddItemToBackpack _x) then {
+							player addItemtoBackpack _x
+						} 
+						else {
+							_playerItems = _playerItems + _x
+						};
+					} forEach _backpackitems;
+				};
+				
 				{player addItem _x} forEach _playerItems;
 
 				// Get the Weapon the Player is now using
@@ -1462,148 +1488,463 @@ switch _playerGrp do
 
 					// G36 Modell Black
 					case "CUP_arifle_G36A" : { 
-												for "_i" from 1 to (_magazineCount - 2) do {player addItem "CUP_30Rnd_556x45_G36";} ; 
-												for "_i" from 1 to 2 do {player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36";} ; 
+												for "_i" from 1 to (_magazineCount - 2) do {
+													if (player canAddItemToVest "CUP_30Rnd_556x45_G36") then {
+														player addItemToVest "CUP_30Rnd_556x45_G36";
+													}
+													else {
+														player addItem "CUP_30Rnd_556x45_G36";
+													};
+												}; 
+												for "_i" from 1 to 2 do {
+													if (player canAddItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36") then {
+														player addItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36";
+													}
+													else {
+														player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36";
+													};
+												}; 
 												player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36";
 											};
 					case "CUP_arifle_G36A3" : {
-												for "_i" from 1 to (_magazineCount - 2) do {player addItem "CUP_30Rnd_556x45_G36";}; 
-												for "_i" from 1 to 2 do {player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36";}; 
-												player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36";
+												for "_i" from 1 to (_magazineCount - 2) do {
+													if (player canAddItemToVest "CUP_30Rnd_556x45_G36") then {
+														player addItemToVest "CUP_30Rnd_556x45_G36";
+													}
+													else {
+														player addItem "CUP_30Rnd_556x45_G36";
+													};
+												}; 
+												for "_i" from 1 to 2 do {
+													if (player canAddItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36") then {
+														player addItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36";
+													}
+													else {
+														player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36";
+													};
+												}; 
+												player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36";												
 											};
 
 					case "CUP_arifle_G36A3_AG36" : {
-												for "_i" from 1 to (_magazineCount - 2) do {player addItem "CUP_30Rnd_556x45_G36";}; 
-												for "_i" from 1 to 2 do {player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36";}; 
-												player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36";
-											};
+													for "_i" from 1 to (_magazineCount - 2) do {
+														if (player canAddItemToVest "CUP_30Rnd_556x45_G36") then {
+															player addItemToVest "CUP_30Rnd_556x45_G36";
+														}
+														else {
+															player addItem "CUP_30Rnd_556x45_G36";
+														};
+													}; 
+													for "_i" from 1 to 2 do {
+														if (player canAddItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36") then {
+															player addItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36";
+														}
+														else {
+															player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36";
+														};
+													}; 
+													player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36";											
+												};
 
 					case "CUP_arifle_G36K" : {
-												for "_i" from 1 to (_magazineCount - 2) do {player addItem "CUP_30Rnd_556x45_G36";}; 
-												for "_i" from 1 to 2 do {player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36";}; 
-												player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36";
+												for "_i" from 1 to (_magazineCount - 2) do {
+													if (player canAddItemToVest "CUP_30Rnd_556x45_G36") then {
+														player addItemToVest "CUP_30Rnd_556x45_G36";
+													}
+													else {
+														player addItem "CUP_30Rnd_556x45_G36";
+													};
+												}; 
+												for "_i" from 1 to 2 do {
+													if (player canAddItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36") then {
+														player addItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36";
+													}
+													else {
+														player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36";
+													};
+												}; 
+												player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36";											
 											};
 
 					case "CUP_arifle_G36KA3" : {
-												for "_i" from 1 to (_magazineCount - 2) do {player addItem "CUP_30Rnd_556x45_G36";}; 
-												for "_i" from 1 to 2 do {player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36";}; 
-												player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36";
-											};
+													for "_i" from 1 to (_magazineCount - 2) do {
+														if (player canAddItemToVest "CUP_30Rnd_556x45_G36") then {
+															player addItemToVest "CUP_30Rnd_556x45_G36";
+														}
+														else {
+															player addItem "CUP_30Rnd_556x45_G36";
+														};
+													}; 
+													for "_i" from 1 to 2 do {
+														if (player canAddItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36") then {
+															player addItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36";
+														}
+														else {
+															player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36";
+														};
+													}; 
+													player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36";											
+												};
 
 					case "CUP_arifle_AG36" : {
-												for "_i" from 1 to (_magazineCount - 2) do {player addItem "CUP_30Rnd_556x45_G36";}; 
-												for "_i" from 1 to 2 do {player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36";}; 
-												player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36";
-											};
+													for "_i" from 1 to (_magazineCount - 2) do {
+														if (player canAddItemToVest "CUP_30Rnd_556x45_G36") then {
+															player addItemToVest "CUP_30Rnd_556x45_G36";
+														}
+														else {
+															player addItem "CUP_30Rnd_556x45_G36";
+														};
+													}; 
+													for "_i" from 1 to 2 do {
+														if (player canAddItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36") then {
+															player addItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36";
+														}
+														else {
+															player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36";
+														};
+													}; 
+													player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36";											
+												};
 
 
 					// G36 Modell Desert
 					case "CUP_arifle_G36A_camo" : {
-												for "_i" from 1 to (_magazineCount - 2) do {player addItem "CUP_30Rnd_556x45_G36_camo";}; 
-												for "_i" from 1 to 2 do {player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo";}; 
-												player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36_camo";
+													for "_i" from 1 to (_magazineCount - 2) do {
+														if (player canAddItemToVest "CUP_30Rnd_556x45_G36_camo") then {
+															player addItemToVest "CUP_30Rnd_556x45_G36_camo";
+														}
+														else {
+															player addItem "CUP_30Rnd_556x45_G36_camo";
+														};
+													}; 
+													for "_i" from 1 to 2 do {
+														if (player canAddItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo") then {
+															player addItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo";
+														}
+														else {
+															player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo";
+														};
+													}; 
+													player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36_camo";
 											};
 
 					case "CUP_arifle_G36A3_camo" : {
-												for "_i" from 1 to (_magazineCount - 2) do {player addItem "CUP_30Rnd_556x45_G36_camo";}; 
-												for "_i" from 1 to 2 do {player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo";}; 
-												player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36_camo";
+													for "_i" from 1 to (_magazineCount - 2) do {
+														if (player canAddItemToVest "CUP_30Rnd_556x45_G36_camo") then {
+															player addItemToVest "CUP_30Rnd_556x45_G36_camo";
+														}
+														else {
+															player addItem "CUP_30Rnd_556x45_G36_camo";
+														};
+													}; 
+													for "_i" from 1 to 2 do {
+														if (player canAddItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo") then {
+															player addItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo";
+														}
+														else {
+															player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo";
+														};
+													}; 
+													player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36_camo";
 											};
 
 					case "CUP_arifle_G36K_camo" : {
-												for "_i" from 1 to (_magazineCount - 2) do {player addItem "CUP_30Rnd_556x45_G36_camo";}; 
-												for "_i" from 1 to 2 do {player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo";}; 
-												player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36_camo";
+													for "_i" from 1 to (_magazineCount - 2) do {
+														if (player canAddItemToVest "CUP_30Rnd_556x45_G36_camo") then {
+															player addItemToVest "CUP_30Rnd_556x45_G36_camo";
+														}
+														else {
+															player addItem "CUP_30Rnd_556x45_G36_camo";
+														};
+													}; 
+													for "_i" from 1 to 2 do {
+														if (player canAddItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo") then {
+															player addItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo";
+														}
+														else {
+															player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo";
+														};
+													}; 
+													player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36_camo";
 											};
 
 					case "CUP_arifle_G36KA3_camo" : {
-												for "_i" from 1 to (_magazineCount - 2) do {player addItem "CUP_30Rnd_556x45_G36_camo";}; 
-												for "_i" from 1 to 2 do {player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo";}; 
-												player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36_camo";
+													for "_i" from 1 to (_magazineCount - 2) do {
+														if (player canAddItemToVest "CUP_30Rnd_556x45_G36_camo") then {
+															player addItemToVest "CUP_30Rnd_556x45_G36_camo";
+														}
+														else {
+															player addItem "CUP_30Rnd_556x45_G36_camo";
+														};
+													}; 
+													for "_i" from 1 to 2 do {
+														if (player canAddItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo") then {
+															player addItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo";
+														}
+														else {
+															player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo";
+														};
+													}; 
+													player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36_camo";
 											};
 
 					case "CUP_arifle_AG36_camo" : {
-												for "_i" from 1 to (_magazineCount - 2) do {player addItem "CUP_30Rnd_556x45_G36_camo";}; 
-												for "_i" from 1 to 2 do {player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo";}; 
-												player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36_camo";
+													for "_i" from 1 to (_magazineCount - 2) do {
+														if (player canAddItemToVest "CUP_30Rnd_556x45_G36_camo") then {
+															player addItemToVest "CUP_30Rnd_556x45_G36_camo";
+														}
+														else {
+															player addItem "CUP_30Rnd_556x45_G36_camo";
+														};
+													}; 
+													for "_i" from 1 to 2 do {
+														if (player canAddItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo") then {
+															player addItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo";
+														}
+														else {
+															player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo";
+														};
+													}; 
+													player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36_camo";
 											};
 
 					case "CUP_arifle_G36A3_AG36_camo" : {
-												for "_i" from 1 to (_magazineCount - 2) do {player addItem "CUP_30Rnd_556x45_G36_camo";}; 
-												for "_i" from 1 to 2 do {player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo";}; 
-												player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36_camo";
+													for "_i" from 1 to (_magazineCount - 2) do {
+														if (player canAddItemToVest "CUP_30Rnd_556x45_G36_camo") then {
+															player addItemToVest "CUP_30Rnd_556x45_G36_camo";
+														}
+														else {
+															player addItem "CUP_30Rnd_556x45_G36_camo";
+														};
+													}; 
+													for "_i" from 1 to 2 do {
+														if (player canAddItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo") then {
+															player addItemToVest "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo";
+														}
+														else {
+															player addItem "CUP_30Rnd_TE1_Red_Tracer_556x45_G36_camo";
+														};
+													}; 
+													player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36_camo";
 											};
 
 
 					// HK416 Modell Black
 					case "CUP_arifle_HK416_Black" : {	
-												for "_i" from 1 to (_magazineCount - 2) do {player addItem "CUP_30Rnd_556x45_PMAG_BLACK_PULL";}; 
-												for "_i" from 1 to 2 do {player addItem "CUP_30Rnd_556x45_PMAG_BLACK_PULL_Tracer_Red";}; 
-												player addPrimaryWeaponItem "CUP_30Rnd_556x45_PMAG_BLACK_PULL";
+													for "_i" from 1 to (_magazineCount - 2) do {
+														if (player canAddItemToVest "CUP_30Rnd_556x45_PMAG_BLACK_PULL") then {
+															player addItemToVest "CUP_30Rnd_556x45_PMAG_BLACK_PULL";
+														}
+														else {
+															player addItem "CUP_30Rnd_556x45_PMAG_BLACK_PULL";
+														};
+													}; 
+													for "_i" from 1 to 2 do {
+														if (player canAddItemToVest "CUP_30Rnd_556x45_PMAG_BLACK_PULL_Tracer_Red") then {
+															player addItemToVest "CUP_30Rnd_556x45_PMAG_BLACK_PULL_Tracer_Red";
+														}
+														else {
+															player addItem "CUP_30Rnd_556x45_PMAG_BLACK_PULL_Tracer_Red";
+														};
+													}; 
+													player addPrimaryWeaponItem "CUP_30Rnd_556x45_PMAG_BLACK_PULL";
 											};
 					
 					case "CUP_arifle_HK416_CQB_Black" : {
-												for "_i" from 1 to (_magazineCount - 2) do {player addItem "CUP_30Rnd_556x45_PMAG_BLACK_PULL";}; 
-												for "_i" from 1 to 2 do {player addItem "CUP_30Rnd_556x45_PMAG_BLACK_PULL_Tracer_Red";}; 
-												player addPrimaryWeaponItem "CUP_30Rnd_556x45_PMAG_BLACK_PULL";
+													for "_i" from 1 to (_magazineCount - 2) do {
+														if (player canAddItemToVest "CUP_30Rnd_556x45_PMAG_BLACK_PULL") then {
+															player addItemToVest "CUP_30Rnd_556x45_PMAG_BLACK_PULL";
+														}
+														else {
+															player addItem "CUP_30Rnd_556x45_PMAG_BLACK_PULL";
+														};
+													}; 
+													for "_i" from 1 to 2 do {
+														if (player canAddItemToVest "CUP_30Rnd_556x45_PMAG_BLACK_PULL_Tracer_Red") then {
+															player addItemToVest "CUP_30Rnd_556x45_PMAG_BLACK_PULL_Tracer_Red";
+														}
+														else {
+															player addItem "CUP_30Rnd_556x45_PMAG_BLACK_PULL_Tracer_Red";
+														};
+													}; 
+													player addPrimaryWeaponItem "CUP_30Rnd_556x45_PMAG_BLACK_PULL";
 											};
 					case "CUP_arifle_HK416_AGL_Black" : {
-												for "_i" from 1 to (_magazineCount - 2) do {player addItem "CUP_30Rnd_556x45_PMAG_BLACK_PULL";}; 
-												for "_i" from 1 to 2 do {player addItem "CUP_30Rnd_556x45_PMAG_BLACK_PULL_Tracer_Red";}; 
-												player addPrimaryWeaponItem "CUP_30Rnd_556x45_PMAG_BLACK_PULL";
+													for "_i" from 1 to (_magazineCount - 2) do {
+														if (player canAddItemToVest "CUP_30Rnd_556x45_PMAG_BLACK_PULL") then {
+															player addItemToVest "CUP_30Rnd_556x45_PMAG_BLACK_PULL";
+														}
+														else {
+															player addItem "CUP_30Rnd_556x45_PMAG_BLACK_PULL";
+														};
+													}; 
+													for "_i" from 1 to 2 do {
+														if (player canAddItemToVest "CUP_30Rnd_556x45_PMAG_BLACK_PULL_Tracer_Red") then {
+															player addItemToVest "CUP_30Rnd_556x45_PMAG_BLACK_PULL_Tracer_Red";
+														}
+														else {
+															player addItem "CUP_30Rnd_556x45_PMAG_BLACK_PULL_Tracer_Red";
+														};
+													}; 
+													player addPrimaryWeaponItem "CUP_30Rnd_556x45_PMAG_BLACK_PULL";
 											};
 
 
 					// HK416 Modell Desert					
 					case "CUP_arifle_HK416_Desert" : {
-												for "_i" from 1 to (_magazineCount - 2) do {player addItem "CUP_30Rnd_556x45_PMAG_COYOTE_PULL";}; 
-												for "_i" from 1 to 2 do {player addItem "CUP_30Rnd_556x45_PMAG_COYOTE_PULL_Tracer_Red";}; 
-												player addPrimaryWeaponItem "CUP_30Rnd_556x45_PMAG_COYOTE_PULL";
+													for "_i" from 1 to (_magazineCount - 2) do {
+														if (player canAddItemToVest "CUP_30Rnd_556x45_PMAG_COYOTE_PULL") then {
+															player addItemToVest "CUP_30Rnd_556x45_PMAG_COYOTE_PULL";
+														}
+														else {
+															player addItem "CUP_30Rnd_556x45_PMAG_COYOTE_PULL";
+														};
+													}; 
+													for "_i" from 1 to 2 do {
+														if (player canAddItemToVest "CUP_30Rnd_556x45_PMAG_COYOTE_PULL_Tracer_Red") then {
+															player addItemToVest "CUP_30Rnd_556x45_PMAG_COYOTE_PULL_Tracer_Red";
+														}
+														else {
+															player addItem "CUP_30Rnd_556x45_PMAG_COYOTE_PULL_Tracer_Red";
+														};
+													}; 
+													player addPrimaryWeaponItem "CUP_30Rnd_556x45_PMAG_COYOTE_PULL";
 											};
 
 					case "CUP_arifle_HK416_CQB_Desert" : {
-												for "_i" from 1 to (_magazineCount - 2) do {player addItem "CUP_30Rnd_556x45_PMAG_COYOTE_PULL";}; 
-												for "_i" from 1 to 2 do {player addItem "CUP_30Rnd_556x45_PMAG_COYOTE_PULL_Tracer_Red";}; 
+													for "_i" from 1 to (_magazineCount - 2) do {
+														if (player canAddItemToVest "CUP_30Rnd_556x45_PMAG_COYOTE_PULL") then {
+															player addItemToVest "CUP_30Rnd_556x45_PMAG_COYOTE_PULL";
+														}
+														else {
+															player addItem "CUP_30Rnd_556x45_PMAG_COYOTE_PULL";
+														};
+													}; 
+													for "_i" from 1 to 2 do {
+														if (player canAddItemToVest "CUP_30Rnd_556x45_PMAG_COYOTE_PULL_Tracer_Red") then {
+															player addItemToVest "CUP_30Rnd_556x45_PMAG_COYOTE_PULL_Tracer_Red";
+														}
+														else {
+															player addItem "CUP_30Rnd_556x45_PMAG_COYOTE_PULL_Tracer_Red";
+														};
+													}; 
 												player addPrimaryWeaponItem "CUP_30Rnd_556x45_PMAG_COYOTE_PULL";
 											};
 
 					case "CUP_arifle_HK416_AGL_Desert" : {
-												for "_i" from 1 to (_magazineCount - 2) do {player addItem "CUP_30Rnd_556x45_PMAG_COYOTE_PULL";}; 
-												for "_i" from 1 to 2 do {player addItem "CUP_30Rnd_556x45_PMAG_COYOTE_PULL_Tracer_Red";}; 
+													for "_i" from 1 to (_magazineCount - 2) do {
+														if (player canAddItemToVest "CUP_30Rnd_556x45_PMAG_COYOTE_PULL") then {
+															player addItemToVest "CUP_30Rnd_556x45_PMAG_COYOTE_PULL";
+														}
+														else {
+															player addItem "CUP_30Rnd_556x45_PMAG_COYOTE_PULL";
+														};
+													}; 
+													for "_i" from 1 to 2 do {
+														if (player canAddItemToVest "CUP_30Rnd_556x45_PMAG_COYOTE_PULL_Tracer_Red") then {
+															player addItemToVest "CUP_30Rnd_556x45_PMAG_COYOTE_PULL_Tracer_Red";
+														}
+														else {
+															player addItem "CUP_30Rnd_556x45_PMAG_COYOTE_PULL_Tracer_Red";
+														};
+													}; 
 												player addPrimaryWeaponItem "CUP_30Rnd_556x45_PMAG_COYOTE_PULL";
 											};
 
 					
 					// HK417 Modell Black
 					case "CUP_arifle_HK417_12" : {
-												for "_i" from 1 to (_magazineCount - 2) do {player addItem "CUP_20Rnd_762x51_HK417";}; 
-												for "_i" from 1 to 2 do {player addItem "CUP_20Rnd_TE1_Red_Tracer_762x51_HK417";}; 
+													for "_i" from 1 to (_magazineCount - 2) do {
+														if (player canAddItemToVest "CUP_20Rnd_762x51_HK417") then {
+															player addItemToVest "CUP_20Rnd_762x51_HK417";
+														}
+														else {
+															player addItem "CUP_20Rnd_762x51_HK417";
+														};
+													}; 
+													for "_i" from 1 to 2 do {
+														if (player canAddItemToVest "CUP_20Rnd_TE1_Red_Tracer_762x51_HK417") then {
+															player addItemToVest "CUP_20Rnd_TE1_Red_Tracer_762x51_HK417";
+														}
+														else {
+															player addItem "CUP_20Rnd_TE1_Red_Tracer_762x51_HK417";
+														};
+													}; 
 												player addPrimaryWeaponItem "CUP_20Rnd_762x51_HK417";
 											};
 
 					case "CUP_arifle_HK417_20" : {
-												for "_i" from 1 to (_magazineCount - 2) do {player addItem "CUP_20Rnd_762x51_HK417";}; 
-												for "_i" from 1 to 2 do {player addItem "CUP_20Rnd_TE1_Red_Tracer_762x51_HK417";}; 
+													for "_i" from 1 to (_magazineCount - 2) do {
+														if (player canAddItemToVest "CUP_20Rnd_762x51_HK417") then {
+															player addItemToVest "CUP_20Rnd_762x51_HK417";
+														}
+														else {
+															player addItem "CUP_20Rnd_762x51_HK417";
+														};
+													}; 
+													for "_i" from 1 to 2 do {
+														if (player canAddItemToVest "CUP_20Rnd_TE1_Red_Tracer_762x51_HK417") then {
+															player addItemToVest "CUP_20Rnd_TE1_Red_Tracer_762x51_HK417";
+														}
+														else {
+															player addItem "CUP_20Rnd_TE1_Red_Tracer_762x51_HK417";
+														};
+													}; 
 												player addPrimaryWeaponItem "CUP_20Rnd_762x51_HK417";
 											};
 
 
 					// HK417 Modell Desert
 					case "CUP_arifle_HK417_12_Desert" : {
-												for "_i" from 1 to (_magazineCount - 2) do {player addItem "CUP_20Rnd_762x51_HK417_Camo_Desert";}; 
-												for "_i" from 1 to 2 do {player addItem "CUP_20Rnd_TE1_Red_Tracer_762x51_HK417";}; 
+													for "_i" from 1 to (_magazineCount - 2) do {
+														if (player canAddItemToVest "CUP_20Rnd_762x51_HK417_Camo_Desert") then {
+															player addItemToVest "CUP_20Rnd_762x51_HK417_Camo_Desert";
+														}
+														else {
+															player addItem "CUP_20Rnd_762x51_HK417_Camo_Desert";
+														};
+													}; 
+													for "_i" from 1 to 2 do {
+														if (player canAddItemToVest "CUP_20Rnd_TE1_Red_Tracer_762x51_HK417") then {
+															player addItemToVest "CUP_20Rnd_TE1_Red_Tracer_762x51_HK417";
+														}
+														else {
+															player addItem "CUP_20Rnd_TE1_Red_Tracer_762x51_HK417";
+														};
+													}; 
 												player addPrimaryWeaponItem "CUP_20Rnd_762x51_HK417_Camo_Desert";
 											};
 
 					case "CUP_arifle_HK417_20_Desert" : {
-												for "_i" from 1 to (_magazineCount - 2) do {player addItem "CUP_20Rnd_762x51_HK417_Camo_Desert";}; 
-												for "_i" from 1 to 2 do {player addItem "CUP_20Rnd_TE1_Red_Tracer_762x51_HK417";}; 
+													for "_i" from 1 to (_magazineCount - 2) do {
+														if (player canAddItemToVest "CUP_20Rnd_762x51_HK417_Camo_Desert") then {
+															player addItemToVest "CUP_20Rnd_762x51_HK417_Camo_Desert";
+														}
+														else {
+															player addItem "CUP_20Rnd_762x51_HK417_Camo_Desert";
+														};
+													}; 
+													for "_i" from 1 to 2 do {
+														if (player canAddItemToVest "CUP_20Rnd_TE1_Red_Tracer_762x51_HK417") then {
+															player addItemToVest "CUP_20Rnd_TE1_Red_Tracer_762x51_HK417";
+														}
+														else {
+															player addItem "CUP_20Rnd_TE1_Red_Tracer_762x51_HK417";
+														};
+													}; 
 												player addPrimaryWeaponItem "CUP_20Rnd_762x51_HK417_Camo_Desert";
 											};
 					
 					// Poor MG Fuckers still have only one gun!!!
 					case "CUP_lmg_minimi_railed" : {
-												for "_i" from 1 to _magazineCount do {player addItem "CUP_200Rnd_TE4_Red_Tracer_556x45_M249_Pouch";}; 
+													for "_i" from 1 to (_magazineCount) do {
+														if (player canAddItemToBackpack "CUP_200Rnd_TE4_Red_Tracer_556x45_M249_Pouch") then {
+															player addItemToBackpack "CUP_200Rnd_TE4_Red_Tracer_556x45_M249_Pouch";
+														}
+														else {
+															player addItem "CUP_200Rnd_TE4_Red_Tracer_556x45_M249_Pouch";
+														};
+													}; 
 												player addPrimaryWeaponItem "CUP_200Rnd_TE4_Red_Tracer_556x45_M249_Pouch";
 											};
 				};
