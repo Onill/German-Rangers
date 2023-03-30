@@ -1,2 +1,0 @@
-PREP=(getLoadouts);
-PREP=(takeLoadout);

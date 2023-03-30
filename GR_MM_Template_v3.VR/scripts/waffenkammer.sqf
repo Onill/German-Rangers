@@ -1,0 +1,16 @@
+inGameUISetEventHandler ["Action", " if (_this select 3 == 'takeWeapon' && _this select 0 == waffenkammer_1) then { hint 'Ich glaube nicht das sie das dürfen.'; true } "]; 
+inGameUISetEventHandler ["Action", " if (_this select 3 == 'takeWeapon' && _this select 0 == waffenkammer_2) then { hint 'Haben sie dafür eine Genehmigung?'; true } "]; 
+inGameUISetEventHandler ["Action", " if (_this select 3 == 'takeWeapon' && _this select 0 == waffenkammer_3) then { hint 'Zuerst muss ich ihren Ausweis sehen.'; true } "]; 
+inGameUISetEventHandler ["Action", " if (_this select 3 == 'takeWeapon' && _this select 0 == waffenkammer_4) then { hint 'Sie sehen nicht so aus als dürften sie ne Waffe tragen.'; true } "]; 
+inGameUISetEventHandler ["Action", " if (_this select 3 == 'takeWeapon' && _this select 0 == waffenkammer_5) then { hint 'Auf keinen Fall. Das ist viel zu wertvoll.'; true } "]; 
+inGameUISetEventHandler ["Action", " if (_this select 3 == 'takeWeapon' && _this select 0 == waffenkammer_6) then { hint 'Sie haben ihre Ausbildung abgeschlossen?'; true } "]; 
+inGameUISetEventHandler ["Action", " if (_this select 3 == 'takeWeapon' && _this select 0 == waffenkammer_7) then { hint 'Keine Chance. Ohne Genehmigung ist das nichts zu machen.'; true } "]; 
+inGameUISetEventHandler ["Action", " if (_this select 3 == 'takeWeapon' && _this select 0 == waffenkammer_8) then { hint 'Haben sie Passierschein A-38.'; true } "]; 
+inGameUISetEventHandler ["Action", " if (_this select 3 == 'takeWeapon' && _this select 0 == waffenkammer_9) then { hint 'Weiß ihr Vorgesetzter davon?'; true } "]; 
+inGameUISetEventHandler ["Action", " if (_this select 3 == 'takeWeapon' && _this select 0 == waffenkammer_10) then { hint 'Dienstausweis und Genehmigung.'; true } "]; 
+inGameUISetEventHandler ["Action", " if (_this select 3 == 'takeWeapon' && _this select 0 == waffenkammer_11) then { hint 'Wer hat sie überhaupt in diese Uniform gesteckt?'; true } "]; 
+inGameUISetEventHandler ["Action", " if (_this select 3 == 'takeWeapon' && _this select 0 == waffenkammer_12) then { hint 'Das geb ich eher einem Eichhörnchen als ihnen!'; true } "]; 
+inGameUISetEventHandler ["Action", " if (_this select 3 == 'takeWeapon' && _this select 0 == waffenkammer_13) then { hint 'Da ist wohl heute jemand ganz von sich überzeugt.'; true } "]; 
+inGameUISetEventHandler ["Action", " if (_this select 3 == 'takeWeapon' && _this select 0 == waffenkammer_14) then { hint 'Mit der Einstellung bekommen sie hier garnichts!'; true } "]; 
+inGameUISetEventHandler ["Action", " if (_this select 3 == 'takeWeapon' && _this select 0 == waffenkammer_15) then { hint 'Gibbet nich'!'; true } "]; 
+inGameUISetEventHandler ["Action", " if (_this select 3 == 'takeWeapon' && _this select 0 == waffenkammer_16) then { hint 'So schonmal garnicht!'; true } "]; 
