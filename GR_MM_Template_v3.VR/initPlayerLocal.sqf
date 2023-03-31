@@ -23,18 +23,18 @@ useDatabase = false;
 publicVariable "useDatabase";
 
 // Muss vom Missionmaker UNBEDIGT gesetzt werden! Entscheidet ob Fleck oder Tropentarn getragen wird "fleck" / "tropen".
-tarnfarbe = "tropen";
+tarnfarbe = "fleck";
 publicVariable "tarnfarbe";
 
 // Für die GUI:
 // 0 = Flecktarn, 1 = Tropentarn, 2 = Winter
-tarnMuster = 1;
+tarnMuster = 0;
 
 // briefingName
-null = [] execVM "scripts\briefing.sqf";
+[] execVM "scripts\briefing.sqf";
 
 //Waffenkammer
-null = [] execVM "scripts\waffenkammerblock.sqf";
+[] execVM "scripts\waffenkammerblock.sqf";
 
 //------------------------------------------------------------------
 //------------------------------------------------------------------
@@ -45,7 +45,7 @@ null = [] execVM "scripts\waffenkammerblock.sqf";
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 
-null = [] execVM "scripts\modcheck.sqf";
+//null = [] execVM "scripts\modcheck.sqf";
 
 
 //------------------------------------------------------------------
@@ -210,7 +210,7 @@ sleep 1;
 //Bestimmt wann das GR Menü angezeigt wird. Im Umkreis der Basis (Radius 50m)und vor Missionsstart.
 //Kann Alternativ mit dieser Zeile Ausgetauscht werden um immer aktiviert zu sein:
 //_condition = {true}; 
-_condition = {player distance base < 50 || missionstarted == false};
+_condition = {player distance base < 100 || missionstarted == false};
 
 //Bedingung unter der die Waffenkammer angezeigt wird. Aktuell bei 8m Entfernung zum Waffenkammersoldaten UND wenn useDatabase auf false ist (also wenn die Mission nicht fortgesetzt wird)
 _conditionWaffenkammer = {player distance waffenkammer < 8 && useDatabase == false};
@@ -356,6 +356,7 @@ if (_playerGrp == grplima || _playerGrp == grpkilo) then {
 
 
 sleep 1;
+
 /*
 //FoggyBreath____________________________________________________________
 	_units = if (!isMultiplayer) then {switchableUnits} else {playableUnits};
@@ -377,5 +378,3 @@ titleText ["Missionsvorbereitung", "BLACK IN" ];
 "dynamicBlur" ppEffectCommit 0;
 "dynamicBlur" ppEffectAdjust [0.0];
 "dynamicBlur" ppEffectCommit 3;
-
-#(rgb,512,512,3)text(1,1,"PuristaBold",0.3,"#ffffff00","#000000","Transport 1"")
