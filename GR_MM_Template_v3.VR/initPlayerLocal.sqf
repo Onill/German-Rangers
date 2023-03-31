@@ -91,11 +91,6 @@ _loadedMods = configSourceModList (configFile >> "CfgPatches");
 		case "@LAMBS_Suppression": {true};
 		case "@LAMBS_Danger.fsm": {true};
 
-		//DCO
-		case "@DCO UnitScanner": {true};
-		case "@DCO Soldier FSM": {true};
-		case "@DCO Vehicle.FSM - Vehicle AI Enhancement": {true};
-
 		//German Rangers Extras
 		case "@NATO Markers+": {true};
 		case "@Zeus Enhanced": {true};
@@ -347,15 +342,19 @@ if (isClass(configFile >> "cfgPatches" >> "task_force_radio")) then {
 //------------------------------------------------------------------
 sleep 1;
 
-//Bestimmt wann das Gr Menü angezeigt wird. Im Umkreis der Basis (Radius 50m)und vor Missionsstart.
+//Bestimmt wann das GR Menü angezeigt wird. Im Umkreis der Basis (Radius 50m)und vor Missionsstart.
 //Kann Alternativ mit dieser Zeile Ausgetauscht werden um immer aktiviert zu sein:
 //_condition = {true}; 
 _condition = {player distance base < 50 || missionstarted == false};
+
+//Bedingung unter der die Waffenkammer angezeigt wird. Aktuell bei 8m Entfernung zum Waffenkammersoldaten UND wenn useDatabase auf false ist (also wenn die Mission nicht fortgesetzt wird)
 _conditionWaffenkammer = {player distance waffenkammer < 8 && useDatabase == false};
-_empty_statement = {createDialog "Main_Dialog";}; //  {"Nothing"};
+
+
+_mainDialog = {createDialog "Main_Dialog";};
 
 // Creating a Sub Menu Category GR Base with Logo
-_base_menu = ["GR Base","GR Base","images\GermanRangersLogo.paa",_empty_statement,_condition] call ace_interact_menu_fnc_createAction;
+_base_menu = ["GR Base","GR Base","images\GermanRangersLogo.paa",_mainDialog,_condition] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions"], _base_menu] call ace_interact_menu_fnc_addActionToClass;
 
 //Open Teleport GUI via Self Interaction Menu in Subcategory GR Base
