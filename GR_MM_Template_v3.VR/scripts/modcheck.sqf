@@ -16,17 +16,6 @@ _whitelistedMods = 	[
 						"@CUP ACE3 Compatibility Addon - Vehicles",
 						"@CUP ACE3 Compatibility Addon - Terrains",
 						
-						//RHS
-						"@RHSAFRF",
-						"@RHSGREF",
-						"@RHSUSAF",
-						"@RHSSAF",
-						"@3CB Factions",
-						"@ACE Compat - RHS AFRF",
-						"@ACE Compat - RHS- SAF",
-						"@ACE Compat - RHS USAF",
-						"@ACE Compat - RHS- GREF",
-						
 						//TFAR
 						"@Task Force Arrowhead Radio (BETA!!!)",
 						"@Radio Animations for Task Force Radio",
