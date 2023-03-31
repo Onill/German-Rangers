@@ -34,7 +34,7 @@ tarnMuster = 1;
 null = [] execVM "scripts\briefing.sqf";
 
 //Waffenkammer
-nul = execVM "scripts\waffenkammer.sqf";
+null = [] execVM "scripts\waffenkammerblock.sqf";
 
 //------------------------------------------------------------------
 //------------------------------------------------------------------
@@ -351,7 +351,7 @@ sleep 1;
 //Kann Alternativ mit dieser Zeile Ausgetauscht werden um immer aktiviert zu sein:
 //_condition = {true}; 
 _condition = {player distance base < 50 || missionstarted == false};
-_conditionWaffenkammer = {player distance waffenkammer < 8};
+_conditionWaffenkammer = {player distance waffenkammer < 8 && useDatabase == false};
 _empty_statement = {createDialog "Main_Dialog";}; //  {"Nothing"};
 
 // Creating a Sub Menu Category GR Base with Logo
