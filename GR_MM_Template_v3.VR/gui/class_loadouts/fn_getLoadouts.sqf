@@ -11,8 +11,8 @@ private ["_loudout","_loudoutIndex","_index","_tarnData"];
 		lbSetData [1500, _forEachIndex, _loudoutIndex select _forEachIndex];	 
 	} forEach _loudout;
 	
-	_Tarn = ["Flecktarn","Troptarn"];
-	_tarnData = ["fleck","tropen"];
+	_Tarn = ["Flecktarn","Troptarn","Wintertarn"];
+	_tarnData = ["fleck","tropen","winter"];
 	
 	{
 		lbAdd [2100, _x];
