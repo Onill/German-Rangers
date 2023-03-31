@@ -27,7 +27,7 @@ tarnfarbe = "tropen";
 publicVariable "tarnfarbe";
 
 // Für die GUI:
-// 0 = Flecktarn, 1 = Tropentarn
+// 0 = Flecktarn, 1 = Tropentarn, 2 = Winter
 tarnMuster = 1;
 
 // briefingName
