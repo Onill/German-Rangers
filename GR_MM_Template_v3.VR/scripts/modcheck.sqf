@@ -106,7 +106,7 @@ _whitelistedMods = 	[
 						"enoch",
 						"aow",
 						"curator"						
-					]
+					];
 
 private _playermods = [];
 
@@ -115,10 +115,7 @@ _loadedMods = configSourceModList (configFile >> "CfgPatches");
 {
 	_result = false;
 	_result = _x in _whitelistedMods;
-	if (_result == false )then {
-		_playermods pushBack _x;
-	};
-	
+	if (!_result) then {_playermods pushBack _x;};	
 	
 } forEach _loadedMods;
 
