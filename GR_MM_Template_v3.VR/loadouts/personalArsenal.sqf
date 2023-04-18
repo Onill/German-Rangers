@@ -29,33 +29,23 @@ zug_westen_fk = [		"CUP_V_B_GER_PVest_Fleck_OFC",
 						"CUP_V_B_GER_PVest_Trop_OFC",
 						
 						"CUP_V_B_GER_PVest_Fleck_TL",
-						"CUP_V_B_GER_PVest_Fleck_TL_LT",
-						"CUP_V_B_GER_PVest_Trop_TL",
-						"CUP_V_B_GER_PVest_Trop_TL_LT"
+						"CUP_V_B_GER_PVest_Trop_TL"
 	];
 
 zug_westen = [			"CUP_V_B_GER_PVest_Fleck_RFL",
-						"CUP_V_B_GER_PVest_Fleck_RFL_LT",
-						"CUP_V_B_GER_PVest_Trop_RFL",
-						"CUP_V_B_GER_PVest_Trop_RFL_LT"
+						"CUP_V_B_GER_PVest_Trop_RFL"
 	];
 
 zug_westen_grenadier = ["CUP_V_B_GER_PVest_Fleck_Gren",
-						"CUP_V_B_GER_PVest_Fleck_Gren_LT",
-						"CUP_V_B_GER_PVest_Trop_Gren",
-						"CUP_V_B_GER_PVest_Trop_Gren_LT"
+						"CUP_V_B_GER_PVest_Trop_Gren"
 	];
 
 zug_westen_mg = [		"CUP_V_B_GER_PVest_Fleck_MG",
-						"CUP_V_B_GER_PVest_Fleck_MG_LT",
-						"CUP_V_B_GER_PVest_Trop_MG",
-						"CUP_V_B_GER_PVest_Trop_MG_LT"
+						"CUP_V_B_GER_PVest_Trop_MG"
 	];
 
 zug_westen_san = [		"CUP_V_B_GER_PVest_Fleck_Med",
-						"CUP_V_B_GER_PVest_Fleck_Med_LT",
-						"CUP_V_B_GER_PVest_Trop_Med",
-						"CUP_V_B_GER_PVest_Trop_Med_LT"
+						"CUP_V_B_GER_PVest_Trop_Med"
 	];
 
 zug_rucksack = [		"B_AssaultPack_rgr",
@@ -72,8 +62,8 @@ zug_rucksack = [		"B_AssaultPack_rgr",
 						"CUP_B_GER_Medic_Tropentarn"
 	];
 
-zug_handfeuerwaffen = [	"CUP_hgun_M17_Coyote",
-						"CUP_hgun_M17_Black",
+zug_handfeuerwaffen = [	"CUP_hgun_M17_Black",
+						"CUP_hgun_M17_Coyote",
 						"CUP_hgun_M17_Green",
 						
 						"CUP_hgun_FlareGun"
@@ -555,7 +545,7 @@ switch _playerGrp do
 				_personalArsenalItems = zug_komplett + sierra + _echo + medic_standard + medic_ehb + medic_san + medic_doc;
 
 				// Fill ACE Arsenal
-				[player, _completeArsenal, false] call ace_arsenal_fnc_addVirtualItems;
+				[player, _personalArsenalItems, false] call ace_arsenal_fnc_addVirtualItems;
 				
 				// Open ACE Arsenal
 				_personalArsenal = [player, player, false] call ace_arsenal_fnc_openBox;				
