@@ -39,7 +39,9 @@ civilian setFriend [west,1];
 useDatabase = false;
 publicVariable "useDatabase";
 
-// Muss vom Missionmaker UNBEDIGT gesetzt werden! Entscheidet mit welchem Fraktionsequipment gespielt wird. (bwtropen / bwfleck / marsoc)
+// Muss vom Missionmaker UNBEDIGT gesetzt werden! Entscheidet mit welchem Fraktionsequipment gespielt wird. 
+// Aktuellverfügbar: bwtropen / bwfleck / bwwinter / marsoc
+
 fraktion = "marsoc";
 publicVariable "fraktion";
 
