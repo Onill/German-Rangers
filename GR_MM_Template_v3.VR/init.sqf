@@ -30,6 +30,34 @@ civilian setFriend [west,1];
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 //
+//							Variablen
+//
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+
+// Muss vom Missionmaker UNBEDIGT gesetzt werden! Aktiviert nutzung der Datenbank (für Kampagnen benötigt)
+useDatabase = false;
+publicVariable "useDatabase";
+
+// Muss vom Missionmaker UNBEDIGT gesetzt werden! Entscheidet mit welchem Fraktionsequipment gespielt wird. (bwtropen / bwfleck / marsoc)
+fraktion = "marsoc";
+publicVariable "fraktion";
+
+waffenkammerpfad = format ["loadouts\%1\waffenkammer.sqf", fraktion];
+publicVariable "waffenkammerpfad";
+
+limapfad = format ["loadouts\%1\lima\", fraktion];
+publicVariable "limapfad";
+
+missioncontinue = false;
+publicVariable "missioncontinue";
+
+//Wird benötigt damit alle Spieler zu Beginn der Mission VOR DEM INTRO, egal an welchem Ort sie sich befinden, ein Personal Arsenal und das Loadoutmenü zur Verfügung haben. Wird mit Missionsstart auf true gesetzt.
+missionstarted = false;
+publicVariable "missionstarted";
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//
 //						Debug Optionen
 //
 //------------------------------------------------------------------

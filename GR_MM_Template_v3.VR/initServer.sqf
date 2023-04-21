@@ -22,9 +22,6 @@
 saveDatabase = false;
 publicVariable "saveDatabase";
 
-//Wird benötigt damit alle Spieler zu Beginn der Mission VOR DEM INTRO, egal an welchem Ort sie sich befinden, ein Personal Arsenal und das Loadoutmenü zur Verfügung haben. Wird mit Missionsstart auf true gesetzt.
-missionstarted = false;
-publicVariable "missionstarted";
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 //

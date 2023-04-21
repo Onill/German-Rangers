@@ -63,17 +63,17 @@ if (playerSide == west) then {
 
 		
 		case("Zug_Zugfuhrer"):{
-			_loadouts = format ["loadouts\bw%1\Zug_Zugfuhrer.sqf", tarnfarbe];
+			_loadouts = format ["loadouts\%1\Zug_Zugfuhrer.sqf", fraktion];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
 		case("Zug_Fox_AvD"):{	
-			_loadouts = format ["loadouts\bw%1\Zug_Fox_AvD.sqf", tarnfarbe];
+			_loadouts = format ["loadouts\%1\Zug_Fox_AvD.sqf", fraktion];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 
 		case("Zug_Fox_Nahsicherer"):{	
-			_loadouts = format ["loadouts\bw%1\Zug_Fox_Nahsicherer.sqf", tarnfarbe];
+			_loadouts = format ["loadouts\%1\Zug_Fox_Nahsicherer.sqf", fraktion];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 
@@ -88,52 +88,52 @@ if (playerSide == west) then {
 
 		
 		case("Zug_Gruppenfuhrer"):{	
-			_loadouts = format ["loadouts\bw%1\Zug_Gruppenfuhrer.sqf", tarnfarbe];
+			_loadouts = format ["loadouts\%1\Zug_Gruppenfuhrer.sqf", fraktion];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 
 		case("Zug_Truppfuhrer"):{	
-			_loadouts = format ["loadouts\bw%1\Zug_Truppfuhrer.sqf", tarnfarbe];
+			_loadouts = format ["loadouts\%1\Zug_Truppfuhrer.sqf", fraktion];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
 		case("Zug_Schutze"):{	
-			_loadouts = format ["loadouts\bw%1\Zug_Schutze.sqf", tarnfarbe];
+			_loadouts = format ["loadouts\%1\Zug_Schutze.sqf", fraktion];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 
 		case("Zug_Sanitater"):{	
-			_loadouts = format ["loadouts\bw%1\Zug_Sanitater.sqf", tarnfarbe];
+			_loadouts = format ["loadouts\%1\Zug_Sanitater.sqf", fraktion];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
 		case("Zug_EHB"):{	
-			_loadouts = format ["loadouts\bw%1\Zug_EHB.sqf", tarnfarbe];
+			_loadouts = format ["loadouts\%1\Zug_EHB.sqf", fraktion];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 
 		case("Zug_Grenadier"):{	
-			_loadouts = format ["loadouts\bw%1\Zug_Grenadier.sqf", tarnfarbe];
+			_loadouts = format ["loadouts\%1\Zug_Grenadier.sqf", fraktion];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
 		case("Zug_DM"):{	
-			_loadouts = format ["loadouts\bw%1\Zug_DM.sqf", tarnfarbe];
+			_loadouts = format ["loadouts\%1\Zug_DM.sqf", fraktion];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
 		case("Zug_MG"):{	
-			_loadouts = format ["loadouts\bw%1\Zug_MG.sqf", tarnfarbe];
+			_loadouts = format ["loadouts\%1\Zug_MG.sqf", fraktion];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
 		case("Zug_AT"):{	
-			_loadouts = format ["loadouts\bw%1\Zug_AT.sqf", tarnfarbe];
+			_loadouts = format ["loadouts\%1\Zug_AT.sqf", fraktion];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
 		case("Zug_ATA"):{	
-			_loadouts = format ["loadouts\bw%1\Zug_ATA.sqf", tarnfarbe];
+			_loadouts = format ["loadouts\%1\Zug_ATA.sqf", fraktion];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
@@ -148,45 +148,20 @@ if (playerSide == west) then {
 
 		
 		case("Sierra_TrpFhr"):{	
-			_loadouts = format ["loadouts\bw%1\Sierra_TrpFhr.sqf", tarnfarbe];
+			_loadouts = format ["loadouts\%1\Sierra_TrpFhr.sqf", fraktion];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
-		case("Sierra_Sniper_M107"):{	
-			_loadouts = format ["loadouts\bw%1\Sierra_Sniper_M107.sqf", tarnfarbe];
+		case("Sierra_Sniper"):{	
+			_loadouts = format ["loadouts\%1\Sierra_Sniper.sqf", fraktion];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
-		case("Sierra_Sniper_HK417"):{	
-			_loadouts = format ["loadouts\bw%1\Sierra_Sniper_HK417.sqf", tarnfarbe];
+		case("Sierra_NaSi"):{	
+			_loadouts = format ["loadouts\%1\Sierra_NaSi.sqf", fraktion];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
-		case("Sierra_Sniper_G22"):{	
-			_loadouts = format ["loadouts\bw%1\Sierra_Sniper_G22.sqf", tarnfarbe];
-			call compile preprocessFileLineNumbers _loadouts;
-		};
-		
-		case("Sierra_NaSi_Spaten"):{	
-			_loadouts = format ["loadouts\bw%1\Sierra_NaSi_Spaten.sqf", tarnfarbe];
-			call compile preprocessFileLineNumbers _loadouts;
-		};
-		
-		case("Sierra_NaSi_Cutter"):{	
-			_loadouts = format ["loadouts\bw%1\Sierra_NaSi_Cutter.sqf", tarnfarbe];
-			call compile preprocessFileLineNumbers _loadouts;
-		};
-
-		case("Sierra_Drohne_HK417"):{	
-			_loadouts = format ["loadouts\bw%1\Sierra_Drohne_HK417.sqf", tarnfarbe];
-			call compile preprocessFileLineNumbers _loadouts;
-		};
-		
-		case("Sierra_Drohne_HK416"):{	
-			_loadouts = format ["loadouts\bw%1\Sierra_Drohne_HK416.sqf", tarnfarbe];
-			call compile preprocessFileLineNumbers _loadouts;
-		};
-
 
 		/*-----------------------------------------------------------------------------
 		-------------------------------------------------------------------------------
@@ -198,25 +173,15 @@ if (playerSide == west) then {
 */
 		
 		case("Echo_Infiltration_1"):{	
-			_loadouts = format ["loadouts\bw%1\Echo_Infiltration_1.sqf", tarnfarbe];
-			call compile preprocessFileLineNumbers _loadouts;
-		};
-		
-		case("Echo_Infiltration_2"):{	
-			_loadouts = format ["loadouts\bw%1\Echo_Infiltration_2.sqf", tarnfarbe];
+			_loadouts = format ["loadouts\%1\Echo_Infiltration_1.sqf", fraktion];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
 		case("Echo_Infiltration_3"):{	
-			_loadouts = format ["loadouts\bw%1\Echo_Infiltration_3.sqf", tarnfarbe];
+			_loadouts = format ["loadouts\%1\Echo_Infiltration_3.sqf", fraktion];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
-		case("Echo_Infiltration_4_HVT"):{	
-			_loadouts = format ["loadouts\bw%1\Echo_Infiltration_4_HVT.sqf", tarnfarbe];
-			call compile preprocessFileLineNumbers _loadouts;
-		};
-
 		/*-----------------------------------------------------------------------------
 		-------------------------------------------------------------------------------
 		---																			---
@@ -227,7 +192,7 @@ if (playerSide == west) then {
 
 
 		case("Lima_Standard"):{
-			_loadouts = format ["loadouts\bw%1\Lima_Standard.sqf", tarnfarbe];
+			_loadouts = format ["loadouts\%1\Lima_Standard.sqf", fraktion];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
@@ -241,12 +206,12 @@ if (playerSide == west) then {
 
 
 		case("Ausbilder"):{
-			_loadouts = format ["loadouts\bw%1\ausbilder.sqf", tarnfarbe];
+			_loadouts = format ["loadouts\%1\ausbilder.sqf", fraktion];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 
 		case("Rekrut"):{
-			_loadouts = format ["loadouts\bw%1\rekrut.sqf", tarnfarbe];
+			_loadouts = format ["loadouts\%1\rekrut.sqf", fraktion];
 			call compile preprocessFileLineNumbers _loadouts;
 		};		
 	};
