@@ -29,7 +29,7 @@ player addWeapon "CUP_hgun_M17_Black";
 
 //Waffen Ausstattung
 player addPrimaryWeaponItem "CUP_acc_LLM01_L";
-player addPrimaryWeaponItem "CUP_optic_Elcan_reflex_pip";
+player addPrimaryWeaponItem "CUP_optic_HensoldtZO_low_RDS";
 
 //Waffen Munition
 player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36";
