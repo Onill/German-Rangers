@@ -9,14 +9,18 @@ removeVest player;
 removeBackpack player;
 removeHeadgear player;
 removeGoggles player;
-
-comment "Add weapons";
-player addWeapon "CUP_arifle_G36C";
-player addPrimaryWeaponItem "CUP_muzzle_mfsup_Flashhider_556x45_Black";
-player addPrimaryWeaponItem "CUP_acc_LLM01_L";
-player addPrimaryWeaponItem "CUP_optic_Elcan_reflex";
-player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36";
+//------------------------------------------------------------------
+//	Waffen
+//------------------------------------------------------------------	
+player addWeapon "CUP_arifle_G36KA3";
 player addWeapon "CUP_hgun_M17_Black";
+
+//Waffen Ausstattung
+player addPrimaryWeaponItem "CUP_acc_LLM01_L";
+player addPrimaryWeaponItem "CUP_optic_HensoldtZO_low_RDS";
+
+//Waffen Munition
+player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36";
 player addHandgunItem "CUP_17Rnd_9x19_M17_Black";
 
 comment "Add containers";
