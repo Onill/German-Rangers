@@ -46,10 +46,10 @@ player addBackpack "TFAR_rt1523g_big_bwmod_tropen";
 //------------------------------------------------------------------
 //	Ausstattung
 //------------------------------------------------------------------	
-player addWeapon "Rangefinder";
+player addWeapon "Laserdesignator_02_ghex_F";
 player linkItem "ItemMap";
 player linkItem "ItemCompass";
-player linkItem "ItemWatch";
+player linkItem "ACE_Altimeter";
 player linkItem "TFAR_anprc152";
 player linkItem "ItemAndroid";
 player linkItem "CUP_NVG_PVS15_black";
@@ -80,19 +80,19 @@ player addItemToVest "kat_scalpel";
 for "_i" from 1 to 25 do {player addItemToBackpack "ACE_elasticBandage";};
 for "_i" from 1 to 5 do {player addItemToBackpack "ACE_packingBandage";};
 for "_i" from 1 to 10 do {player addItemToBackpack "ACE_salineIV_500";};
-for "_i" from 1 to 20 do {player addItemToBackpack "kat_IV_16";};
+for "_i" from 1 to 15 do {player addItemToBackpack "kat_IV_16";};
 for "_i" from 1 to 3 do {player addItemToBackpack "ACE_adenosine";};
-for "_i" from 1 to 5 do {player addItemToBackpack "kat_chestSeal";};
-for "_i" from 1 to 7 do {player addItemToBackpack "kat_EACA";};
+for "_i" from 1 to 3 do {player addItemToBackpack "kat_chestSeal";};
+for "_i" from 1 to 6 do {player addItemToBackpack "kat_EACA";};
 for "_i" from 1 to 6 do {player addItemToBackpack "ACE_epinephrine";};
 for "_i" from 1 to 2 do {player addItemToBackpack "kat_IO_FAST";};
 for "_i" from 1 to 5 do {player addItemToBackpack "kat_larynx";};
-for "_i" from 1 to 7 do {player addItemToBackpack "kat_TXA";};
-for "_i" from 1 to 5 do {player addItemToBackpack "ACE_splint";};
+for "_i" from 1 to 6 do {player addItemToBackpack "kat_TXA";};
+for "_i" from 1 to 3 do {player addItemToBackpack "ACE_splint";};
 for "_i" from 1 to 2 do {player addItemToBackpack "kat_norepinephrine";};
 for "_i" from 1 to 3 do {player addItemToBackpack "kat_fentanyl";};
 for "_i" from 1 to 2 do {player addItemToBackpack "ACE_morphine";};
-for "_i" from 1 to 7 do {player addItemToBackpack "kat_nitroglycerin";};
+for "_i" from 1 to 6 do {player addItemToBackpack "kat_nitroglycerin";};
 player addItemToBackpack "kat_naloxone";
 player addItemToBackpack "kat_ketamine";
 player addItemToBackpack "kat_phenylephrine";
