@@ -37,8 +37,6 @@ player addPrimaryWeaponItem "CUP_optic_HensoldtZO_low_RDS";
 player addPrimaryWeaponItem "CUP_30Rnd_556x45_G36";
 player addHandgunItem "CUP_17Rnd_9x19_M17_Black";
 
-comment "Add containers";
-
 //------------------------------------------------------------------
 //	Kleidung
 //------------------------------------------------------------------	
