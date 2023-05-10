@@ -130,7 +130,23 @@ PPeffect_colorC ppEffectEnable true;
 PPeffect_colorC ppEffectCommit 0;
 */
 
+/*
+// Recolor Post-Processing - Jungle Rainy
+PPeffect_colorC = ppEffectCreate ["ColorCorrections",1500]; 
+PPeffect_colorC ppEffectAdjust [1,1,0,[0,1,0.3,0.04],[1,1,1,1],[0.3,0.587,0.114,0]]; 
+PPeffect_colorC ppEffectEnable true; 
+PPeffect_colorC ppEffectCommit 0;
+"filmGrain" ppEffectAdjust  [0.04,1,1,0.1,1,false];
+"filmGrain" ppEffectEnable true;
+*/
 
+/*
+// Recolor Post-Processing - Jungle
+PPeffect_colorC = ppEffectCreate ["ColorCorrections",1500]; 
+PPeffect_colorC ppEffectAdjust [1,1,0,[0,1,0.1,0.04],[1,1,1,1],[0.3,0.587,0.114,0]]; 
+PPeffect_colorC ppEffectEnable true; 
+PPeffect_colorC ppEffectCommit 0;
+*/
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 //
