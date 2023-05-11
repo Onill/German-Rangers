@@ -1,5 +1,10 @@
 // Kiste Sanität Typ II - Spezial
-// Aufruf im Editor mit 	_nul = execvm "scripts\supplies\box_san_typ_ii.sqf";
+/* Aufruf im Editor mit:
+
+_path = format ["loadouts\%1\lima\box_san_typ_ii.sqf", getMissionConfigValue "fraktion"]; 
+null = [this] execVM _path;
+
+*/
 
 if (! isServer) exitWith {};
 

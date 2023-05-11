@@ -6,7 +6,7 @@ _supply = _this select 0;
 _boxPos = limasupplypointstaticmarker getRelPos [0,0];
 
 //Setzt die Höhe auf der die Box nachher Positioniert wird. Wird benötigt wenn die Static Station in einem Gebäude oder ähnlichem steht.
-_boxheight = 39.2;
+_boxheight = 0.5;
 
 switch (_supply) do
 {

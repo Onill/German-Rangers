@@ -1,3 +1,10 @@
+//German Rangers Mission Config Variables
+
+useDBMapMarkers 	= false;		//Sets if MapMarkers from the DB are loaded for this mission
+loadPlayers 		= false;		//Sets if Loadouts for Players are loaded from DB
+fraktion 			= "bwfleck"; 	//Sets the Loadout Path for the Mission: "bwfleck" | "bwtropen" | "bwwinter" | "marsoc"
+
+//Mission Head
 author			= "GerRng Mission Making Team";
 loadScreen 		= "a3\data_f_exp_a\Data\FM_LEARN_Nexus1_ca.paa";
 

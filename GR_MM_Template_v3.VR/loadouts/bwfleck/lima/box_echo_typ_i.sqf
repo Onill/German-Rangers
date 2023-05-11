@@ -1,5 +1,10 @@
 // Kiste Echo Typ I - Munition
-// Aufruf im Editor mit 	[this] execvm "scripts\supplies\box_echo_typ_i.sqf";
+/* Aufruf im Editor mit:
+
+_path = format ["loadouts\%1\lima\box_echo_typ_i.sqf", getMissionConfigValue "fraktion"]; 
+null = [this] execVM _path;
+
+*/
 
 if (! isServer) exitWith {};
 

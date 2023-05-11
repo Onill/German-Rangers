@@ -13,51 +13,96 @@
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 //
-//							Variablen
-//
-//------------------------------------------------------------------
-//------------------------------------------------------------------
-
-// Muss vom Missionmaker UNBEDIGT gesetzt werden! Aktiviert das Speichern und Laden von Markern / Kisten aus der Datenbank.
-saveDatabase = false;
-publicVariable "saveDatabase";
-
-//------------------------------------------------------------------
-//------------------------------------------------------------------
-//
 //							Fortify Tool
+//
+//				Unterteilt in Woodland oder Arid 
 //
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 
 //Fortify Baumoeglichkeiten Objekt, kosten(bauzeit)
+//Bauzeit: Ist immer 20 + x * 8, sprich eine Bauzeit "1" ist 28 Sekunden, "2" ist 36, "0.5" ist 24 und "-1" ist 12 Sekunden
+//Bitte fragt mich nicht wieso das so ist.
 
+//Woodland
 if isClass (configFile >> "CfgPatches" >> "ace_main") then
 {
 	[west, -1, [
 
-	["Land_fortified_nest_small_EP1",5],
-	["Land_CamoNetVar_NATO_EP1",2],
-	["Land_BagFence_Long_F",2],
-	["Land_BagFence_Round_F",2],
-	["Land_Razorwire_F",2],
-	["Land_BarGate_F",0],
+	["RoadCone_L_F",-2],
+	["PortableHelipadLight_01_red_F",-2],
+	
 	["RoadBarrier_F",0],
-	["RoadCone_L_F",0],
-	["Sign_Checkpoint_US_EP1",0],
-	["Sign_Checkpoint_TK_EP1",0],
-	["Land_Barricade_01_10m_F",3],
-	["Land_Barricade_01_4m_F",3],
-	["Land_SandbagBarricade_01_F",5],
-	["Land_SandbagBarricade_01_hole_F",5],
-	["Land_SandbagBarricade_01_half_F",5],
-	["FenceWoodPalet",2],
-	["Land_TentLamp_01_standing_red_F",2],
-	["Land_TentLamp_01_standing_F",2],
-	["Land_PortableLight_02_double_black_F",2]
+	["Land_PortableLight_double_F",0],
+	["Land_Plank_01_4m_F",0],
+
+	["Land_Razorwire_F",1],
+	["Land_Plank_01_8m_F",1],
+	
+	["Land_CzechHedgehog_01_new_F",2],
+	["Land_CncBarrier_stripes_F",2],
+	
+	["Land_SandbagBarricade_01_half_F",3],
+	
+	["Land_SandbagBarricade_01_F",4],
+	["Land_SandbagBarricade_01_hole_F",4],
+	["Land_BarGate_F",4],
+	
+	//Woodland Specific
+	["Land_BagFence_01_long_green_F",4],
+	["Land_BagFence_01_round_green_F",4],
+	
+	["Land_BagBunker_01_small_green_F",15],
+	
+	["Land_HBarrier_01_line_3_green_F",20],
+	
+	["CamoNet_BLUFOR_F",5],
+	["CamoNet_BLUFOR_open_F",5],
+	["CamoNet_BLUFOR_big_F",5],
+	["Land_MedicalTent_01_NATO_tropic_generic_outer_F",5]
 	]] call acex_fortify_fnc_registerObjects;
 };
 
+/*
+//Arid
+if isClass (configFile >> "CfgPatches" >> "ace_main") then
+{
+	[west, -1, [
+
+	["RoadCone_L_F",-2],
+	["PortableHelipadLight_01_red_F",-2],
+	
+	["RoadBarrier_F",0],
+	["Land_PortableLight_double_F",0],
+	["Land_Plank_01_4m_F",0],
+
+	["Land_Razorwire_F",1],
+	["Land_Plank_01_8m_F",1],
+	
+	["Land_CzechHedgehog_01_new_F",2],
+	["Land_CncBarrier_stripes_F",2],
+	
+	["Land_SandbagBarricade_01_half_F",3],
+	
+	["Land_SandbagBarricade_01_F",4],
+	["Land_SandbagBarricade_01_hole_F",4],
+	["Land_BarGate_F",4],
+	
+	//Woodland Specific
+	["Land_BagFence_Long_F",4],
+	["Land_BagFence_Round_F",4],
+	
+	["Land_BagBunker_Small_F",15],
+	
+	["Land_HBarrier_3_F",20],
+	
+	["CamoNet_OPFOR_F",5],
+	["CamoNet_OPFOR_open_F",5],
+	["CamoNet_OPFOR_big_F",5],
+	["Land_MedicalTent_01_NATO_generic_outer_F",5]
+	]] call acex_fortify_fnc_registerObjects;
+};
+*/
 
 //------------------------------------------------------------------
 //------------------------------------------------------------------
@@ -67,8 +112,7 @@ if isClass (configFile >> "CfgPatches" >> "ace_main") then
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 
-
-if saveDatabase then {
+if (getMissionConfigValue "useDBMapMarkers" == "true") then {
 
 	//LOADOUTS SPEICHERN
 	"checkForDatabase" addPublicVariableEventHandler
@@ -145,24 +189,5 @@ if saveDatabase then {
 		
 		["write", ["markers","marker",_array]] call _inidbi;
 
-	};
-};
-
-// end mission when all players are Dead or Unconscious
-// works for ACE and AIS
-_nul = [] spawn {
-	if (!isServer or !isMultiplayer) exitWith {};
-	private _pass = TRUE;
-	while {_pass} do {
-		uisleep 1;
-		if ( (playableUnits findIf {!(toLowerANSI lifeState _x in ["incapacitated","dead","dead-respawn"])} == -1)||(playableUnits findIf {!(_x getVariable ["ais_unconscious",false])} == -1) ) then {
-			uisleep 6;
-			_pass = FALSE;
-
-			if ( (playableUnits findIf {!(toLowerANSI lifeState _x in ["incapacitated","dead","dead-respawn"])} == -1)||(playableUnits findIf {!(_x getVariable ["ais_unconscious",false])} == -1) ) exitWith { 
-				"End3" call BIS_fnc_endMissionServer;
-			};
-			_pass = TRUE;
-		};  
 	};
 };

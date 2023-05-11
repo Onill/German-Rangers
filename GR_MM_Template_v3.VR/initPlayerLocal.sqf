@@ -25,9 +25,6 @@ tarnMuster = 0;
 // briefingName
 [] execVM "scripts\briefing.sqf";
 
-//Waffenkammer
-[] execVM "scripts\waffenkammerblock.sqf";
-
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 //
@@ -62,7 +59,7 @@ null = [] execVM "scripts\modcheck.sqf";
 sleep 1;
 
 //Abfrage ob Datenbank oder frisches Loadout
-if useDatabase then {
+if (getMissionConfigValue "loadPlayers" == "true") then {
 
 	// INIDB
 	_clientID = clientOwner;

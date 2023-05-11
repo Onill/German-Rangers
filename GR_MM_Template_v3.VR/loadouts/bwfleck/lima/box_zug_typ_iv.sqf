@@ -1,5 +1,10 @@
 // Kiste Zug Typ IV - Ausrüstung
-// Aufruf im Editor mit 	[this] execvm "scripts\supplies\box_zug_typ_iv.sqf";
+/* Aufruf im Editor mit:
+
+_path = format ["loadouts\%1\lima\box_zug_typ_iv.sqf", getMissionConfigValue "fraktion"]; 
+null = [this] execVM _path;
+
+*/
 
 if (! isServer) exitWith {};
 

@@ -1,5 +1,10 @@
 // Kiste Zug Typ II - Explosiv-Munition
-// Aufruf im Editor mit 	[this] execvm "scripts\supplies\box_zug_typ_ii.sqf";
+/* Aufruf im Editor mit:
+
+_path = format ["loadouts\%1\lima\box_zug_typ_ii.sqf", getMissionConfigValue "fraktion"]; 
+null = [this] execVM _path;
+
+*/
 
 if (! isServer) exitWith {};
 

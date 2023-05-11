@@ -63,17 +63,17 @@ if (playerSide == west) then {
 
 		
 		case("Zug_Zugfuhrer"):{
-			_loadouts = format ["loadouts\%1\Zug_Zugfuhrer.sqf", fraktion];
+			_loadouts = format ["loadouts\%1\Zug_Zugfuhrer.sqf", getMissionConfigValue "fraktion"];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
 		case("Zug_Fox_AvD"):{	
-			_loadouts = format ["loadouts\%1\Zug_Fox_AvD.sqf", fraktion];
+			_loadouts = format ["loadouts\%1\Zug_Fox_AvD.sqf", getMissionConfigValue "fraktion"];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 
 		case("Zug_Fox_Nahsicherer"):{	
-			_loadouts = format ["loadouts\%1\Zug_Fox_Nahsicherer.sqf", fraktion];
+			_loadouts = format ["loadouts\%1\Zug_Fox_Nahsicherer.sqf", getMissionConfigValue "fraktion"];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 
@@ -88,52 +88,52 @@ if (playerSide == west) then {
 
 		
 		case("Zug_Gruppenfuhrer"):{	
-			_loadouts = format ["loadouts\%1\Zug_Gruppenfuhrer.sqf", fraktion];
+			_loadouts = format ["loadouts\%1\Zug_Gruppenfuhrer.sqf", getMissionConfigValue "fraktion"];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 
 		case("Zug_Truppfuhrer"):{	
-			_loadouts = format ["loadouts\%1\Zug_Truppfuhrer.sqf", fraktion];
+			_loadouts = format ["loadouts\%1\Zug_Truppfuhrer.sqf", getMissionConfigValue "fraktion"];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
 		case("Zug_Schutze"):{	
-			_loadouts = format ["loadouts\%1\Zug_Schutze.sqf", fraktion];
+			_loadouts = format ["loadouts\%1\Zug_Schutze.sqf", getMissionConfigValue "fraktion"];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 
 		case("Zug_Sanitater"):{	
-			_loadouts = format ["loadouts\%1\Zug_Sanitater.sqf", fraktion];
+			_loadouts = format ["loadouts\%1\Zug_Sanitater.sqf", getMissionConfigValue "fraktion"];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
 		case("Zug_EHB"):{	
-			_loadouts = format ["loadouts\%1\Zug_EHB.sqf", fraktion];
+			_loadouts = format ["loadouts\%1\Zug_EHB.sqf", getMissionConfigValue "fraktion"];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 
 		case("Zug_Grenadier"):{	
-			_loadouts = format ["loadouts\%1\Zug_Grenadier.sqf", fraktion];
+			_loadouts = format ["loadouts\%1\Zug_Grenadier.sqf", getMissionConfigValue "fraktion"];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
 		case("Zug_DM"):{	
-			_loadouts = format ["loadouts\%1\Zug_DM.sqf", fraktion];
+			_loadouts = format ["loadouts\%1\Zug_DM.sqf", getMissionConfigValue "fraktion"];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
 		case("Zug_MG"):{	
-			_loadouts = format ["loadouts\%1\Zug_MG.sqf", fraktion];
+			_loadouts = format ["loadouts\%1\Zug_MG.sqf", getMissionConfigValue "fraktion"];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
 		case("Zug_AT"):{	
-			_loadouts = format ["loadouts\%1\Zug_AT.sqf", fraktion];
+			_loadouts = format ["loadouts\%1\Zug_AT.sqf", getMissionConfigValue "fraktion"];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
 		case("Zug_ATA"):{	
-			_loadouts = format ["loadouts\%1\Zug_ATA.sqf", fraktion];
+			_loadouts = format ["loadouts\%1\Zug_ATA.sqf", getMissionConfigValue "fraktion"];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
@@ -148,17 +148,17 @@ if (playerSide == west) then {
 
 		
 		case("Sierra_TrpFhr"):{	
-			_loadouts = format ["loadouts\%1\Sierra_TrpFhr.sqf", fraktion];
+			_loadouts = format ["loadouts\%1\Sierra_TrpFhr.sqf", getMissionConfigValue "fraktion"];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
 		case("Sierra_Sniper"):{	
-			_loadouts = format ["loadouts\%1\Sierra_Sniper.sqf", fraktion];
+			_loadouts = format ["loadouts\%1\Sierra_Sniper.sqf", getMissionConfigValue "fraktion"];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
 		case("Sierra_NaSi"):{	
-			_loadouts = format ["loadouts\%1\Sierra_NaSi.sqf", fraktion];
+			_loadouts = format ["loadouts\%1\Sierra_NaSi.sqf", getMissionConfigValue "fraktion"];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
@@ -173,12 +173,12 @@ if (playerSide == west) then {
 */
 		
 		case("Echo_Infiltration_1"):{	
-			_loadouts = format ["loadouts\%1\Echo_Infiltration_1.sqf", fraktion];
+			_loadouts = format ["loadouts\%1\Echo_Infiltration_1.sqf", getMissionConfigValue "fraktion"];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
 		case("Echo_Infiltration_3"):{	
-			_loadouts = format ["loadouts\%1\Echo_Infiltration_3.sqf", fraktion];
+			_loadouts = format ["loadouts\%1\Echo_Infiltration_3.sqf", getMissionConfigValue "fraktion"];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
@@ -192,7 +192,7 @@ if (playerSide == west) then {
 
 
 		case("Lima_Standard"):{
-			_loadouts = format ["loadouts\%1\Lima_Standard.sqf", fraktion];
+			_loadouts = format ["loadouts\%1\Lima_Standard.sqf", getMissionConfigValue "fraktion"];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
@@ -206,12 +206,12 @@ if (playerSide == west) then {
 
 
 		case("Ausbilder"):{
-			_loadouts = format ["loadouts\%1\ausbilder.sqf", fraktion];
+			_loadouts = format ["loadouts\%1\ausbilder.sqf", getMissionConfigValue "fraktion"];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 
 		case("Rekrut"):{
-			_loadouts = format ["loadouts\%1\rekrut.sqf", fraktion];
+			_loadouts = format ["loadouts\%1\rekrut.sqf", getMissionConfigValue "fraktion"];
 			call compile preprocessFileLineNumbers _loadouts;
 		};		
 	};

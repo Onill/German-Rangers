@@ -840,6 +840,32 @@ if (_loadout == "Zug_ATA") then {
 		_equipment = 
 						_equipment +
 						_rifles +
+						_pistol +
+						_mags +
+						_grenades +						
+						_medic_standard;
+	};
+};
+
+//------------------------------------------------------------------
+//						AA
+//------------------------------------------------------------------	
+
+if (_loadout == "Zug_AA") then {
+	_equipment = 
+					_uniforms +
+					_vests +
+					_backpacks +
+					_headgear +
+					_optics +
+					_attachments +
+					_items_1 +
+					_facewear;
+
+	if !missioncontinue then {
+		_equipment = 
+						_equipment +
+						_rifles +
 						_launcher_AA +
 						_pistol +
 						_mags +

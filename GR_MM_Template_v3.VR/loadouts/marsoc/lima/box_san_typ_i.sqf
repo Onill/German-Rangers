@@ -1,5 +1,5 @@
 // Kiste Sanität Typ I - Allgemein
-// Aufruf im Editor mit 	[this] execvm "scripts\supplies\box_san_typ_i.sqf";
+// Aufruf im Editor mit 	[this] execvm "loadouts\marsoc\lima\box_san_typ_i.sqf";
 
 if (! isServer) exitWith {};
 

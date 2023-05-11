@@ -1,5 +1,10 @@
 // Kiste Sanität Typ II - Spezial
-// Aufruf im Editor mit 	_nul = execvm "loadouts\bwfleck\lima\container_ammo.sqf";
+/* Aufruf im Editor mit:
+
+_path = format ["loadouts\%1\lima\container_ammo.sqf", getMissionConfigValue "fraktion"]; 
+null = [this] execVM _path;
+
+*/
 
 if (! isServer) exitWith {};
 

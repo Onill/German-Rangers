@@ -1,5 +1,10 @@
 // Kiste Echo Typ II - Explosivmunition
-// Aufruf im Editor mit 	[this] execvm "scripts\supplies\box_echo_typ_ii.sqf";
+/* Aufruf im Editor mit:
+
+_path = format ["loadouts\%1\lima\box_echo_typ_ii.sqf", getMissionConfigValue "fraktion"]; 
+null = [this] execVM _path;
+
+*/
 
 if (! isServer) exitWith {};
 
