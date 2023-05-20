@@ -87,7 +87,7 @@ for "_i" from 1 to 3 do {player addItemToBackpack "kat_chestSeal";};
 for "_i" from 1 to 6 do {player addItemToBackpack "kat_EACA";};
 for "_i" from 1 to 6 do {player addItemToBackpack "ACE_epinephrine";};
 for "_i" from 1 to 2 do {player addItemToBackpack "kat_IO_FAST";};
-for "_i" from 1 to 5 do {player addItemToBackpack "kat_larynx";};
+for "_i" from 1 to 10 do {player addItemToBackpack "kat_larynx";};
 for "_i" from 1 to 6 do {player addItemToBackpack "kat_TXA";};
 for "_i" from 1 to 3 do {player addItemToBackpack "ACE_splint";};
 for "_i" from 1 to 2 do {player addItemToBackpack "kat_norepinephrine";};
