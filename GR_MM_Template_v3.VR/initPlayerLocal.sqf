@@ -213,9 +213,7 @@ if (isClass(configFile >> "cfgPatches" >> "task_force_radio")) then {
 sleep 1;
 
 //Bestimmt wann das GR Menü angezeigt wird. Im Umkreis der Basis (Radius 50m)und vor Missionsstart.
-if (getMissionConfigValue "allowgui" == "true") then {
-	_condition = {player distance base < 100 || missionstarted == false};
-}
+_condition = {player distance base < 100 || missionstarted == false};
 else {
 	_condition = {false};
 };
