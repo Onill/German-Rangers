@@ -206,7 +206,7 @@ if (isClass(configFile >> "cfgPatches" >> "task_force_radio")) then {
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 //
-//						Standard AddActions
+//						German Rangers GUI
 //
 //------------------------------------------------------------------
 //------------------------------------------------------------------
@@ -216,18 +216,31 @@ sleep 1;
 //Kann Alternativ mit dieser Zeile Ausgetauscht werden um immer aktiviert zu sein:
 //_condition = {true}; 
 
-_condition = {player distance base < 100 || missionstarted == false};
+
+if (getMissionConfigValue "allowgui" == "true") then {
+	_condition = {player distance base < 100 || missionstarted == false};
+}
+else {
+	_condition = {false};
+};
+
 _mainDialog = {createDialog "Main_Dialog";};
 
 // Creating a Sub Menu Category GR Base with Logo
 _base_menu = ["GR Base","GR Base","images\GermanRangersLogo.paa",_mainDialog,_condition] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions"], _base_menu] call ace_interact_menu_fnc_addActionToClass;
 
+//Open Waffenkammer ACE Arsenal
+_waffenkammer = ["Waffenkammer","Waffenkammer","",{ execVM waffenkammerpfad; },_condition] call ace_interact_menu_fnc_createAction;
+[(typeOf player), 1, ["ACE_SelfActions","GR Base"], _waffenkammer] call ace_interact_menu_fnc_addActionToClass;
+
 //Open Teleport GUI via Self Interaction Menu in Subcategory GR Base
 _teleport_action = ["Teleporter","Teleporter","gui\teleport\icon_teleport.paa",{ _ok = createDialog "Teleport_Dialog";},_condition] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","GR Base"], _teleport_action] call ace_interact_menu_fnc_addActionToClass;
 
-//Loadout GUI
+
+//Loadout GUI in Interface
+if (getMissionConfigValue "allowloadouts" == "true") then {
 
 	_choose_Loadout= {
 	switch (groupId group player) do 
@@ -240,29 +253,40 @@ _teleport_action = ["Teleporter","Teleporter","gui\teleport\icon_teleport.paa",{
 	  };
 	};
 
+	_loadout_action = ["Loadouts","Loadouts","",_choose_Loadout,_condition] call ace_interact_menu_fnc_createAction;
+	[(typeOf player), 1, ["ACE_SelfActions","GR Base"], _loadout_action] call ace_interact_menu_fnc_addActionToClass;
+};
 
-_loadout_action = ["Loadouts","Loadouts","",_choose_Loadout,_condition] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions","GR Base"], _loadout_action] call ace_interact_menu_fnc_addActionToClass;
+
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//
+//						Zeus Mission Control
+//
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+
+// Creating a Sub Menu Category GR Base with Logo
+_mission_control = ["Mission Control","Mission Control","images\GermanRangersLogo.paa",{}, {true}] call ace_interact_menu_fnc_createAction;
+[["ACE_ZeusActions"], _mission_control] call ace_interact_menu_fnc_addActionToZeus;
+
+_start_mission = ["Missionsstart","Missionsstart","",{ execVM "scripts\MCC_chapter_missionstart.sqf"; },{true}] call ace_interact_menu_fnc_createAction;
+[["ACE_ZeusActions","Mission Control"], _start_mission] call ace_interact_menu_fnc_addActionToZeus;
+
+_mission_succesful = ["Ende: Mission Erfüllt","Ende: Mission Erfüllt","",{ execVM "scripts\MCC_chapter_missionendsuccesfull.sqf"; },{true}] call ace_interact_menu_fnc_createAction;
+[["ACE_ZeusActions","Mission Control"], _mission_succesful] call ace_interact_menu_fnc_addActionToZeus;
+
+_to_be_continued = ["Ende: TO BE CONTINUED","Ende: TO BE CONTINUED","",{ execVM "scripts\MCC_chapter_missionendcontinue.sqf"; },{true}] call ace_interact_menu_fnc_createAction;
+[["ACE_ZeusActions","Mission Control"], _to_be_continued] call ace_interact_menu_fnc_addActionToZeus;
 
 
-_waffenkammer = ["Waffenkammer","Waffenkammer","",{ execVM waffenkammerpfad; },_condition] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions","GR Base"], _waffenkammer] call ace_interact_menu_fnc_addActionToClass;
-
-//		New Mission Control
-
-	// Creating a Sub Menu Category GR Base with Logo
-	_mission_control = ["Mission Control","Mission Control","images\GermanRangersLogo.paa",{}, {true}] call ace_interact_menu_fnc_createAction;
-	[["ACE_ZeusActions"], _mission_control] call ace_interact_menu_fnc_addActionToZeus;
-
-	_start_mission = ["Missionsstart","Missionsstart","",{ execVM "scripts\MCC_chapter_missionstart.sqf"; },{true}] call ace_interact_menu_fnc_createAction;
-	[["ACE_ZeusActions","Mission Control"], _start_mission] call ace_interact_menu_fnc_addActionToZeus;
-	
-	_mission_succesful = ["Ende: Mission Erfüllt","Ende: Mission Erfüllt","",{ execVM "scripts\MCC_chapter_missionendsuccesfull.sqf"; },{true}] call ace_interact_menu_fnc_createAction;
-	[["ACE_ZeusActions","Mission Control"], _mission_succesful] call ace_interact_menu_fnc_addActionToZeus;
-
-	_to_be_continued = ["Ende: TO BE CONTINUED","Ende: TO BE CONTINUED","",{ execVM "scripts\MCC_chapter_missionendcontinue.sqf"; },{true}] call ace_interact_menu_fnc_createAction;
-	[["ACE_ZeusActions","Mission Control"], _to_be_continued] call ace_interact_menu_fnc_addActionToZeus;
-
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//
+//						LIMA Supply Point
+//
+//------------------------------------------------------------------
+//------------------------------------------------------------------
 _playerGrp = group player;
 
 if (_playerGrp == grplima || _playerGrp == grpkilo) then {

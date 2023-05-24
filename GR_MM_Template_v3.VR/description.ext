@@ -3,6 +3,8 @@
 useDBMapMarkers 	= false;		//Sets if MapMarkers from the DB are loaded for this mission
 loadPlayers 		= false;		//Sets if Loadouts for Players are loaded from DB
 fraktion 			= "bwfleck"; 	//Sets the Loadout Path for the Mission: "bwfleck" | "bwtropen" | "bwwinter" | "marsoc"
+allowgui			= true;			//Sets if the GR Base GUI is available ingame
+allowloadouts		= true;			//Sets if the Loadout Change is available ingame
 rearm				= true;			//Sets if Weaponchange and Reload is enabled in Waffenkammer
 
 //Mission Head
