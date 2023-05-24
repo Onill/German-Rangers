@@ -3,10 +3,11 @@
 //
 //					Rollen.sqf
 //
-// Hier werden die verschiedenen Rollen die es gibt für das GUI konfiguriert.
+// Hier werden die verschiedenen Rollen die es für die Fraktion gibt, 
+// für das GUI konfiguriert.
 // Dies funktioniert über ein Mehrdimensionales Array für die Aufteilung:
 // 				
-//					ZUG / ECHO / SIERRA / LIMA / AUSBILDUNG
+//					ZUG / ECHO / SIERRA / LIMA 
 //
 // Jede Fraktion hat ihre eigene Rollen Aufteilung.
 //
@@ -30,8 +31,8 @@ zugRollen = [
 				["AT-Assistent","Zug_ATA.sqf"],
 				["Truppführer","Zug_Truppfuhrer.sqf"],
 				["Gruppenführer","Zug_Gruppenfuhrer.sqf"],
-				["Fox AvD","Zug_Fox_AvD.sqf"],
-				["Fox Nahsicherer","Zug_Fox_Nahsicherer.sqf"],
+				["Nahsicherer","Zug_Fox_Nahsicherer.sqf"],
+				["AvD","Zug_Fox_AvD.sqf"],				
 				["Zugführer","Zug_Zugfuhrer.sqf"]				
 ];
 publicVariable "zugRollen";
@@ -57,7 +58,7 @@ publicVariable "echoRollen";
 sierraRollen = [
 					["Truppführer","Sierra_TrpFhr.sqf"],
 					["Sniper G22","Sierra_Sniper_G22.sqf"],
-					["NaSi","Sierra_NaSi_Spaten.sqf"],
+					["NaSi","Sierra_NaSi_Spaten.sqf"]
 ];
 publicVariable "sierraRollen";
 
@@ -68,6 +69,6 @@ publicVariable "sierraRollen";
 //-----------------------------------------------------------------------------
 
 limaRollen = [
-					["Standard","Lima_Standard.sqf"],
+					["Standard","Lima_Standard.sqf"]
 ];
 publicVariable "limaRollen";
