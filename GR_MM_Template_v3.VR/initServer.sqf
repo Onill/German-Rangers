@@ -13,6 +13,31 @@
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 //
+//							Variablen
+//
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+
+//Wird benötigt damit alle Spieler zu Beginn der Mission VOR DEM INTRO, egal an welchem Ort sie sich befinden, ein Personal Arsenal und das Loadoutmenü zur Verfügung haben. Wird mit Missionsstart auf true gesetzt. 
+//Konfiguriert in description.ext
+if (getMissionConfigValue "missionstartedfeat" == "true") then {
+	missionstarted = false;
+}
+else {
+	missionstarted = true;
+};
+
+publicVariable "missionstarted";
+
+waffenkammerpfad = format ["loadouts\%1\waffenkammer.sqf", getMissionConfigValue "fraktion"];
+publicVariable "waffenkammerpfad";
+
+limapfad = format ["loadouts\%1\lima\", getMissionConfigValue "fraktion"];
+publicVariable "limapfad";
+
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//
 //							Fortify Tool
 //
 //				Unterteilt in Woodland oder Arid 

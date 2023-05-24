@@ -30,24 +30,6 @@ civilian setFriend [west,1];
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 //
-//							Variablen
-//
-//------------------------------------------------------------------
-//------------------------------------------------------------------
-
-waffenkammerpfad = format ["loadouts\%1\waffenkammer.sqf", getMissionConfigValue "fraktion"];
-publicVariable "waffenkammerpfad";
-
-limapfad = format ["loadouts\%1\lima\", getMissionConfigValue "fraktion"];
-publicVariable "limapfad";
-
-//Wird benötigt damit alle Spieler zu Beginn der Mission VOR DEM INTRO, egal an welchem Ort sie sich befinden, ein Personal Arsenal und das Loadoutmenü zur Verfügung haben. Wird mit Missionsstart auf true gesetzt.
-missionstarted = false;
-publicVariable "missionstarted";
-
-//------------------------------------------------------------------
-//------------------------------------------------------------------
-//
 //						Debug Optionen
 //
 //------------------------------------------------------------------
