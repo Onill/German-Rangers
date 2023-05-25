@@ -214,9 +214,6 @@ sleep 1;
 
 //Bestimmt wann das GR Menü angezeigt wird. Im Umkreis der Basis (Radius 50m)und vor Missionsstart.
 _condition = {player distance base < 100 || missionstarted == false};
-else {
-	_condition = {false};
-};
 
 _mainDialog = {createDialog "Main_Dialog";};
 
