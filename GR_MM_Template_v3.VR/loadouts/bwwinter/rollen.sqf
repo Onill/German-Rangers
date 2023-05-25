@@ -58,11 +58,7 @@ publicVariable "echoRollen";
 sierraRollen = [
 					["Truppführer","Sierra_TrpFhr.sqf"],
 					["Sniper G22","Sierra_Sniper_G22.sqf"],
-					["Sniper G22","Sierra_Sniper_HK417.sqf"],
-					["Sniper G22","Sierra_Sniper_M107.sqf"],
-					["Sniper G22","Sierra_Drohne_HK417.sqf"],
-					["NaSi","Sierra_NaSi_Spaten.sqf"],
-					["NaSi","Sierra_NaSi_Cutter.sqf"]
+					["NaSi","Sierra_NaSi_Spaten.sqf"]
 ];
 publicVariable "sierraRollen";
 
