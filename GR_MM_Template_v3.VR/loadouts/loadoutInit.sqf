@@ -173,12 +173,12 @@ if (playerSide == west) then {
 */
 		
 		case("Echo_Infiltration_1"):{	
-			_loadouts = format ["loadouts\%1\Echo_Infiltration_1.sqf", getMissionConfigValue "fraktion"];
+			_loadouts = format ["loadouts\%1\Echo1.sqf", getMissionConfigValue "fraktion"];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
 		case("Echo_Infiltration_3"):{	
-			_loadouts = format ["loadouts\%1\Echo_Infiltration_3.sqf", getMissionConfigValue "fraktion"];
+			_loadouts = format ["loadouts\%1\Echo3.sqf", getMissionConfigValue "fraktion"];
 			call compile preprocessFileLineNumbers _loadouts;
 		};
 		
