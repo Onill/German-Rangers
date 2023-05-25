@@ -221,17 +221,19 @@ _mainDialog = {createDialog "Main_Dialog";};
 _base_menu = ["GR Base","GR Base","images\GermanRangersLogo.paa",_mainDialog,_condition] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions"], _base_menu] call ace_interact_menu_fnc_addActionToClass;
 
-//Open Waffenkammer ACE Arsenal
-_waffenkammer = ["Waffenkammer","Waffenkammer","",{ execVM waffenkammerpfad; },_condition] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions","GR Base"], _waffenkammer] call ace_interact_menu_fnc_addActionToClass;
+//Add Waffenkammer to ACE Menu GR Base
+if (getMissionConfigValue "allowWaffenkammer" == "true") then {
+	_waffenkammer = ["Waffenkammer","Waffenkammer","",{ execVM waffenkammerpfad; },_condition] call ace_interact_menu_fnc_createAction;
+	[(typeOf player), 1, ["ACE_SelfActions","GR Base"], _waffenkammer] call ace_interact_menu_fnc_addActionToClass;
+};
 
-//Open Teleport GUI via Self Interaction Menu in Subcategory GR Base
+////Add Teleport to ACE Menu GR Base
 _teleport_action = ["Teleporter","Teleporter","gui\teleport\icon_teleport.paa",{ _ok = createDialog "Teleport_Dialog";},_condition] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","GR Base"], _teleport_action] call ace_interact_menu_fnc_addActionToClass;
 
 
-//Loadout GUI in Interface
-if (getMissionConfigValue "allowloadouts" == "true") then {
+//Add Loadout to ACE Menu GR Base
+if (getMissionConfigValue "allowLoadouts" == "true") then {
 
 	_choose_Loadout= {
 	switch (groupId group player) do 

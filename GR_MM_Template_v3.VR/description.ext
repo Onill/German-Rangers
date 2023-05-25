@@ -3,10 +3,10 @@
 useDBMapMarkers 	= false;		//Sets if MapMarkers from the DB are loaded for this mission
 loadPlayers 		= false;		//Sets if Loadouts for Players are loaded from DB
 fraktion 			= "bwfleck"; 	//Sets the Loadout Path for the Mission: "bwfleck" | "bwtropen" | "bwwinter" | "marsoc"
-allowwaffenkammer	= true;			//Sets if the Waffenkammer is available ingame
-allowloadouts		= true;			//Sets if the Loadout Change is available ingame
+allowWaffenkammer	= true;			//Sets if the Waffenkammer is available ingame
+allowLoadouts		= true;			//Sets if the Loadout Change is available ingame
 rearm				= true;			//Sets if Weaponchange and Reload is enabled in Waffenkammer
-lima				= true;			//Sets if a Lima Supply Point is for the Group Lima and Kilo available (Needs adjusted supply boxes in lima folder for the fraktion)
+lima				= true;			//Sets if a Lima Supply Point is for the Group Lima and Kilo available (Needs adjusted supply boxes in Lima folder for the Fraktion)
 missionstartedfeat	= true;			//Sets if the Mission Started Feature is available. When the Feature is "true", all Players have the GR GUI everywhere available until the Mission is started by Zeus
 									//After the Mission was started, every JIP Player will be spawned in the Base, defined in initPlayerLocal.sqf. 
 									//This is used for Missions that start in field. Needs the Mission Start Feature from Zeus!
@@ -15,7 +15,7 @@ missionstartedfeat	= true;			//Sets if the Mission Started Feature is available.
 author			= "GerRng Mission Making Team";
 loadScreen 		= "a3\data_f_exp_a\Data\FM_LEARN_Nexus1_ca.paa";
 
-OnLoadName 		= "GR Missiontemplate";
+OnLoadName 		= "Missionsüberschrift im Ladebildschirm";
 OnLoadMission   = "Punchline zur Mission im Ladebildschirm.";
 OnLoadIntro 	= "";
 
