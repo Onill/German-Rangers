@@ -21,7 +21,6 @@ _box addItemCargoGlobal ["ACE_Fortify",10];
 _box addItemCargoGlobal ["ACE_wirecutter",10];
 _box addItemCargoGlobal ["ACE_DefusalKit",10];
 _box addItemCargoGlobal ["ACE_EntrenchingTool",100];
-_box addItemCargoGlobal ["ACE_UAVBattery",100];
 _box addItemCargoGlobal ["ACE_CableTie",100];
 
 _box addItemCargoGlobal ["ACE_Wheel",100];

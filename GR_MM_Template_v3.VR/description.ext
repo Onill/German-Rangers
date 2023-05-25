@@ -19,7 +19,7 @@ OnLoadName 		= "Missionsüberschrift im Ladebildschirm";
 OnLoadMission   = "Punchline zur Mission im Ladebildschirm.";
 OnLoadIntro 	= "";
 
-overviewText 		= "Beschreibugn der Mission im Missionsauswahlbildschirm auf dem Server.<br/><br/>Addons: CBA, CUP, ACE, LAMBS_Danger.fsm<br/>Alle Loadouts benötigen cTab, KAT und TFAR!";
+overviewText 		= "Beschreibung der Mission im Missionsauswahlbildschirm auf dem Server.<br/><br/>Addons: CBA, CUP, ACE, LAMBS_Danger.fsm<br/>Alle Loadouts benötigen cTab, KAT und TFAR!";
 overviewTextLocked 	= "";
 overviewPicture 	= "a3\data_f_exp_a\Data\FM_LEARN_Nexus1_ca.paa";
 
