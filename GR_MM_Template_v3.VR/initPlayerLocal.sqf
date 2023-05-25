@@ -375,11 +375,14 @@ if (getMissionConfigValue "lima" == "true") then {
 
 sleep 1;
 
-/*
-//FoggyBreath____________________________________________________________
-	_units = if (!isMultiplayer) then {switchableUnits} else {playableUnits};
-	{[_x, 0.03] execVM "scripts\foggy_breath.sqf"} forEach _units;
-*/
+
+//FoggyBreath
+//_units = if (!isMultiplayer) then {switchableUnits} else {playableUnits};
+//{[_x, 0.03] execVM "scripts\foggy_breath.sqf"} forEach _units;
+
+//Ground Fog
+//null = [] execVM "scripts\GroundFog.sqf";
+
 
 //Wenn das Missionsintro gestartet wurde, werden alle Spieler die reconnecten oder später dazu kommen in die Basis teleportiert.
 
