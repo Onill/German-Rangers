@@ -20,7 +20,11 @@ _loadout = player getVariable "loadout";
 //Needed for waitUntil after Arsenal is closed, combined with Event Handler on Arsenal
 player setVariable ["arsenalClosed", false];
 
-_rearm = getMissionConfigValue "rearm";
+_rearm = false;
+
+if (getMissionConfigValue "rearm" == "true") then {
+	_rearm = true;
+};
 
 //-------------------------------------------------------------------------
 //
@@ -956,12 +960,14 @@ if (_playerGrp == grpkilo || _playerGrp == grplima || _playerGrp == grpfox ) the
 _waffenkammer = [player, player, false] call ace_arsenal_fnc_openBox;
 
 // Message for Player which options are available
-if (_rearm == true) then {
-	titleText ["<t color='#ffffff' size='1'>Die Mission wird fortgesetzt<br/></t><t color='#ff0000' size='2'>Es ist weder ein Waffenwechsel noch Aufmunitionieren möglich.</t>", "PLAIN", 1, true, true];
+if _rearm then {
+	titleText ["<t color='#ffffff' size='2'>Die Waffenkammer steht in vollem Umfang zur Verfügung.<br/>Nach Waffenwechsel AUFMUNITIONIEREN nicht vergessen!</t>", "PLAIN", 1, true, true];
 }
 else {
-	titleText ["<t color='#ffffff' size='2'>Die Waffenkammer steht in vollem Umfang zur Verfügung.</t>", "PLAIN", 1, true, true];
+	
+	titleText ["<t color='#ffffff' size='1'>Die Mission wird fortgesetzt<br/></t><t color='#ff0000' size='2'>Es ist weder ein Waffenwechsel noch Aufmunitionieren möglich.</t>", "PLAIN", 1, true, true];
 };
+
 
 // Add Event Handler for closing the Arsenal
 _arsenalEventHandler = ["ace_arsenal_displayClosed", { player setVariable ["arsenalClosed", true]; } ] call CBA_fnc_addEventHandler;
