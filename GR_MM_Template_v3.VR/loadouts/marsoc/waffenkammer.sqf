@@ -20,6 +20,12 @@ _loadout = player getVariable "loadout";
 //Needed for waitUntil after Arsenal is closed, combined with Event Handler on Arsenal
 player setVariable ["arsenalClosed", false];
 
+_rearm = false;
+
+if (getMissionConfigValue "rearm" == "true") then {
+	_rearm = true;
+};
+
 //-------------------------------------------------------------------------
 //
 // 				Kleidung
@@ -646,7 +652,7 @@ if (_loadout == "Zug_Schutze") then {
 					_items_1 +
 					_facewear;
 	
-	if !missioncontinue then {
+	if _rearm then {
 		_equipment = 
 						_equipment +
 						_rifles +
@@ -672,7 +678,7 @@ if (_loadout == "Zug_Grenadier") then {
 					_items_1 +
 					_facewear;
 
-	if !missioncontinue then {
+	if _rearm then {
 		_equipment = 
 						_equipment +
 						_rifles_grenadier +
@@ -699,7 +705,7 @@ if (_loadout == "Zug_DM") then {
 					_items_1 +
 					_facewear;
 
-	if !missioncontinue then {
+	if _rearm then {
 		_equipment = 
 						_equipment +
 						_rifles_dm +
@@ -726,7 +732,7 @@ if (_loadout == "Zug_MG") then {
 					_items_1 +
 					_facewear;
 
-	if !missioncontinue then {
+	if _rearm then {
 		_equipment = 
 						_equipment +
 						_rifles_mg +
@@ -752,7 +758,7 @@ if (_loadout == "Zug_EHB") then {
 					_items_1 +
 					_facewear;			
 
-	if !missioncontinue then {
+	if _rearm then {
 		_equipment = 
 						_equipment +
 						_rifles +
@@ -780,7 +786,7 @@ if (_loadout == "Zug_Sanitater") then {
 					_items_1 +	
 					_facewear;	
 
-	if !missioncontinue then {
+	if _rearm then {
 		_equipment = 
 						_equipment +
 						_rifles +
@@ -809,7 +815,7 @@ if (_loadout == "Zug_AT") then {
 					_items_1 +
 					_facewear;
 
-	if !missioncontinue then {
+	if _rearm then {
 		_equipment = 
 						_equipment +
 						_rifles +
@@ -836,7 +842,7 @@ if (_loadout == "Zug_ATA") then {
 					_items_1 +
 					_facewear;
 
-	if !missioncontinue then {
+	if _rearm then {
 		_equipment = 
 						_equipment +
 						_rifles +
@@ -862,7 +868,7 @@ if (_loadout == "Zug_AA") then {
 					_items_1 +
 					_facewear;
 
-	if !missioncontinue then {
+	if _rearm then {
 		_equipment = 
 						_equipment +
 						_rifles +
@@ -890,7 +896,7 @@ if (_loadout == "Zug_Truppfuhrer") then {
 					_items_2 +
 					_facewear;
 
-	if !missioncontinue then {
+	if _rearm then {
 		_equipment = 
 						_equipment +
 						_rifles +
@@ -918,7 +924,7 @@ if (_loadout == "Zug_Gruppenfuhrer") then {
 					_coms_lead +
 					_facewear;
 
-	if (!missioncontinue) then {
+	if (_rearm) then {
 		_equipment = 
 						_equipment +
 						_rifles +
@@ -945,7 +951,7 @@ if (_playerGrp == grpecho1 || _playerGrp == grpecho2) then {
 					_facewear +
 					_echo_items_1;					
 
-	if !missioncontinue then {
+	if _rearm then {
 		_equipment = 
 					_equipment +
 					_echo_items_2 +
@@ -972,7 +978,7 @@ if (_playerGrp == grpsierra) then {
 					_sierra_items_1;
 					
 
-	if !missioncontinue then {
+	if _rearm then {
 		_equipment = 
 					_equipment +
 					_sierra_items_2 +
@@ -1035,11 +1041,12 @@ if (_playerGrp == grpkilo || _playerGrp == grplima || _playerGrp == grpfox ) the
 _waffenkammer = [player, player, false] call ace_arsenal_fnc_openBox;
 
 // Message for Player which options are available
-if (missioncontinue == true) then {
-	titleText ["<t color='#ffffff' size='1'>Die Mission wird fortgesetzt<br/></t><t color='#ff0000' size='2'>Es ist weder ein Waffenwechsel noch Aufmunitionieren möglich.</t>", "PLAIN", 1, true, true];
+if _rearm then {
+	titleText ["<t color='#ffffff' size='2'>Die Waffenkammer steht in vollem Umfang zur Verfügung.<br/>Nach Waffenwechsel AUFMUNITIONIEREN nicht vergessen!</t>", "PLAIN", 1, true, true];
 }
 else {
-	titleText ["<t color='#ffffff' size='2'>Die Waffenkammer steht in vollem Umfang zur Verfügung.</t>", "PLAIN", 1, true, true];
+	
+	titleText ["<t color='#ffffff' size='1'>Die Mission wird fortgesetzt<br/></t><t color='#ff0000' size='2'>Es ist weder ein Waffenwechsel noch Aufmunitionieren möglich.</t>", "PLAIN", 1, true, true];
 };
 
 // Add Event Handler for closing the Arsenal
