@@ -1,3 +1,4 @@
+//#include "..\config.hpp" 
 #include "config\config.hpp"
 #include "config\defineResColors.hpp"
 

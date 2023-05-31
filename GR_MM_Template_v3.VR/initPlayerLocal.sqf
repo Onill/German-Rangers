@@ -18,9 +18,6 @@ titleText ["Missionsvorbereitung", "BLACK FADED" ];
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 
-// Für die GUI:
-// 0 = Flecktarn, 1 = Tropentarn, 2 = Winter
-tarnMuster = 0;
 
 // briefingName
 [] execVM "scripts\briefing.sqf";
@@ -34,7 +31,7 @@ tarnMuster = 0;
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 
-null = [] execVM "scripts\modcheck.sqf";
+[] execVM "scripts\modcheck.sqf";
 
 
 //------------------------------------------------------------------
@@ -210,7 +207,6 @@ if (isClass(configFile >> "cfgPatches" >> "task_force_radio")) then {
 //
 //------------------------------------------------------------------
 //------------------------------------------------------------------
-sleep 1;
 
 //Bestimmt wann das GR Menü angezeigt wird. Im Umkreis der Basis (Radius 50m)und vor Missionsstart.
 _condition = {player distance base < 100 || missionstarted == false};
@@ -372,8 +368,6 @@ if (getMissionConfigValue "lima" == "true") then {
 	};
 };
 
-
-sleep 1;
 
 
 //FoggyBreath

@@ -2,9 +2,16 @@
  *  Author: 
  */
 private [];
+	// Welche Fraktion
 
+
+	// Welche Gruppe
 	_LoadoutClass = "Zug";
 	_LoadoutClass = param[0];
+	
+	
+	
+	
 	
 switch (_LoadoutClass) do
 {

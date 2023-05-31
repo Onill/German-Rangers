@@ -35,7 +35,7 @@ zugRollen = [
 				["AvD","Zug_Fox_AvD.sqf"],				
 				["Zugführer","Zug_Zugfuhrer.sqf"]				
 ];
-publicVariable "zugRollen";
+
 
 //-----------------------------------------------------------------------------
 //
@@ -47,7 +47,7 @@ echoRollen = [
 				["Echo 1","Echo1.sqf"],
 				["Echo 3","Echo3.sqf"],
 ];
-publicVariable "echoRollen";
+
 
 //-----------------------------------------------------------------------------
 //
@@ -60,7 +60,7 @@ sierraRollen = [
 					["Sniper M24","Sierra_Sniper.sqf"],
 					["NaSi","Sierra_NaSi.sqf"]
 ];
-publicVariable "sierraRollen";
+
 
 //-----------------------------------------------------------------------------
 //
@@ -71,4 +71,3 @@ publicVariable "sierraRollen";
 limaRollen = [
 					["Standard","Lima_Standard.sqf"]
 ];
-publicVariable "limaRollen";
