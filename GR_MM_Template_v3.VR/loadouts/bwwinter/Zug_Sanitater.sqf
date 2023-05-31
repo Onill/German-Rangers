@@ -56,6 +56,8 @@ for "_i" from 1 to 10 do {player addItemToBackpack "kat_nitroglycerin";};
 player addItemToBackpack "kat_Carbonate";
 player addItemToBackpack "ACE_morphine";
 player addItemToBackpack "kat_naloxone";
+player addItemToBackpack "kat_BVM"
+
 player addItemToBackpack "CUP_NVG_PVS15_winter";
 for "_i" from 1 to 2 do {player addItemToBackpack "SmokeShell";};
 player addHeadgear "CUP_H_PASGTv2_winter";
