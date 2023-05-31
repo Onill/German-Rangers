@@ -74,22 +74,24 @@ for "_i" from 1 to 10 do {player addItemToBackpack "ACE_splint";};
 for "_i" from 1 to 3 do {player addItemToBackpack "ACE_EarPlugs";};
 
 for "_i" from 1 to 44 do {player addItemToBackpack "ACE_elasticBandage";};
-for "_i" from 1 to 30 do {player addItemToBackpack "ACE_packingBandage";};
-for "_i" from 1 to 10 do {player addItemToBackpack "kat_chestSeal";};
-for "_i" from 1 to 15 do {player addItemToBackpack "kat_larynx";};
+for "_i" from 1 to 20 do {player addItemToBackpack "ACE_packingBandage";};
+for "_i" from 1 to 8 do {player addItemToBackpack "kat_chestSeal";};
+for "_i" from 1 to 13 do {player addItemToBackpack "kat_larynx";};
 for "_i" from 1 to 10 do {player addItemToBackpack "ACE_epinephrine";};
 for "_i" from 1 to 5 do {player addItemToBackpack "ACE_morphine";};
-for "_i" from 1 to 5 do {player addItemToBackpack "ACE_adenosine";};
-for "_i" from 1 to 17 do {player addItemToBackpack "ACE_salineIV_500";};
+for "_i" from 1 to 14 do {player addItemToBackpack "ACE_salineIV_500";};
 for "_i" from 1 to 5 do {player addItemToBackpack "kat_naloxone";};
 for "_i" from 1 to 10 do {player addItemToBackpack "kat_IV_16";};
 for "_i" from 1 to 5 do {player addItemToBackpack "kat_IO_FAST";};
 for "_i" from 1 to 5 do {player addItemToBackpack "kat_ketamine";};
-for "_i" from 1 to 5 do {player addItemToBackpack "kat_fentanyl";};
 for "_i" from 1 to 5 do {player addItemToBackpack "kat_TXA";};
 for "_i" from 1 to 3 do {player addItemToBackpack "kat_EACA";};
 for "_i" from 1 to 2 do {player addItemToBackpack "kat_Pulseoximeter";};
-player addItemToBackpack "kat_carbonate";
+for "_i" from 1 to 5 do {player addItemToBackpack "ACE_adenosine";};
+for "_i" from 1 to 5 do {player addItemToBackpack "kat_fentanyl";};
+player addItemToBackpack "kat_Carbonate";
+player addItemToBackpack "kat_oxygenTank_150_Item"
+player addItemToBackpack "kat_BVM"
 
 //------------------------------------------------------------------
 //	ACE Items in Uniform
