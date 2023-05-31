@@ -92,6 +92,7 @@ for "_i" from 1 to 10 do {player addItemToBackpack "kat_nitroglycerin";};
 player addItemToBackpack "kat_Carbonate";
 player addItemToBackpack "ACE_morphine";
 player addItemToBackpack "kat_naloxone";
+player addItemToBackpack "kat_BVM"
 
 //------------------------------------------------------------------
 //	ACE Items in Uniform
