@@ -23,3 +23,4 @@ private ["_loudout","_loudoutIndex","_index","_Tarn","_tarnData","_fraktion"];
 	_index = _tarnData find _fraktion;
 	
 	lbSetCurSel [2100, _index];
+	

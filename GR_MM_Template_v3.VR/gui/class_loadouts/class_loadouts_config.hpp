@@ -9,5 +9,6 @@ class CLF
 		class getLoadouts {};
 		class takeLoadout {};
 		class createGUI {};
+		class updateGUI {};
 	}; 
 };

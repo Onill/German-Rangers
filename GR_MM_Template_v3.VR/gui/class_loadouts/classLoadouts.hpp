@@ -125,7 +125,9 @@ class ClassLoadout_Dialog
 		w = 0.150937 * safezoneW;
 		h = 0.056 * safezoneH;
 		
+		//Eventhandler
+		onLBSelChanged  = "Test23 = 3; call CLF_fnc_updateGUI";
+		
 	};
-
 };
 
