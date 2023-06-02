@@ -7,7 +7,7 @@ private [];
 
 	// Welche Gruppe
 	_LoadoutClass = "Zug";
-	_LoadoutClass = param[0];
+	_LoadoutClass = param[0]; // get the right group, currently not done
 	
 
 	_indexCamo = lbCurSel 2100;
@@ -17,7 +17,7 @@ private [];
 
 	//get rollen.sqf
 	
-		
+	//swicht gruppe set Loadouts for the gruppe 	
 switch (_LoadoutClass) do
 {
 	case "Sierra": { 
@@ -44,4 +44,13 @@ switch (_LoadoutClass) do
 	};
 };
 
-hint"update GUI executed";
+	//Show the  loudout/roles in the selection
+
+	_loudout = loudout;
+	_loudoutIndex = loudoutIndex;
+	
+
+	{
+		lbAdd [1500, _x];
+		lbSetData [1500, _forEachIndex, _loudoutIndex select _forEachIndex];	 
+	} forEach _loudout;
