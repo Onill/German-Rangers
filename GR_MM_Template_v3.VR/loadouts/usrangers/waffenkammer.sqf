@@ -133,6 +133,7 @@ _mags =	[
 				
 				//Launcher
 				"CUP_SMAW_HEAA_M",
+				"CUP_SMAW_Spotting",
 				
 				//Pistol
 				"CUP_7Rnd_45ACP_1911",

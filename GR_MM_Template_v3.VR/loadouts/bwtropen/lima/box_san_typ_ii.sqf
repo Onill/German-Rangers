@@ -1,10 +1,5 @@
 // Kiste Sanität Typ II - Spezial
-/* Aufruf im Editor mit:
-
-_path = format ["loadouts\%1\lima\box_san_typ_ii.sqf", getMissionConfigValue "fraktion"]; 
-null = [this] execVM _path;
-
-*/
+// Aufruf im Editor mit 	_nul = execvm "scripts\supplies\box_san_typ_ii.sqf";
 
 if (! isServer) exitWith {};
 
@@ -43,5 +38,8 @@ _box addItemCargoGlobal ["kat_lorazepam",9];
 _box addItemCargoGlobal ["kat_Pulseoximeter",2];
 _box addItemCargoGlobal ["kat_AED",2];
 _box addItemCargoGlobal ["kat_scalpel",2];
+
+_box addItemCargoGlobal ["kat_oxygenTank_150_Item",5];
+_box addItemCargoGlobal ["kat_BVM",2];
 
 

@@ -39,4 +39,7 @@ _box addItemCargoGlobal ["kat_Pulseoximeter",2];
 _box addItemCargoGlobal ["kat_AED",2];
 _box addItemCargoGlobal ["kat_scalpel",2];
 
+_box addItemCargoGlobal ["kat_oxygenTank_150_Item",5];
+_box addItemCargoGlobal ["kat_BVM",2];
+
 

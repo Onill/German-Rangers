@@ -50,4 +50,7 @@ _box addItemCargoGlobal ["kat_fentanyl",200];
 _box addItemCargoGlobal ["kat_nalbuphine",200];
 _box addItemCargoGlobal ["kat_lorazepam",200];
 
+_box addItemCargoGlobal ["kat_oxygenTank_150_Item",200];
+_box addItemCargoGlobal ["kat_BVM",100];
+
 
