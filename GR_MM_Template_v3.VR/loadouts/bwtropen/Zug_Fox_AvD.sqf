@@ -77,7 +77,7 @@ player addItemToVest "ACE_personalAidKit";
 player addItemToVest "kat_Pulseoximeter";
 player addItemToVest "ACE_surgicalKit";
 player addItemToVest "kat_scalpel";
-player addItemToBackpack "kat_BVM"
+player addItemToBackpack "kat_BVM";
 for "_i" from 1 to 25 do {player addItemToBackpack "ACE_elasticBandage";};
 for "_i" from 1 to 5 do {player addItemToBackpack "ACE_packingBandage";};
 for "_i" from 1 to 10 do {player addItemToBackpack "ACE_salineIV_500";};
@@ -93,7 +93,7 @@ for "_i" from 1 to 5 do {player addItemToBackpack "ACE_splint";};
 for "_i" from 1 to 3 do {player addItemToBackpack "kat_fentanyl";};
 for "_i" from 1 to 2 do {player addItemToBackpack "ACE_morphine";};
 for "_i" from 1 to 6 do {player addItemToBackpack "kat_nitroglycerin";};
-player addItemToBackpack "kat_oxygenTank_150_Item"
+player addItemToBackpack "kat_oxygenTank_150_Item";
 player addItemToBackpack "kat_naloxone";
 player addItemToBackpack "kat_ketamine";
 player addItemToBackpack "kat_phenylephrine";
