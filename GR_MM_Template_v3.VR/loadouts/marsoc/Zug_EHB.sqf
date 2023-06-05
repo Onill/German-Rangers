@@ -90,7 +90,7 @@ for "_i" from 1 to 2 do {player addItemToBackpack "kat_Pulseoximeter";};
 for "_i" from 1 to 5 do {player addItemToBackpack "ACE_adenosine";};
 for "_i" from 1 to 5 do {player addItemToBackpack "kat_fentanyl";};
 player addItemToBackpack "kat_Carbonate";
-player addItemToBackpack "kat_oxygenTank_150_Item"
+player addItemToBackpack "kat_oxygenTank_150_Item";
 player addItemToBackpack "kat_BVM";
 
 //------------------------------------------------------------------
