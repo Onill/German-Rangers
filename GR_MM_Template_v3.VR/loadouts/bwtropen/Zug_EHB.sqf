@@ -76,7 +76,7 @@ for "_i" from 1 to 2 do {player addItemToUniform "kat_chestSeal";};
 
 for "_i" from 1 to 2 do {player addItemToVest "ACE_salineIV_500";};
 for "_i" from 1 to 10 do {player addItemToVest "ACE_packingBandage";};
-player addItemToVest "kat_BVM"
+player addItemToVest "kat_BVM";
 
 for "_i" from 1 to 44 do {player addItemToBackpack "ACE_elasticBandage";};
 for "_i" from 1 to 20 do {player addItemToBackpack "ACE_packingBandage";};
@@ -95,7 +95,7 @@ for "_i" from 1 to 2 do {player addItemToBackpack "kat_Pulseoximeter";};
 for "_i" from 1 to 5 do {player addItemToBackpack "ACE_adenosine";};
 for "_i" from 1 to 5 do {player addItemToBackpack "kat_fentanyl";};
 player addItemToBackpack "kat_Carbonate";
-player addItemToBackpack "kat_oxygenTank_150_Item"
+player addItemToBackpack "kat_oxygenTank_150_Item";
 
 
 //------------------------------------------------------------------
