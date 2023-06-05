@@ -94,7 +94,7 @@ for "_i" from 1 to 10 do {player addItemToBackpack "kat_nitroglycerin";};
 for "_i" from 1 to 5 do {player addItemToBackpack "kat_fentanyl";};
 player addItemToBackpack "kat_Carbonate";
 player addItemToBackpack "kat_naloxone";
-player addItemToBackpack "kat_BVM"
+player addItemToBackpack "kat_BVM";
 
 player addItemToUniform "ACE_surgicalKit";
 
