@@ -206,7 +206,6 @@ if (getMissionConfigValue "allowWaffenkammer" == "true") then {
 _teleport_action = ["Teleporter","Teleporter","gui\teleport\icon_teleport.paa",{ _ok = createDialog "Teleport_Dialog";},_condition] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","GR Base"], _teleport_action] call ace_interact_menu_fnc_addActionToClass;
 
-
 //Add Loadout to ACE Menu GR Base
 if (getMissionConfigValue "allowLoadouts" == "true") then {
 
@@ -224,7 +223,6 @@ if (getMissionConfigValue "allowLoadouts" == "true") then {
 	_loadout_action = ["Loadouts","Loadouts","",_choose_Loadout,_condition] call ace_interact_menu_fnc_createAction;
 	[(typeOf player), 1, ["ACE_SelfActions","GR Base"], _loadout_action] call ace_interact_menu_fnc_addActionToClass;
 };
-
 
 //------------------------------------------------------------------
 //------------------------------------------------------------------
@@ -248,6 +246,31 @@ _to_be_continued = ["Ende: TO BE CONTINUED","Ende: TO BE CONTINUED","",{ execVM 
 [["ACE_ZeusActions","Mission Control"], _to_be_continued] call ace_interact_menu_fnc_addActionToZeus;
 
 
+
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+//
+//						Admin Control Menu
+//
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+_playerGrp = group player;
+
+if (_playerGrp == grplima || _playerGrp == grpkilo || _playerGrp == grpfox) then {
+	// Creating the Admin Control Menu Category GR Base with Logo
+	_adminmenu = ["GR Admin Menu","GR Admin Menu","images\GermanRangersLogo.paa",{}, {true}] call ace_interact_menu_fnc_createAction;
+	[(typeOf player), 1, ["ACE_SelfActions"], _adminmenu] call ace_interact_menu_fnc_addActionToClass;
+
+	_avdheal = ["AvD Heal","AvD Heal","a3\ui_f\data\igui\cfg\simpletasks\types\heal_ca.paa",{[player, cursorObject] call ace_medical_treatment_fnc_fullHeal},{true}] call ace_interact_menu_fnc_createAction;
+	[(typeOf player), 1, ["ACE_SelfActions","GR Admin Menu"], _avdheal] call ace_interact_menu_fnc_addActionToClass;
+
+	[(typeOf player), 1, ["ACE_SelfActions","GR Admin Menu"], _start_mission] call ace_interact_menu_fnc_addActionToClass;
+
+	[(typeOf player), 1, ["ACE_SelfActions","GR Admin Menu"], _mission_succesful] call ace_interact_menu_fnc_addActionToClass;
+	
+	[(typeOf player), 1, ["ACE_SelfActions","GR Admin Menu"], _to_be_continued] call ace_interact_menu_fnc_addActionToClass;
+};
+
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 //
@@ -257,8 +280,6 @@ _to_be_continued = ["Ende: TO BE CONTINUED","Ende: TO BE CONTINUED","",{ execVM 
 //------------------------------------------------------------------
 
 if (getMissionConfigValue "lima" == "true") then {
-	_playerGrp = group player;
-
 	if (_playerGrp == grplima || _playerGrp == grpkilo) then {
 
 		//Lima Supply Point Static
