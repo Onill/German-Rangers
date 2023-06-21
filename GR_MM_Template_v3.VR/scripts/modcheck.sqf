@@ -71,7 +71,7 @@ _whitelistedMods = 	[
 						"@ACE Compat CUP Facewear", "2614664632",
 						"@Head Range Plus - TrackIR Mod", "630737877",
 						"@cb_blood", "2362277256",
-						//"@Enhanced Map Ace Version", "2467590475",
+						"@Enhanced Map Ace Version", "2467590475",
 						
 						
 						//Visual
@@ -128,7 +128,8 @@ _blacklistedMods = [
 						"@Bloodlust+", "2916769685",
 						"@CQB Weapon Stance", "2288108304",
 						"@Bullet Casings", "606289254",
-						"@Cartridge Cases", "1198749494"
+						"@Cartridge Cases", "1198749494",
+						"@SigSound - ArmA3", "1181005146"
 						/*,"@Reduced Weapon Sway", "567737932",
 						"@No Weapon Sway", "570118882",
 						"@Weapon Sway", "784646334",
@@ -157,7 +158,7 @@ if(count _blacklisthits > 0) then {
 	titleText [_playermessage, "BLACK FADED", 100, true, true];
 	
 	//Teleport to Cage of Shame:
-	player setPos [14593.9,13979.2,0];
+	player setPos getPos blacklistcage;
 }
 else {
 
