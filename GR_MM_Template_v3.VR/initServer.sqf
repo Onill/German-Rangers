@@ -29,10 +29,16 @@ else {
 
 publicVariable "missionstarted";
 
-waffenkammerpfad = format ["loadouts\%1\waffenkammer.sqf", getMissionConfigValue "fraktion"];
+fraktionV = getMissionConfigValue "fraktion";
+publicVariable "fraktionV";
+
+tarnfarbeV = getMissionConfigValue "tarnfarbe";
+publicVariable "tarnfarbeV";
+
+waffenkammerpfad = format ["loadouts\%1\waffenkammer.sqf", fraktionV];
 publicVariable "waffenkammerpfad";
 
-limapfad = format ["loadouts\%1\lima\", getMissionConfigValue "fraktion"];
+limapfad = format ["loadouts\%1\lima\", fraktionV];
 publicVariable "limapfad";
 
 //------------------------------------------------------------------

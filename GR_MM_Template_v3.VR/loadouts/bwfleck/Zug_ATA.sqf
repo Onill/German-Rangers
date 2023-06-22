@@ -37,11 +37,31 @@ player addHandgunItem "CUP_21Rnd_9x19_M17_Black";
 
 //------------------------------------------------------------------
 //	Kleidung
-//------------------------------------------------------------------	
-player forceAddUniform "CUP_U_B_GER_Flecktarn_2";
-player addVest "CUP_V_B_GER_PVest_Fleck_RFL";
-player addBackpack "CUP_B_GER_Pack_Flecktarn";
-player addHeadgear "CUP_H_OpsCore_Covered_Fleck";
+//------------------------------------------------------------------
+
+switch _fraktion do {
+	case "bwfleck": {
+		player forceAddUniform "CUP_U_B_GER_Fleck_Crye";
+		player addHeadgear "CUP_H_OpsCore_Covered_Fleck";
+		player addVest "GRE_PlateCarrier1_Flecktarn";
+		player addGoggles "CUP_G_PMC_Facewrap_Black_Glasses_Dark";
+		player addBackpack "CFP_Kitbag_Flecktarn";
+	};
+	case "bwtropen": {
+		player forceAddUniform "CUP_U_B_GER_Crye";
+		player addHeadgear "CUP_H_OpsCore_Covered_Tropen";
+		player addVest "GRE_PlateCarrier1_Tropentarn";
+		player addGoggles "CUP_G_PMC_Facewrap_Tan_Glasses_Dark";
+		player addBackpack "CFP_Kitbag_Tropentarn";	
+	};
+	case "bwwinter": {
+		player forceAddUniform "CFP_U_FieldUniform_flecktarn_snow";
+		player addHeadgear "CFP_OPS2017_Helmet_White";
+		player addVest "GRE_PlateCarrier1_Grau";
+		player addGoggles "CUP_G_PMC_Facewrap_Winter_Glasses_Dark";
+		player addBackpack "CFP_Kitbag_White";
+	};	
+};
 
 //------------------------------------------------------------------
 //	Munition

@@ -8,11 +8,12 @@ missionstartedfeat	= true;			//Sets if the "Mission Started"-Feature is availabl
 
 // Loadouts 
 loadPlayers 		= false;		//Sets if Loadouts for Players are loaded from DB
-fraktion 			= "usrangers"; 	//Sets the Loadout Path for the Mission start: "bwfleck" | "bwtropen" | "bwwinter" | "marsoc"
+fraktion 			= "bw2023"; 	//Sets the Loadout Path for the Mission start: "bwfleck" | "bwtropen" | "bwwinter" | "marsoc"
+tarnfarbe			= "bwwinter"		//If the fraktion has different camos, it is changed here.
 
 //avaible Factions via GUI
-fraktionList[] 		= {"bwfleck", "bwtropen", "bwwinter", "marsoc", "usrangers"};
-fraktionListN[] 	= {"BW Fleck", "BW Tropen", "BW Winter", "Marsoc", "US Rangers"};
+fraktionList[] 		= {"bw2023", "marsoc", "usrangers"};
+fraktionListN[] 	= {"Bundeswehr", "Marsoc", "US Rangers"};
 
 allowWaffenkammer	= true;			//Sets if the Waffenkammer is available ingame
 allowLoadouts		= true;			//Sets if the Loadout Change is available ingame
